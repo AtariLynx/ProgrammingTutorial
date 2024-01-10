@@ -46,9 +46,11 @@ read_byte:
 
 .proc _UpLoaderIRQ2
 
-	lda			INTSET
-	and			#$10
-	bne			@L0
+	lda		INTSET
+	and		#$10
+	;bne	@L0
+	sta     PALETTE         ; feedback ;-)
+
 	lda			#$10
 	sta			INTRST
 	clc

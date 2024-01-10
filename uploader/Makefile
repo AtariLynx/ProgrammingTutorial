@@ -45,7 +45,7 @@ AFLAGS=-I $(CA65_INC) -t $(SYS) -D $(BUILD)
 CFLAGS=-I ./includes -t $(SYS) --add-source -O -Or -Cl -Os -D $(BUILD)
 
 target = tutorial-uploader.lnx 
-objects = main.o uploader.o directory.o
+objects = main.o uploader.o directory.o upload.o
 		  
 $(target) : $(objects)
 	$(CL) -t $(SYS) -o $@ -v -C lynx-uploader.cfg -m uploader.map $(objects) lynx.lib
