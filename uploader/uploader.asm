@@ -32,7 +32,7 @@ loop1:
 cont1:
 	jsr     read_byte
 	sta     (load_ptr2),y
-	sta     PALETTE         ; feedback ;-)
+	sta     PALETTE+1         ; feedback ;-)
 	iny
 	bne			loop1
 	inc			load_ptr2+1
@@ -46,11 +46,9 @@ read_byte:
 
 .proc _UpLoaderIRQ2
 
-	lda		INTSET
-	and		#$10
-	;bne	@L0
-	sta     PALETTE         ; feedback ;-)
-
+	lda			INTSET
+	and			#$10
+	bne			@L0
 	lda			#$10
 	sta			INTRST
 	clc
