@@ -39,7 +39,7 @@ void show_screen()
 	tgi_setcolor(COLOR_WHITE);
 	tgi_setbgcolor(COLOR_TRANSPARENT);
 
-	tgi_outtextxy(30, 20, "Hello, World?");
+	tgi_outtextxy(30, 20, "Hello, World!");
 
 	itoa(MIKEY.timer4.count, text, 10);
 	tgi_outtextxy(10, 40, text);
@@ -57,7 +57,7 @@ void show_screen()
 
 void initialize()
 {
-	lynx_load((int)&UPLOAD_FILENR);
+	//lynx_load((int)&UPLOAD_FILENR);
 
 	tgi_install(&tgi_static_stddrv);
 	joy_install(&joy_static_stddrv); 
@@ -97,12 +97,8 @@ void main(void)
 
 	MIKEY.timer4.control = 0x18; // %00011000
 	MIKEY.timer4.reload = 1; // 12; //0x01;	
-	MIKEY.serctl = 0x04|0x01;
+	MIKEY.serctl = 0x10 | 0x04 | 0x01 | 0x08; // 0x40|
 
-	// Dummy read
-	data = MIKEY.serdat;
-	
-	MIKEY.serctl = 0x10|0x04|0x01|0x08; // 0x40|
 	//MIKEY.SERCTL = TxParEnable|TxOpenColl|ParEven|ResetErr; //	RxIntEnable|
 
 	// Clear receive buffer
