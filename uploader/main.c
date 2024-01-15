@@ -39,7 +39,7 @@ void show_screen()
 	tgi_setcolor(COLOR_WHITE);
 	tgi_setbgcolor(COLOR_TRANSPARENT);
 
-	tgi_outtextxy(30, 20, "Hello, World!!");
+	tgi_outtextxy(30, 20, "Hello, World?");
 
 	itoa(MIKEY.timer4.count, text, 10);
 	tgi_outtextxy(10, 40, text);
@@ -96,9 +96,9 @@ void main(void)
 	wait_joystick();
 
 	MIKEY.timer4.control = 0x18; // %00011000
-	MIKEY.timer4.reload = 12; //0x01;
-	
+	MIKEY.timer4.reload = 1; // 12; //0x01;	
 	MIKEY.serctl = 0x04|0x01;
+
 	// Dummy read
 	data = MIKEY.serdat;
 	

@@ -2,17 +2,17 @@ Modules list:
 -------------
 main.o:
     CODE              Offs=000000  Size=000176  Align=00001  Fill=0000
-    RODATA            Offs=000000  Size=00000F  Align=00001  Fill=0000
+    RODATA            Offs=000000  Size=00000E  Align=00001  Fill=0000
     BSS               Offs=000000  Size=00001B  Align=00001  Fill=0000
 uploader.o:
-    UPCODE            Offs=000000  Size=000064  Align=00001  Fill=0000
+    UPCODE            Offs=000000  Size=000060  Align=00001  Fill=0000
     UPDATA            Offs=000000  Size=000001  Align=00001  Fill=0000
 directory.o:
     DIRECTORY         Offs=000000  Size=000010  Align=00001  Fill=0000
 /usr/share/cc65/lib/lynx.lib(_directerrno.o):
     CODE              Offs=000176  Size=000009  Align=00001  Fill=0000
 /usr/share/cc65/lib/lynx.lib(_hextab.o):
-    RODATA            Offs=00000F  Size=000010  Align=00001  Fill=0000
+    RODATA            Offs=00000E  Size=000010  Align=00001  Fill=0000
 /usr/share/cc65/lib/lynx.lib(_oserror.o):
     BSS               Offs=00001B  Size=000001  Align=00001  Fill=0000
 /usr/share/cc65/lib/lynx.lib(_seterrno.o):
@@ -37,10 +37,10 @@ directory.o:
     DATA              Offs=000022  Size=000025  Align=00001  Fill=0000
     ONCE              Offs=000000  Size=00000C  Align=00001  Fill=0000
 /usr/share/cc65/lib/lynx.lib(crt0.o):
-    RODATA            Offs=00001F  Size=00002C  Align=00001  Fill=0000
+    RODATA            Offs=00001E  Size=00002C  Align=00001  Fill=0000
     STARTUP           Offs=000000  Size=00006D  Align=00001  Fill=0000
 /usr/share/cc65/lib/lynx.lib(ctype.o):
-    RODATA            Offs=00004B  Size=00008B  Align=00001  Fill=0000
+    RODATA            Offs=00004A  Size=00008B  Align=00001  Fill=0000
 /usr/share/cc65/lib/lynx.lib(ctypemask.o):
     CODE              Offs=000265  Size=00001E  Align=00001  Fill=0000
 /usr/share/cc65/lib/lynx.lib(decax1.o):
@@ -71,10 +71,10 @@ directory.o:
     LOWCODE           Offs=000000  Size=000010  Align=00001  Fill=0000
 /usr/share/cc65/lib/lynx.lib(itoa.o):
     CODE              Offs=0002F4  Size=000094  Align=00001  Fill=0000
-    RODATA            Offs=0000D6  Size=000007  Align=00001  Fill=0000
+    RODATA            Offs=0000D5  Size=000007  Align=00001  Fill=0000
 /usr/share/cc65/lib/lynx.lib(joy-kernel.o):
     CODE              Offs=000388  Size=00004D  Align=00001  Fill=0000
-    RODATA            Offs=0000DD  Size=000004  Align=00001  Fill=0000
+    RODATA            Offs=0000DC  Size=000004  Align=00001  Fill=0000
     BSS               Offs=00001E  Size=000002  Align=00001  Fill=0000
     DATA              Offs=000047  Size=00000C  Align=00001  Fill=0000
 /usr/share/cc65/lib/lynx.lib(joy_read.o):
@@ -123,7 +123,7 @@ directory.o:
     CODE              Offs=000682  Size=000016  Align=00001  Fill=0000
 /usr/share/cc65/lib/lynx.lib(tgi-kernel.o):
     CODE              Offs=000698  Size=00007F  Align=00001  Fill=0000
-    RODATA            Offs=0000E1  Size=000004  Align=00001  Fill=0000
+    RODATA            Offs=0000E0  Size=000004  Align=00001  Fill=0000
     BSS               Offs=000020  Size=000028  Align=00001  Fill=0000
     DATA              Offs=000057  Size=000039  Align=00001  Fill=0000
 /usr/share/cc65/lib/lynx.lib(tgi_clear.o):
@@ -181,7 +181,7 @@ directory.o:
     DATA              Offs=000093  Size=00000E  Align=00001  Fill=0000
 /usr/share/cc65/lib/lynx.lib(lynx-160-102-16-tgi.o):
     CODE              Offs=000CE5  Size=00039E  Align=00001  Fill=0000
-    RODATA            Offs=0000E5  Size=000324  Align=00001  Fill=0000
+    RODATA            Offs=0000E4  Size=000324  Align=00001  Fill=0000
     BSS               Offs=000060  Size=0000BD  Align=00001  Fill=0000
     DATA              Offs=0000A1  Size=000090  Align=00001  Fill=0000
 
@@ -199,11 +199,11 @@ STARTUP               000200  00026C  00006D  00001
 LOWCODE               00026D  00027C  000010  00001
 ONCE                  00027D  000297  00001B  00001
 CODE                  000298  00131A  001083  00001
-RODATA                00131B  001729  00040F  00001
-DATA                  00172A  00185A  000131  00001
-UPCODE                00185B  0018BE  000064  00001
-UPDATA                0018BF  0018BF  000001  00001
-BSS                   0018C0  0019DC  00011D  00001
+RODATA                00131B  001728  00040E  00001
+DATA                  001729  001859  000131  00001
+BSS                   00185A  001976  00011D  00001
+UPCODE                00BFD7  00C036  000060  00001
+UPDATA                00C037  00C037  000001  00001
 
 
 Exports list by name:
@@ -212,54 +212,54 @@ _FileBlockByte            000027 RLZ    _FileBlockOffset          00001F RLZ
 _FileCurrBlock            000026 RLZ    _FileDestAddr             000022 RLZ    
 _FileDestPtr              000029 RLZ    _FileEntry                00001E RLZ    
 _FileFileLen              000024 RLZ    _FileStartBlock           00001E RLZ    
-_UPLOAD_FILENR            000001 REA    _UpLoaderIRQ2             001891  LAI   
+_UPLOAD_FILENR            000001 REA    _UpLoaderIRQ2             00C00D  LAI   
 __BANK0BLOCKSIZE__        000400 REA    __BANK1BLOCKSIZE__        000000 REA    
 __BLOCKSIZE__             000400 REA    __BOOTLDR__               000001 REA    
-__BSS_RUN__               0018C0 RLA    __BSS_SIZE__              00011D REA    
+__BSS_RUN__               00185A RLA    __BSS_SIZE__              00011D REA    
 __CALLIRQ__               000001 REA    __CODE_SIZE__             001083 REA    
 __CONSTRUCTOR_COUNT__     000001 REA    __CONSTRUCTOR_TABLE__     000296 RLA    
 __DATA_SIZE__             000131 REA    __DESTRUCTOR_COUNT__      000001 REA    
-__DESTRUCTOR_TABLE__      001724 RLA    __EXEHDR__                000001 REA    
-__INTERRUPTOR_COUNT__     000002 REA    __INTERRUPTOR_TABLE__     001726 RLA    
+__DESTRUCTOR_TABLE__      001723 RLA    __EXEHDR__                000001 REA    
+__INTERRUPTOR_COUNT__     000002 REA    __INTERRUPTOR_TABLE__     001725 RLA    
 __LOWCODE_SIZE__          000010 REA    __MAIN_SIZE__             00B5D3 REA    
 __MAIN_START__            000200 RLA    __ONCE_SIZE__             00001B REA    
-__RODATA_SIZE__           00040F REA    __STACKSIZE__             000800 REA    
+__RODATA_SIZE__           00040E REA    __STACKSIZE__             000800 REA    
 __STARTOFDIRECTORY__      0000CB REA    __STARTUP_LOAD__          000200 RLA    
 __STARTUP_SIZE__          00006D REA    __STARTUP__               000001 REA    
-__UPCODE_LOAD__           00185B RLA    __UPCODE_SIZE__           000064 REA    
+__UPCODE_LOAD__           00BFD7 RLA    __UPCODE_SIZE__           000060 REA    
 __UPDATA_SIZE__           000001 REA    ___directerrno            00040E RLA    
-___errno                  0018DC RLA    ___oserror                0018DB RLA    
-___seterrno               000417 RLA    __ctype                   001366 RLA    
-__ctypeidx                001371 RLA    __hextab                  00132A RLA    
+___errno                  001876 RLA    ___oserror                001875 RLA    
+___seterrno               000417 RLA    __ctype                   001365 RLA    
+__ctypeidx                001370 RLA    __hextab                  001329 RLA    
 __iodat                   00001A RLZ    __iodir                   00001B RLZ    
 __sprsys                  00001D RLZ    __viddma                  00001C RLZ    
 _atoi                     00043C RLA    _exit                     000268 RLA    
 _itoa                     0005AA RLA    _joy_install              000620 RLA    
-_joy_read                 00177A REA    _joy_static_stddrv        0017BD RLA    
-_lseek                    00075B RLA    _lynx_160_102_16_tgi      0017CB RLA    
-_lynx_load                00070A RLA    _lynx_stdjoy_joy          0017BD RLA    
+_joy_read                 001779 REA    _joy_static_stddrv        0017BC RLA    
+_lseek                    00075B RLA    _lynx_160_102_16_tgi      0017CA RLA    
+_lynx_load                00070A RLA    _lynx_stdjoy_joy          0017BC RLA    
 _main                     000394 RLA    _openn                    000838 RLA    
 _read                     0008D9 RLA    _strlen                   00091A RLA    
-_tgi_charwidth            0018F1 RLA    _tgi_clear                001793 REA    
-_tgi_color                0018E8 RLA    _tgi_colorcount           001901 RLA    
-_tgi_curx                 0018E4 RLA    _tgi_cury                 0018E6 RLA    
-_tgi_done                 000BA7 RLA    _tgi_error                0018E2 RLA    
-_tgi_flags                001907 RLA    _tgi_font                 0018E9 RLA    
-_tgi_fontheight           001904 RLA    _tgi_fontwidth            001903 RLA    
+_tgi_charwidth            00188B RLA    _tgi_clear                001792 REA    
+_tgi_color                001882 RLA    _tgi_colorcount           00189B RLA    
+_tgi_curx                 00187E RLA    _tgi_cury                 001880 RLA    
+_tgi_done                 000BA7 RLA    _tgi_error                00187C RLA    
+_tgi_flags                0018A1 RLA    _tgi_font                 001883 RLA    
+_tgi_fontheight           00189E RLA    _tgi_fontwidth            00189D RLA    
 _tgi_gettextwidth         000BB5 RLA    _tgi_getxres              000C0C RLA    
-_tgi_getyres              000C13 RLA    _tgi_gmode                0018E3 RLA    
+_tgi_getyres              000C13 RLA    _tgi_gmode                00187D RLA    
 _tgi_init                 000C3F RLA    _tgi_install              000930 RLA    
 _tgi_ioctl                000C97 RLA    _tgi_outtext              000CE2 RLA    
 _tgi_outtextxy            000D73 RLA    _tgi_setcolor             000D94 RLA    
-_tgi_settextstyle         000DA7 RLA    _tgi_static_stddrv        0017CB RLA    
-_tgi_textdir              0018EA RLA    _tgi_textscaleh           0018F3 RLA    
-_tgi_textscalew           0018ED RLA    _tgi_vectorchar           000E2B RLA    
-_tgi_vectorfont           0018EB RLA    _tgi_xmax                 0018F9 RLA    
-_tgi_xres                 0018FD RLA    _tgi_ymax                 0018FB RLA    
-_tgi_yres                 0018FF RLA    _toascii                  000EBE RLA    
+_tgi_settextstyle         000DA7 RLA    _tgi_static_stddrv        0017CA RLA    
+_tgi_textdir              001884 RLA    _tgi_textscaleh           00188D RLA    
+_tgi_textscalew           001887 RLA    _tgi_vectorchar           000E2B RLA    
+_tgi_vectorfont           001885 RLA    _tgi_xmax                 001893 RLA    
+_tgi_xres                 001897 RLA    _tgi_ymax                 001895 RLA    
+_tgi_yres                 001899 RLA    _toascii                  000EBE RLA    
 addysp                    000421 RLA    addysp1                   000420 RLA    
 aslax3                    00042E RLA    axlong                    0004CD RLA    
-callirq                   00172A RLA    callmain                  0004DA RLA    
+callirq                   001729 RLA    callmain                  0004DA RLA    
 ctypemaskdirect           000501 RLA    decax1                    00051B RLA    
 decsp4                    000522 RLA    decsp6                    00052F RLA    
 doneirq                   00058B RLA    donelib                   0004F1 RLA    
@@ -268,7 +268,7 @@ incsp4                    00057C RLA    incsp6                    000581 RLA
 incsp8                    000586 RLA    initirq                   000289 RLA    
 initlib                   00027D RLA    irq_done                  00058B  LAI   
 irq_init                  000289  LAI   joy_libref                000268 RLA    
-joy_read                  00177A RLA    ldax0sp                   0006D0 RLA    
+joy_read                  001779 RLA    ldax0sp                   0006D0 RLA    
 ldaxysp                   0006D2 RLA    ldeaxysp                  0006DB RLA    
 lynxblock                 0007C0 RLA    lynxread0                 0007A2 RLA    
 lynxskip0                 000797 RLA    negax                     0007F9 RLA    
@@ -280,19 +280,19 @@ pusha                     0008AD RLA    pusha0                    0008C1 RLA
 pushax                    0008C3 RLA    pusheax                   000744 RLA    
 regbank                   000014 RLZ    sp                        000000 RLZ    
 sreg                      000002 RLZ    stax0sp                   0008FA RLA    
-steaxysp                  000907 RLA    tgi_clear                 001793 RLA    
-tgi_clip_x1               001910 RLA    tgi_clip_x2               001914 RLA    
-tgi_clip_y1               001912 RLA    tgi_clip_y2               001916 RLA    
+steaxysp                  000907 RLA    tgi_clear                 001792 RLA    
+tgi_clip_x1               0018AA RLA    tgi_clip_x2               0018AE RLA    
+tgi_clip_y1               0018AC RLA    tgi_clip_y2               0018B0 RLA    
 tgi_clippedline           000A73 RLA    tgi_color_white           00000F REZ    
-tgi_control               001790 RLA    tgi_curtoxy               000B92 RLA    
-tgi_done                  00178A RLA    tgi_getdefpalette         0017A5 RLA    
-tgi_geterror              00178D RLA    tgi_imulround             000C21 RLA    
-tgi_init                  001787 RLA    tgi_inv_arg               000986 RLA    
-tgi_irq                   0017BA  LAI   tgi_libref                0017BA RLA    
-tgi_line                  0017AE RLA    tgi_outcode               000CA1 RLA    
-tgi_outtext               0017B7 RLA    tgi_setcolor              00179C RLA    
-tgi_setdrawpage           001799 RLA    tgi_setpalette            00179F RLA    
-tgi_setviewpage           001796 RLA    tmp1                      000010 RLZ    
+tgi_control               00178F RLA    tgi_curtoxy               000B92 RLA    
+tgi_done                  001789 RLA    tgi_getdefpalette         0017A4 RLA    
+tgi_geterror              00178C RLA    tgi_imulround             000C21 RLA    
+tgi_init                  001786 RLA    tgi_inv_arg               000986 RLA    
+tgi_irq                   0017B9  LAI   tgi_libref                0017B9 RLA    
+tgi_line                  0017AD RLA    tgi_outcode               000CA1 RLA    
+tgi_outtext               0017B6 RLA    tgi_setcolor              00179B RLA    
+tgi_setdrawpage           001798 RLA    tgi_setpalette            00179E RLA    
+tgi_setviewpage           001795 RLA    tmp1                      000010 RLZ    
 tmp2                      000011 RLZ    tmp3                      000012 RLZ    
 tmp4                      000013 RLZ    tosaddeax                 000673 RLA    
 tosandeax                 000695 RLA    tosasreax                 0006B2 RLA    
@@ -304,16 +304,16 @@ umul8x16r24               000F1E RLA    zerobss                   000F49 RLA
 
 Exports list by value:
 ----------------------
-sp                        000000 RLZ    __BANK1BLOCKSIZE__        000000 REA    
-__DESTRUCTOR_COUNT__      000001 REA    __CONSTRUCTOR_COUNT__     000001 REA    
-__UPDATA_SIZE__           000001 REA    __STARTUP__               000001 REA    
-__EXEHDR__                000001 REA    __BOOTLDR__               000001 REA    
-_UPLOAD_FILENR            000001 REA    __CALLIRQ__               000001 REA    
-sreg                      000002 RLZ    __INTERRUPTOR_COUNT__     000002 REA    
+__BANK1BLOCKSIZE__        000000 REA    sp                        000000 RLZ    
+__DESTRUCTOR_COUNT__      000001 REA    __UPDATA_SIZE__           000001 REA    
+__STARTUP__               000001 REA    __EXEHDR__                000001 REA    
+__BOOTLDR__               000001 REA    __CALLIRQ__               000001 REA    
+_UPLOAD_FILENR            000001 REA    __CONSTRUCTOR_COUNT__     000001 REA    
+__INTERRUPTOR_COUNT__     000002 REA    sreg                      000002 RLZ    
 ptr1                      000008 RLZ    ptr2                      00000A RLZ    
 ptr3                      00000C RLZ    ptr4                      00000E RLZ    
-tgi_color_white           00000F REZ    tmp1                      000010 RLZ    
-__LOWCODE_SIZE__          000010 REA    tmp2                      000011 RLZ    
+tgi_color_white           00000F REZ    __LOWCODE_SIZE__          000010 REA    
+tmp1                      000010 RLZ    tmp2                      000011 RLZ    
 tmp3                      000012 RLZ    tmp4                      000013 RLZ    
 regbank                   000014 RLZ    __iodat                   00001A RLZ    
 __iodir                   00001B RLZ    __ONCE_SIZE__             00001B REA    
@@ -322,15 +322,15 @@ _FileEntry                00001E RLZ    _FileStartBlock           00001E RLZ
 _FileBlockOffset          00001F RLZ    _FileDestAddr             000022 RLZ    
 _FileFileLen              000024 RLZ    _FileCurrBlock            000026 RLZ    
 _FileBlockByte            000027 RLZ    _FileDestPtr              000029 RLZ    
-__UPCODE_SIZE__           000064 REA    __STARTUP_SIZE__          00006D REA    
+__UPCODE_SIZE__           000060 REA    __STARTUP_SIZE__          00006D REA    
 __STARTOFDIRECTORY__      0000CB REA    __BSS_SIZE__              00011D REA    
 __DATA_SIZE__             000131 REA    __MAIN_START__            000200 RLA    
-__STARTUP_LOAD__          000200 RLA    _exit                     000268 RLA    
-joy_libref                000268 RLA    initlib                   00027D RLA    
-initirq                   000289 RLA    irq_init                  000289  LAI   
+__STARTUP_LOAD__          000200 RLA    joy_libref                000268 RLA    
+_exit                     000268 RLA    initlib                   00027D RLA    
+irq_init                  000289  LAI   initirq                   000289 RLA    
 __CONSTRUCTOR_TABLE__     000296 RLA    _main                     000394 RLA    
 __BANK0BLOCKSIZE__        000400 REA    __BLOCKSIZE__             000400 REA    
-___directerrno            00040E RLA    __RODATA_SIZE__           00040F REA    
+__RODATA_SIZE__           00040E REA    ___directerrno            00040E RLA    
 ___seterrno               000417 RLA    addysp1                   000420 RLA    
 addysp                    000421 RLA    aslax3                    00042E RLA    
 _atoi                     00043C RLA    axlong                    0004CD RLA    
@@ -340,7 +340,7 @@ decsp4                    000522 RLA    decsp6                    00052F RLA
 imul16x16r32              00053C RLA    popax                     000567 RLA    
 incsp2                    00056E RLA    incsp4                    00057C RLA    
 incsp6                    000581 RLA    incsp8                    000586 RLA    
-doneirq                   00058B RLA    irq_done                  00058B  LAI   
+irq_done                  00058B  LAI   doneirq                   00058B RLA    
 _itoa                     0005AA RLA    _joy_install              000620 RLA    
 tosaddeax                 000673 RLA    tosandeax                 000695 RLA    
 tosasreax                 0006B2 RLA    ldax0sp                   0006D0 RLA    
@@ -365,36 +365,36 @@ _tgi_outtextxy            000D73 RLA    _tgi_setcolor             000D94 RLA
 _tgi_settextstyle         000DA7 RLA    _tgi_vectorchar           000E2B RLA    
 _toascii                  000EBE RLA    udiv32by16r16             000EC1 RLA    
 umul16x16r32              000EF2 RLA    umul16x16r32m             000EF6 RLA    
-umul8x16r24               000F1E RLA    umul8x16r16               000F1E RLA    
+umul8x16r16               000F1E RLA    umul8x16r24               000F1E RLA    
 zerobss                   000F49 RLA    __CODE_SIZE__             001083 REA    
-__hextab                  00132A RLA    __ctype                   001366 RLA    
-__ctypeidx                001371 RLA    __DESTRUCTOR_TABLE__      001724 RLA    
-__INTERRUPTOR_TABLE__     001726 RLA    callirq                   00172A RLA    
-joy_read                  00177A RLA    _joy_read                 00177A REA    
-tgi_init                  001787 RLA    tgi_done                  00178A RLA    
-tgi_geterror              00178D RLA    tgi_control               001790 RLA    
-tgi_clear                 001793 RLA    _tgi_clear                001793 REA    
-tgi_setviewpage           001796 RLA    tgi_setdrawpage           001799 RLA    
-tgi_setcolor              00179C RLA    tgi_setpalette            00179F RLA    
-tgi_getdefpalette         0017A5 RLA    tgi_line                  0017AE RLA    
-tgi_outtext               0017B7 RLA    tgi_irq                   0017BA  LAI   
-tgi_libref                0017BA RLA    _lynx_stdjoy_joy          0017BD RLA    
-_joy_static_stddrv        0017BD RLA    _tgi_static_stddrv        0017CB RLA    
-_lynx_160_102_16_tgi      0017CB RLA    __UPCODE_LOAD__           00185B RLA    
-_UpLoaderIRQ2             001891  LAI   __BSS_RUN__               0018C0 RLA    
-___oserror                0018DB RLA    ___errno                  0018DC RLA    
-_tgi_error                0018E2 RLA    _tgi_gmode                0018E3 RLA    
-_tgi_curx                 0018E4 RLA    _tgi_cury                 0018E6 RLA    
-_tgi_color                0018E8 RLA    _tgi_font                 0018E9 RLA    
-_tgi_textdir              0018EA RLA    _tgi_vectorfont           0018EB RLA    
-_tgi_textscalew           0018ED RLA    _tgi_charwidth            0018F1 RLA    
-_tgi_textscaleh           0018F3 RLA    _tgi_xmax                 0018F9 RLA    
-_tgi_ymax                 0018FB RLA    _tgi_xres                 0018FD RLA    
-_tgi_yres                 0018FF RLA    _tgi_colorcount           001901 RLA    
-_tgi_fontwidth            001903 RLA    _tgi_fontheight           001904 RLA    
-_tgi_flags                001907 RLA    tgi_clip_x1               001910 RLA    
-tgi_clip_y1               001912 RLA    tgi_clip_x2               001914 RLA    
-tgi_clip_y2               001916 RLA    __MAIN_SIZE__             00B5D3 REA    
+__hextab                  001329 RLA    __ctype                   001365 RLA    
+__ctypeidx                001370 RLA    __DESTRUCTOR_TABLE__      001723 RLA    
+__INTERRUPTOR_TABLE__     001725 RLA    callirq                   001729 RLA    
+joy_read                  001779 RLA    _joy_read                 001779 REA    
+tgi_init                  001786 RLA    tgi_done                  001789 RLA    
+tgi_geterror              00178C RLA    tgi_control               00178F RLA    
+tgi_clear                 001792 RLA    _tgi_clear                001792 REA    
+tgi_setviewpage           001795 RLA    tgi_setdrawpage           001798 RLA    
+tgi_setcolor              00179B RLA    tgi_setpalette            00179E RLA    
+tgi_getdefpalette         0017A4 RLA    tgi_line                  0017AD RLA    
+tgi_outtext               0017B6 RLA    tgi_irq                   0017B9  LAI   
+tgi_libref                0017B9 RLA    _lynx_stdjoy_joy          0017BC RLA    
+_joy_static_stddrv        0017BC RLA    _tgi_static_stddrv        0017CA RLA    
+_lynx_160_102_16_tgi      0017CA RLA    __BSS_RUN__               00185A RLA    
+___oserror                001875 RLA    ___errno                  001876 RLA    
+_tgi_error                00187C RLA    _tgi_gmode                00187D RLA    
+_tgi_curx                 00187E RLA    _tgi_cury                 001880 RLA    
+_tgi_color                001882 RLA    _tgi_font                 001883 RLA    
+_tgi_textdir              001884 RLA    _tgi_vectorfont           001885 RLA    
+_tgi_textscalew           001887 RLA    _tgi_charwidth            00188B RLA    
+_tgi_textscaleh           00188D RLA    _tgi_xmax                 001893 RLA    
+_tgi_ymax                 001895 RLA    _tgi_xres                 001897 RLA    
+_tgi_yres                 001899 RLA    _tgi_colorcount           00189B RLA    
+_tgi_fontwidth            00189D RLA    _tgi_fontheight           00189E RLA    
+_tgi_flags                0018A1 RLA    tgi_clip_x1               0018AA RLA    
+tgi_clip_y1               0018AC RLA    tgi_clip_x2               0018AE RLA    
+tgi_clip_y2               0018B0 RLA    __MAIN_SIZE__             00B5D3 REA    
+__UPCODE_LOAD__           00BFD7 RLA    _UpLoaderIRQ2             00C00D  LAI   
 
 
 

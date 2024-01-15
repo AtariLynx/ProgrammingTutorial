@@ -9,12 +9,12 @@ load_ptr2=_FileCurrBlock
 .segment "UPCODE"
 
 ComLynxReadAndExec:
-	ldy     #4
+  ldy     #4
 loop0:
-	jsr     read_byte
-	sta     load_len-1,y
-	dey
-	bne     loop0       ; get destination and length
+  jsr     read_byte
+  sta     load_len-1,y
+  dey
+  bne     loop0       ; get destination and length
   tax                 ; lowbyte of length
 
   lda     load_ptr
@@ -23,47 +23,45 @@ loop0:
   sta     load_ptr2+1
 
 loop1:
-	inx
+  inx
   bne     cont1
   inc     load_len+1
   bne     cont1
   jmp     (load_ptr)
 
 cont1:
-	jsr     read_byte
-	sta     (load_ptr2),y
-	sta     PALETTE+1         ; feedback ;-)
-	iny
-	bne			loop1
-	inc			load_ptr2+1
-	bra			loop1
+  jsr     read_byte
+  sta     (load_ptr2),y
+  sta     PALETTE+1         ; feedback ;-)
+  iny
+  bne     loop1
+  inc     load_ptr2+1
+  bra     loop1
 
 read_byte:
-	bit     SERCTL
-	bvc     read_byte
-	lda     SERDAT
-	rts
+  bit     SERCTL
+  bvc     read_byte
+  lda     SERDAT
+  rts
 
 .proc _UpLoaderIRQ2
 
-	lda			INTSET
-	and			#$10
-	bne			@L0
-	lda			#$10
-	sta			INTRST
-	clc
-	rts
+  lda     INTSET
+  and     #$10
+  bne     @L0
+  clc
+  rts
 @L0:
-	lda     SERDAT          ; wait for the start sequence
-	bit     flag            ; already seen $81 ?
-	bpl     again           ; >= 0 => no
-	cmp     #$50            ; "P" ?
-	bne     again           ; not correct, so clear flag
-;	sei
+  lda     SERDAT          ; wait for the start sequence
+  bit     flag            ; already seen $81 ?
+  bpl     again           ; >= 0 => no
+  cmp     #$50            ; "P" ?
+  bne     again           ; not correct, so clear flag
+  sei
   jmp     ComLynxReadAndExec
 
 again:
-	stz     flag
+  stz     flag
   cmp     #$81
   bne     exit
   sta     flag
@@ -71,9 +69,9 @@ again:
 ; last action : clear interrupt
 ;
 exit:
-	lda			#$10
-	sta			INTRST
-	clc
+  lda			#$10
+  sta			INTRST
+  clc
   rts
 
 .endproc ; _UploaderIRQ2
