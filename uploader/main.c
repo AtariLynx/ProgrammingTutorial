@@ -13,22 +13,6 @@ extern int UPLOAD_FILENR;
 
 #define true 1
 
-#define TXINTEN  128 // %10000000
-#define RXINTEN  64  // %01000000
-#define PAREN    16  // %00010000
-#define RESETERR 8   // %00001000
-#define TXOPEN   4   // %00000100
-#define TXBRK    2   // %00000010
-#define PAREVEN  1   // %00000001
-#define TXRDY    128 // %10000000
-#define RXRDY    64  // %01000000
-#define TXEMPTY  32  // %00100000
-#define PARERR   16  // %00010000
-#define OVERRUN  8   // %00001000
-#define FRAMERR  4   // %00000100
-#define RXBRK    2   // %00000010
-#define PARBIT   1   // %00000001
-
 void show_screen()
 {
 	char text[4];
@@ -57,7 +41,7 @@ void show_screen()
 
 void initialize()
 {
-	//lynx_load((int)&UPLOAD_FILENR);
+	lynx_load((int)&UPLOAD_FILENR);
 
 	tgi_install(&tgi_static_stddrv);
 	joy_install(&joy_static_stddrv); 
@@ -95,19 +79,17 @@ void main(void)
 	while (tgi_busy());
 	wait_joystick();
 
-	MIKEY.timer4.control = 0x18; // %00011000
-	MIKEY.timer4.reload = 1; // 12; //0x01;	
-	MIKEY.serctl = 0x10 | 0x04 | 0x01 | 0x08; // 0x40|
-
-	//MIKEY.SERCTL = TxParEnable|TxOpenColl|ParEven|ResetErr; //	RxIntEnable|
+	MIKEY.timer4.control = 0x18; // ENABLE_RELOAD | ENABLE_COUNT; // %00011000
+	MIKEY.timer4.reload = 1; // AUD_2;	
+	MIKEY.serctl = 0x10 | 0x04 | 0x01 | 0x08; // PAREN | TXOPEN | PAREVEN | RESETERR;
 
 	// Clear receive buffer
-	while ((MIKEY.serctl & 0x40) == 0x40)
+	while ((MIKEY.serctl & 0x40) > 0)
 	{
 		data = MIKEY.serdat;
 	}
 
-	MIKEY.serctl = 0x40 | 0x10 | 0x04 | 0x01 | 0x08;
+	MIKEY.serctl = 0x40 | 0x10 | 0x04 | 0x01 | 0x08; // PAREN | TXOPEN | PAREVEN | RESETERR | RXINTEN;
 
 	while (true)
 	{

@@ -8,7 +8,7 @@
 	.import __MAIN_START__
 	.import __CODE_SIZE__, __DATA_SIZE__, __RODATA_SIZE__
 	.import __STARTUP_SIZE__, __ONCE_SIZE__, __LOWCODE_SIZE__
-	.import __BLOCKSIZE__
+	.import __BANK0BLOCKSIZE__
 	.import __STARTUP_LOAD__
 	.import __STARTUP_SIZE__ 
 	.import __LOWCODE_SIZE__
@@ -24,10 +24,10 @@
 
 .macro entry old_off, old_len, new_off, new_block, new_len, new_size, new_addr
 new_off=old_off+old_len
-new_block=new_off/__BLOCKSIZE__
+new_block=new_off/__BANK0BLOCKSIZE__
 new_len=new_size
 	.byte	<new_block
-	.word	(new_off & (__BLOCKSIZE__ - 1))
+	.word	(new_off & (__BANK0BLOCKSIZE__ - 1))
 	.byte	$88
 	.word	new_addr
 	.word	new_len

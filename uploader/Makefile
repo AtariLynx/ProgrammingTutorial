@@ -3,12 +3,13 @@
 # https://ismail.badawi.io/blog/automatic-directory-creation-in-make/
 
 # Include paths needed for compilations
-ifeq ($(CC65_INC),)
-	CC65_INC=/usr/share/cc65/include
-endif
-ifeq ($(CA65_INC),)
-	CA65_INC=/usr/share/cc65/asminc
-endif
+CC65_INC=/workspaces/cc65/include
+CA65_INC=/workspaces/cc65/asminc
+CC65_HOME=/workspaces/cc65/
+LD65_CFG=/workspaces/cc65/cfg
+LD65_LIB=/workspaces/cc65/lib
+LD65_OBJ=/workspaces/cc65/obj
+
 ifeq ($(BUILD),)
 	BUILD=debug
 endif
@@ -45,7 +46,7 @@ AFLAGS=-I $(CA65_INC) -t $(SYS) -D $(BUILD)
 CFLAGS=-I ./includes -t $(SYS) --add-source -O -Or -Cl -Os -D $(BUILD)
 
 target = tutorial-uploader.lnx 
-objects = main.o uploader.o directory.o
+objects = main.o directory.o
 		  
 $(target) : $(objects)
 	$(CL) -t $(SYS) -o $@ -v -C lynx-uploader.cfg -m uploader.map $(objects) lynx.lib

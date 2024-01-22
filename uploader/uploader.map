@@ -1,186 +1,186 @@
 Modules list:
 -------------
 main.o:
-    CODE              Offs=000000  Size=000176  Align=00001  Fill=0000
+    CODE              Offs=000000  Size=000173  Align=00001  Fill=0000
     RODATA            Offs=000000  Size=00000E  Align=00001  Fill=0000
     BSS               Offs=000000  Size=00001B  Align=00001  Fill=0000
-uploader.o:
-    UPCODE            Offs=000000  Size=000060  Align=00001  Fill=0000
-    UPDATA            Offs=000000  Size=000001  Align=00001  Fill=0000
 directory.o:
     DIRECTORY         Offs=000000  Size=000010  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(_directerrno.o):
-    CODE              Offs=000176  Size=000009  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(_hextab.o):
+/workspaces/cc65/lib/lynx.lib(_directerrno.o):
+    CODE              Offs=000173  Size=000009  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(_hextab.o):
     RODATA            Offs=00000E  Size=000010  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(_oserror.o):
+/workspaces/cc65/lib/lynx.lib(_oserror.o):
     BSS               Offs=00001B  Size=000001  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(_seterrno.o):
-    CODE              Offs=00017F  Size=000009  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(addysp.o):
-    CODE              Offs=000188  Size=00000E  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(aslax3.o):
-    CODE              Offs=000196  Size=00000E  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(atoi.o):
-    CODE              Offs=0001A4  Size=000091  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(axlong.o):
-    CODE              Offs=000235  Size=00000D  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(bootldr.o):
+/workspaces/cc65/lib/lynx.lib(_seterrno.o):
+    CODE              Offs=00017C  Size=000009  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(addysp.o):
+    CODE              Offs=000185  Size=00000E  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(aslax3.o):
+    CODE              Offs=000193  Size=00000E  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(atoi.o):
+    CODE              Offs=0001A1  Size=000091  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(axlong.o):
+    CODE              Offs=000232  Size=00000D  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(bootldr.o):
     BOOTLDR           Offs=000000  Size=0000CB  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(callirq.o):
+/workspaces/cc65/lib/lynx.lib(callirq.o):
     DATA              Offs=000000  Size=00001E  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(callmain.o):
-    CODE              Offs=000242  Size=000017  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(callmain.o):
+    CODE              Offs=00023F  Size=000017  Align=00001  Fill=0000
     DATA              Offs=00001E  Size=000004  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(condes.o):
-    CODE              Offs=000259  Size=00000C  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(condes.o):
+    CODE              Offs=000256  Size=00000C  Align=00001  Fill=0000
     DATA              Offs=000022  Size=000025  Align=00001  Fill=0000
     ONCE              Offs=000000  Size=00000C  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(crt0.o):
+/workspaces/cc65/lib/lynx.lib(crt0.o):
     RODATA            Offs=00001E  Size=00002C  Align=00001  Fill=0000
     STARTUP           Offs=000000  Size=00006D  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(ctype.o):
+/workspaces/cc65/lib/lynx.lib(ctype.o):
     RODATA            Offs=00004A  Size=00008B  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(ctypemask.o):
-    CODE              Offs=000265  Size=00001E  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(decax1.o):
-    CODE              Offs=000283  Size=000007  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(decsp4.o):
-    CODE              Offs=00028A  Size=00000D  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(decsp6.o):
-    CODE              Offs=000297  Size=00000D  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(errno.o):
+/workspaces/cc65/lib/lynx.lib(ctypemask.o):
+    CODE              Offs=000262  Size=00001E  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(decax1.o):
+    CODE              Offs=000280  Size=000007  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(decsp4.o):
+    CODE              Offs=000287  Size=00000D  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(decsp6.o):
+    CODE              Offs=000294  Size=00000D  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(errno.o):
     BSS               Offs=00001C  Size=000002  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(exehdr.o):
+/workspaces/cc65/lib/lynx.lib(exehdr.o):
     EXEHDR            Offs=000000  Size=000040  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(extzp.o):
+/workspaces/cc65/lib/lynx.lib(extzp.o):
     EXTZP             Offs=000000  Size=000011  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(imul16x16r32.o):
-    CODE              Offs=0002A4  Size=00002B  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(incsp2.o):
-    CODE              Offs=0002CF  Size=000015  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(incsp4.o):
-    CODE              Offs=0002E4  Size=000005  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(incsp6.o):
-    CODE              Offs=0002E9  Size=000005  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(incsp8.o):
-    CODE              Offs=0002EE  Size=000005  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(irq.o):
-    CODE              Offs=0002F3  Size=000001  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(imul16x16r32.o):
+    CODE              Offs=0002A1  Size=00002B  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(incsp2.o):
+    CODE              Offs=0002CC  Size=000015  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(incsp4.o):
+    CODE              Offs=0002E1  Size=000005  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(incsp6.o):
+    CODE              Offs=0002E6  Size=000005  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(incsp8.o):
+    CODE              Offs=0002EB  Size=000005  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(irq.o):
+    CODE              Offs=0002F0  Size=000001  Align=00001  Fill=0000
     ONCE              Offs=00000C  Size=00000D  Align=00001  Fill=0000
     LOWCODE           Offs=000000  Size=000010  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(itoa.o):
-    CODE              Offs=0002F4  Size=000094  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(itoa.o):
+    CODE              Offs=0002F1  Size=000094  Align=00001  Fill=0000
     RODATA            Offs=0000D5  Size=000007  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(joy-kernel.o):
-    CODE              Offs=000388  Size=00004D  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(joy-kernel.o):
+    CODE              Offs=000385  Size=00004D  Align=00001  Fill=0000
     RODATA            Offs=0000DC  Size=000004  Align=00001  Fill=0000
     BSS               Offs=00001E  Size=000002  Align=00001  Fill=0000
     DATA              Offs=000047  Size=00000C  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(joy_read.o):
-/usr/share/cc65/lib/lynx.lib(joy_stat_stddrv.o):
-/usr/share/cc65/lib/lynx.lib(ladd.o):
-    CODE              Offs=0003D5  Size=000024  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(land.o):
-    CODE              Offs=0003F9  Size=000021  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(lasr.o):
-    CODE              Offs=00041A  Size=00001E  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(ldaxsp.o):
-    CODE              Offs=000438  Size=000009  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(ldeaxysp.o):
-    CODE              Offs=000441  Size=000013  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(libref.o):
-/usr/share/cc65/lib/lynx.lib(lneg.o):
-    CODE              Offs=000454  Size=00001E  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(load.o):
-    CODE              Offs=000472  Size=00001F  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(lpop.o):
-    CODE              Offs=000491  Size=000014  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(lpush.o):
-    CODE              Offs=0004A5  Size=00001E  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(lseek.o):
-    CODE              Offs=0004C3  Size=00003C  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(lynx-cart.o):
-    CODE              Offs=0004FF  Size=00005E  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(negabs.o):
-    CODE              Offs=00055D  Size=000012  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(open.o):
-    CODE              Offs=00056F  Size=000098  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(joy_read.o):
+/workspaces/cc65/lib/lynx.lib(joy_stat_stddrv.o):
+/workspaces/cc65/lib/lynx.lib(ladd.o):
+    CODE              Offs=0003D2  Size=000024  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(land.o):
+    CODE              Offs=0003F6  Size=000021  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(lasr.o):
+    CODE              Offs=000417  Size=00001E  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(ldaxsp.o):
+    CODE              Offs=000435  Size=000009  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(ldeaxysp.o):
+    CODE              Offs=00043E  Size=000013  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(libref.o):
+/workspaces/cc65/lib/lynx.lib(lneg.o):
+    CODE              Offs=000451  Size=00001E  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(load.o):
+    CODE              Offs=00046F  Size=00001F  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(lpop.o):
+    CODE              Offs=00048E  Size=000014  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(lpush.o):
+    CODE              Offs=0004A2  Size=00001E  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(lseek.o):
+    CODE              Offs=0004C0  Size=00003C  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(lynx-cart.o):
+    CODE              Offs=0004FC  Size=00005E  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(negabs.o):
+    CODE              Offs=00055A  Size=000012  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(open.o):
+    CODE              Offs=00056C  Size=000098  Align=00001  Fill=0000
     DATA              Offs=000053  Size=000004  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(popa.o):
-    CODE              Offs=000607  Size=00000A  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(pusha.o):
-    CODE              Offs=000611  Size=000016  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(pushax.o):
-    CODE              Offs=000627  Size=00001A  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(read.o):
-    CODE              Offs=000641  Size=000021  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(staxsp.o):
-    CODE              Offs=000662  Size=00000B  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(steaxsp.o):
-    CODE              Offs=00066D  Size=000015  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(strlen.o):
-    CODE              Offs=000682  Size=000016  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(tgi-kernel.o):
-    CODE              Offs=000698  Size=00007F  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(popa.o):
+    CODE              Offs=000604  Size=00000A  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(pusha.o):
+    CODE              Offs=00060E  Size=000016  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(pushax.o):
+    CODE              Offs=000624  Size=00001A  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(read.o):
+    CODE              Offs=00063E  Size=000021  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(staxsp.o):
+    CODE              Offs=00065F  Size=00000B  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(steaxsp.o):
+    CODE              Offs=00066A  Size=000015  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(strlen.o):
+    CODE              Offs=00067F  Size=000016  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(tgi-kernel.o):
+    CODE              Offs=000695  Size=00007F  Align=00001  Fill=0000
     RODATA            Offs=0000E0  Size=000004  Align=00001  Fill=0000
     BSS               Offs=000020  Size=000028  Align=00001  Fill=0000
     DATA              Offs=000057  Size=000039  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(tgi_clear.o):
-/usr/share/cc65/lib/lynx.lib(tgi_clippedline.o):
-    CODE              Offs=000717  Size=0001E3  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(tgi_clear.o):
+/workspaces/cc65/lib/lynx.lib(tgi_clippedline.o):
+    CODE              Offs=000714  Size=0001E3  Align=00001  Fill=0000
     BSS               Offs=000048  Size=000008  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(tgi_colors.o):
-/usr/share/cc65/lib/lynx.lib(tgi_curtoxy.o):
-    CODE              Offs=0008FA  Size=000015  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(tgi_done.o):
-    CODE              Offs=00090F  Size=00000E  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(tgi_gettextwidth.o):
-    CODE              Offs=00091D  Size=000057  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(tgi_getxres.o):
-    CODE              Offs=000974  Size=000007  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(tgi_getyres.o):
-    CODE              Offs=00097B  Size=000007  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(tgi_imulround.o):
-    CODE              Offs=000982  Size=000025  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(tgi_init.o):
-    CODE              Offs=0009A7  Size=000058  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(tgi_ioctl.o):
-    CODE              Offs=0009FF  Size=00000A  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(tgi_irq.o):
+/workspaces/cc65/lib/lynx.lib(tgi_colors.o):
+/workspaces/cc65/lib/lynx.lib(tgi_curtoxy.o):
+    CODE              Offs=0008F7  Size=000015  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(tgi_done.o):
+    CODE              Offs=00090C  Size=00000E  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(tgi_gettextwidth.o):
+    CODE              Offs=00091A  Size=000057  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(tgi_getxres.o):
+    CODE              Offs=000971  Size=000007  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(tgi_getyres.o):
+    CODE              Offs=000978  Size=000007  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(tgi_imulround.o):
+    CODE              Offs=00097F  Size=000025  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(tgi_init.o):
+    CODE              Offs=0009A4  Size=000058  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(tgi_ioctl.o):
+    CODE              Offs=0009FC  Size=00000A  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(tgi_irq.o):
     DATA              Offs=000090  Size=000003  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(tgi_outcode.o):
-    CODE              Offs=000A09  Size=000041  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(tgi_outcode.o):
+    CODE              Offs=000A06  Size=000041  Align=00001  Fill=0000
     BSS               Offs=000050  Size=000008  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(tgi_outtext.o):
-    CODE              Offs=000A4A  Size=000091  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(tgi_outtextxy.o):
-    CODE              Offs=000ADB  Size=000021  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(tgi_setcolor.o):
-    CODE              Offs=000AFC  Size=000013  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(tgi_settextstyle.o):
-    CODE              Offs=000B0F  Size=000042  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(tgi_stat_stddrv.o):
-/usr/share/cc65/lib/lynx.lib(tgi_vectorchar.o):
-    CODE              Offs=000B51  Size=0000D5  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(tgi_outtext.o):
+    CODE              Offs=000A47  Size=000091  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(tgi_outtextxy.o):
+    CODE              Offs=000AD8  Size=000021  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(tgi_setcolor.o):
+    CODE              Offs=000AF9  Size=000013  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(tgi_settextstyle.o):
+    CODE              Offs=000B0C  Size=000042  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(tgi_stat_stddrv.o):
+/workspaces/cc65/lib/lynx.lib(tgi_vectorchar.o):
+    CODE              Offs=000B4E  Size=0000D5  Align=00001  Fill=0000
     BSS               Offs=000058  Size=000008  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(toascii.o):
-    CODE              Offs=000C26  Size=000003  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(udiv32by16r16.o):
-    CODE              Offs=000C29  Size=000031  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(umul16x16r32.o):
-    CODE              Offs=000C5A  Size=00002C  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(umul8x16r24.o):
-    CODE              Offs=000C86  Size=00002B  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(zerobss.o):
-    CODE              Offs=000CB1  Size=000023  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(zeropage.o):
+/workspaces/cc65/lib/lynx.lib(toascii.o):
+    CODE              Offs=000C23  Size=000003  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(udiv32by16r16.o):
+    CODE              Offs=000C26  Size=000031  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(umul16x16r32.o):
+    CODE              Offs=000C57  Size=00002C  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(umul8x16r24.o):
+    CODE              Offs=000C83  Size=00002B  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(uploader.o):
+    UPCODE            Offs=000000  Size=000060  Align=00001  Fill=0000
+    UPDATA            Offs=000000  Size=000001  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(zerobss.o):
+    CODE              Offs=000CAE  Size=000023  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(zeropage.o):
     ZEROPAGE          Offs=000000  Size=00001A  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(lynx-stdjoy-joy.o):
-    CODE              Offs=000CD4  Size=000011  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(lynx-stdjoy-joy.o):
+    CODE              Offs=000CD1  Size=000011  Align=00001  Fill=0000
     DATA              Offs=000093  Size=00000E  Align=00001  Fill=0000
-/usr/share/cc65/lib/lynx.lib(lynx-160-102-16-tgi.o):
-    CODE              Offs=000CE5  Size=00039E  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(lynx-160-102-16-tgi.o):
+    CODE              Offs=000CE2  Size=00039E  Align=00001  Fill=0000
     RODATA            Offs=0000E4  Size=000324  Align=00001  Fill=0000
     BSS               Offs=000060  Size=0000BD  Align=00001  Fill=0000
     DATA              Offs=0000A1  Size=000090  Align=00001  Fill=0000
@@ -198,10 +198,10 @@ BOOTLDR               000200  0002CA  0000CB  00001
 STARTUP               000200  00026C  00006D  00001
 LOWCODE               00026D  00027C  000010  00001
 ONCE                  00027D  000297  00001B  00001
-CODE                  000298  00131A  001083  00001
-RODATA                00131B  001728  00040E  00001
-DATA                  001729  001859  000131  00001
-BSS                   00185A  001976  00011D  00001
+CODE                  000298  001317  001080  00001
+RODATA                001318  001725  00040E  00001
+DATA                  001726  001856  000131  00001
+BSS                   001857  001973  00011D  00001
 UPCODE                00BFD7  00C036  000060  00001
 UPDATA                00C037  00C037  000001  00001
 
@@ -212,189 +212,189 @@ _FileBlockByte            000027 RLZ    _FileBlockOffset          00001F RLZ
 _FileCurrBlock            000026 RLZ    _FileDestAddr             000022 RLZ    
 _FileDestPtr              000029 RLZ    _FileEntry                00001E RLZ    
 _FileFileLen              000024 RLZ    _FileStartBlock           00001E RLZ    
-_UPLOAD_FILENR            000001 REA    _UpLoaderIRQ2             00C00D  LAI   
+_UPLOAD_FILENR            000001 REA    _UpLoaderIRQ              00C00D  LAI   
 __BANK0BLOCKSIZE__        000400 REA    __BANK1BLOCKSIZE__        000000 REA    
-__BLOCKSIZE__             000400 REA    __BOOTLDR__               000001 REA    
-__BSS_RUN__               00185A RLA    __BSS_SIZE__              00011D REA    
-__CALLIRQ__               000001 REA    __CODE_SIZE__             001083 REA    
-__CONSTRUCTOR_COUNT__     000001 REA    __CONSTRUCTOR_TABLE__     000296 RLA    
-__DATA_SIZE__             000131 REA    __DESTRUCTOR_COUNT__      000001 REA    
-__DESTRUCTOR_TABLE__      001723 RLA    __EXEHDR__                000001 REA    
-__INTERRUPTOR_COUNT__     000002 REA    __INTERRUPTOR_TABLE__     001725 RLA    
-__LOWCODE_SIZE__          000010 REA    __MAIN_SIZE__             00B5D3 REA    
-__MAIN_START__            000200 RLA    __ONCE_SIZE__             00001B REA    
-__RODATA_SIZE__           00040E REA    __STACKSIZE__             000800 REA    
-__STARTOFDIRECTORY__      0000CB REA    __STARTUP_LOAD__          000200 RLA    
-__STARTUP_SIZE__          00006D REA    __STARTUP__               000001 REA    
-__UPCODE_LOAD__           00BFD7 RLA    __UPCODE_SIZE__           000060 REA    
-__UPDATA_SIZE__           000001 REA    ___directerrno            00040E RLA    
-___errno                  001876 RLA    ___oserror                001875 RLA    
-___seterrno               000417 RLA    __ctype                   001365 RLA    
-__ctypeidx                001370 RLA    __hextab                  001329 RLA    
+__BOOTLDR__               000001 REA    __BSS_RUN__               001857 RLA    
+__BSS_SIZE__              00011D REA    __CALLIRQ__               000001 REA    
+__CODE_SIZE__             001080 REA    __CONSTRUCTOR_COUNT__     000001 REA    
+__CONSTRUCTOR_TABLE__     000296 RLA    __DATA_SIZE__             000131 REA    
+__DESTRUCTOR_COUNT__      000001 REA    __DESTRUCTOR_TABLE__      001720 RLA    
+__EXEHDR__                000001 REA    __INTERRUPTOR_COUNT__     000002 REA    
+__INTERRUPTOR_TABLE__     001722 RLA    __LOWCODE_SIZE__          000010 REA    
+__MAIN_SIZE__             00B5D7 REA    __MAIN_START__            000200 RLA    
+__ONCE_SIZE__             00001B REA    __RODATA_SIZE__           00040E REA    
+__STACKSIZE__             000800 REA    __STARTOFDIRECTORY__      0000CB REA    
+__STARTUP_LOAD__          000200 RLA    __STARTUP_SIZE__          00006D REA    
+__STARTUP__               000001 REA    __UPCODE_LOAD__           00BFD7 RLA    
+__UPCODE_SIZE__           000060 REA    __UPDATA_SIZE__           000001 REA    
+__UPLOADER__              000001 REA    ___directerrno            00040B RLA    
+___errno                  001873 RLA    ___oserror                001872 RLA    
+___seterrno               000414 RLA    __ctype                   001362 RLA    
+__ctypeidx                00136D RLA    __hextab                  001326 RLA    
 __iodat                   00001A RLZ    __iodir                   00001B RLZ    
 __sprsys                  00001D RLZ    __viddma                  00001C RLZ    
-_atoi                     00043C RLA    _exit                     000268 RLA    
-_itoa                     0005AA RLA    _joy_install              000620 RLA    
-_joy_read                 001779 REA    _joy_static_stddrv        0017BC RLA    
-_lseek                    00075B RLA    _lynx_160_102_16_tgi      0017CA RLA    
-_lynx_load                00070A RLA    _lynx_stdjoy_joy          0017BC RLA    
-_main                     000394 RLA    _openn                    000838 RLA    
-_read                     0008D9 RLA    _strlen                   00091A RLA    
-_tgi_charwidth            00188B RLA    _tgi_clear                001792 REA    
-_tgi_color                001882 RLA    _tgi_colorcount           00189B RLA    
-_tgi_curx                 00187E RLA    _tgi_cury                 001880 RLA    
-_tgi_done                 000BA7 RLA    _tgi_error                00187C RLA    
-_tgi_flags                0018A1 RLA    _tgi_font                 001883 RLA    
-_tgi_fontheight           00189E RLA    _tgi_fontwidth            00189D RLA    
-_tgi_gettextwidth         000BB5 RLA    _tgi_getxres              000C0C RLA    
-_tgi_getyres              000C13 RLA    _tgi_gmode                00187D RLA    
-_tgi_init                 000C3F RLA    _tgi_install              000930 RLA    
-_tgi_ioctl                000C97 RLA    _tgi_outtext              000CE2 RLA    
-_tgi_outtextxy            000D73 RLA    _tgi_setcolor             000D94 RLA    
-_tgi_settextstyle         000DA7 RLA    _tgi_static_stddrv        0017CA RLA    
-_tgi_textdir              001884 RLA    _tgi_textscaleh           00188D RLA    
-_tgi_textscalew           001887 RLA    _tgi_vectorchar           000E2B RLA    
-_tgi_vectorfont           001885 RLA    _tgi_xmax                 001893 RLA    
-_tgi_xres                 001897 RLA    _tgi_ymax                 001895 RLA    
-_tgi_yres                 001899 RLA    _toascii                  000EBE RLA    
-addysp                    000421 RLA    addysp1                   000420 RLA    
-aslax3                    00042E RLA    axlong                    0004CD RLA    
-callirq                   001729 RLA    callmain                  0004DA RLA    
-ctypemaskdirect           000501 RLA    decax1                    00051B RLA    
-decsp4                    000522 RLA    decsp6                    00052F RLA    
-doneirq                   00058B RLA    donelib                   0004F1 RLA    
-imul16x16r32              00053C RLA    incsp2                    00056E RLA    
-incsp4                    00057C RLA    incsp6                    000581 RLA    
-incsp8                    000586 RLA    initirq                   000289 RLA    
-initlib                   00027D RLA    irq_done                  00058B  LAI   
+_atoi                     000439 RLA    _exit                     000268 RLA    
+_itoa                     0005A7 RLA    _joy_install              00061D RLA    
+_joy_read                 001776 REA    _joy_static_stddrv        0017B9 RLA    
+_lseek                    000758 RLA    _lynx_160_102_16_tgi      0017C7 RLA    
+_lynx_load                000707 RLA    _lynx_stdjoy_joy          0017B9 RLA    
+_main                     000394 RLA    _openn                    000835 RLA    
+_read                     0008D6 RLA    _strlen                   000917 RLA    
+_tgi_charwidth            001888 RLA    _tgi_clear                00178F REA    
+_tgi_color                00187F RLA    _tgi_colorcount           001898 RLA    
+_tgi_curx                 00187B RLA    _tgi_cury                 00187D RLA    
+_tgi_done                 000BA4 RLA    _tgi_error                001879 RLA    
+_tgi_flags                00189E RLA    _tgi_font                 001880 RLA    
+_tgi_fontheight           00189B RLA    _tgi_fontwidth            00189A RLA    
+_tgi_gettextwidth         000BB2 RLA    _tgi_getxres              000C09 RLA    
+_tgi_getyres              000C10 RLA    _tgi_gmode                00187A RLA    
+_tgi_init                 000C3C RLA    _tgi_install              00092D RLA    
+_tgi_ioctl                000C94 RLA    _tgi_outtext              000CDF RLA    
+_tgi_outtextxy            000D70 RLA    _tgi_setcolor             000D91 RLA    
+_tgi_settextstyle         000DA4 RLA    _tgi_static_stddrv        0017C7 RLA    
+_tgi_textdir              001881 RLA    _tgi_textscaleh           00188A RLA    
+_tgi_textscalew           001884 RLA    _tgi_vectorchar           000E28 RLA    
+_tgi_vectorfont           001882 RLA    _tgi_xmax                 001890 RLA    
+_tgi_xres                 001894 RLA    _tgi_ymax                 001892 RLA    
+_tgi_yres                 001896 RLA    _toascii                  000EBB RLA    
+addysp                    00041E RLA    addysp1                   00041D RLA    
+aslax3                    00042B RLA    axlong                    0004CA RLA    
+callirq                   001726 RLA    callmain                  0004D7 RLA    
+ctypemaskdirect           0004FE RLA    decax1                    000518 RLA    
+decsp4                    00051F RLA    decsp6                    00052C RLA    
+doneirq                   000588 RLA    donelib                   0004EE RLA    
+imul16x16r32              000539 RLA    incsp2                    00056B RLA    
+incsp4                    000579 RLA    incsp6                    00057E RLA    
+incsp8                    000583 RLA    initirq                   000289 RLA    
+initlib                   00027D RLA    irq_done                  000588  LAI   
 irq_init                  000289  LAI   joy_libref                000268 RLA    
-joy_read                  001779 RLA    ldax0sp                   0006D0 RLA    
-ldaxysp                   0006D2 RLA    ldeaxysp                  0006DB RLA    
-lynxblock                 0007C0 RLA    lynxread0                 0007A2 RLA    
-lynxskip0                 000797 RLA    negax                     0007F9 RLA    
-negeax                    0006EC RLA    popa                      00089F RLA    
-popax                     000567 RLA    popeax                    000729 RLA    
+joy_read                  001776 RLA    ldax0sp                   0006CD RLA    
+ldaxysp                   0006CF RLA    ldeaxysp                  0006D8 RLA    
+lynxblock                 0007BD RLA    lynxread0                 00079F RLA    
+lynxskip0                 000794 RLA    negax                     0007F6 RLA    
+negeax                    0006E9 RLA    popa                      00089C RLA    
+popax                     000564 RLA    popeax                    000726 RLA    
 ptr1                      000008 RLZ    ptr2                      00000A RLZ    
 ptr3                      00000C RLZ    ptr4                      00000E RLZ    
-pusha                     0008AD RLA    pusha0                    0008C1 RLA    
-pushax                    0008C3 RLA    pusheax                   000744 RLA    
+pusha                     0008AA RLA    pusha0                    0008BE RLA    
+pushax                    0008C0 RLA    pusheax                   000741 RLA    
 regbank                   000014 RLZ    sp                        000000 RLZ    
-sreg                      000002 RLZ    stax0sp                   0008FA RLA    
-steaxysp                  000907 RLA    tgi_clear                 001792 RLA    
-tgi_clip_x1               0018AA RLA    tgi_clip_x2               0018AE RLA    
-tgi_clip_y1               0018AC RLA    tgi_clip_y2               0018B0 RLA    
-tgi_clippedline           000A73 RLA    tgi_color_white           00000F REZ    
-tgi_control               00178F RLA    tgi_curtoxy               000B92 RLA    
-tgi_done                  001789 RLA    tgi_getdefpalette         0017A4 RLA    
-tgi_geterror              00178C RLA    tgi_imulround             000C21 RLA    
-tgi_init                  001786 RLA    tgi_inv_arg               000986 RLA    
-tgi_irq                   0017B9  LAI   tgi_libref                0017B9 RLA    
-tgi_line                  0017AD RLA    tgi_outcode               000CA1 RLA    
-tgi_outtext               0017B6 RLA    tgi_setcolor              00179B RLA    
-tgi_setdrawpage           001798 RLA    tgi_setpalette            00179E RLA    
-tgi_setviewpage           001795 RLA    tmp1                      000010 RLZ    
+sreg                      000002 RLZ    stax0sp                   0008F7 RLA    
+steaxysp                  000904 RLA    tgi_clear                 00178F RLA    
+tgi_clip_x1               0018A7 RLA    tgi_clip_x2               0018AB RLA    
+tgi_clip_y1               0018A9 RLA    tgi_clip_y2               0018AD RLA    
+tgi_clippedline           000A70 RLA    tgi_color_white           00000F REZ    
+tgi_control               00178C RLA    tgi_curtoxy               000B8F RLA    
+tgi_done                  001786 RLA    tgi_getdefpalette         0017A1 RLA    
+tgi_geterror              001789 RLA    tgi_imulround             000C1E RLA    
+tgi_init                  001783 RLA    tgi_inv_arg               000983 RLA    
+tgi_irq                   0017B6  LAI   tgi_libref                0017B6 RLA    
+tgi_line                  0017AA RLA    tgi_outcode               000C9E RLA    
+tgi_outtext               0017B3 RLA    tgi_setcolor              001798 RLA    
+tgi_setdrawpage           001795 RLA    tgi_setpalette            00179B RLA    
+tgi_setviewpage           001792 RLA    tmp1                      000010 RLZ    
 tmp2                      000011 RLZ    tmp3                      000012 RLZ    
-tmp4                      000013 RLZ    tosaddeax                 000673 RLA    
-tosandeax                 000695 RLA    tosasreax                 0006B2 RLA    
-udiv32by16r16             000EC1 RLA    umul16x16r32              000EF2 RLA    
-umul16x16r32m             000EF6 RLA    umul8x16r16               000F1E RLA    
-umul8x16r24               000F1E RLA    zerobss                   000F49 RLA    
+tmp4                      000013 RLZ    tosaddeax                 000670 RLA    
+tosandeax                 000692 RLA    tosasreax                 0006AF RLA    
+udiv32by16r16             000EBE RLA    umul16x16r32              000EEF RLA    
+umul16x16r32m             000EF3 RLA    umul8x16r16               000F1B RLA    
+umul8x16r24               000F1B RLA    zerobss                   000F46 RLA    
 
 
 
 Exports list by value:
 ----------------------
 __BANK1BLOCKSIZE__        000000 REA    sp                        000000 RLZ    
-__DESTRUCTOR_COUNT__      000001 REA    __UPDATA_SIZE__           000001 REA    
-__STARTUP__               000001 REA    __EXEHDR__                000001 REA    
-__BOOTLDR__               000001 REA    __CALLIRQ__               000001 REA    
-_UPLOAD_FILENR            000001 REA    __CONSTRUCTOR_COUNT__     000001 REA    
-__INTERRUPTOR_COUNT__     000002 REA    sreg                      000002 RLZ    
-ptr1                      000008 RLZ    ptr2                      00000A RLZ    
-ptr3                      00000C RLZ    ptr4                      00000E RLZ    
-tgi_color_white           00000F REZ    __LOWCODE_SIZE__          000010 REA    
-tmp1                      000010 RLZ    tmp2                      000011 RLZ    
-tmp3                      000012 RLZ    tmp4                      000013 RLZ    
-regbank                   000014 RLZ    __iodat                   00001A RLZ    
-__iodir                   00001B RLZ    __ONCE_SIZE__             00001B REA    
-__viddma                  00001C RLZ    __sprsys                  00001D RLZ    
-_FileEntry                00001E RLZ    _FileStartBlock           00001E RLZ    
-_FileBlockOffset          00001F RLZ    _FileDestAddr             000022 RLZ    
-_FileFileLen              000024 RLZ    _FileCurrBlock            000026 RLZ    
-_FileBlockByte            000027 RLZ    _FileDestPtr              000029 RLZ    
-__UPCODE_SIZE__           000060 REA    __STARTUP_SIZE__          00006D REA    
-__STARTOFDIRECTORY__      0000CB REA    __BSS_SIZE__              00011D REA    
-__DATA_SIZE__             000131 REA    __MAIN_START__            000200 RLA    
-__STARTUP_LOAD__          000200 RLA    joy_libref                000268 RLA    
-_exit                     000268 RLA    initlib                   00027D RLA    
-irq_init                  000289  LAI   initirq                   000289 RLA    
-__CONSTRUCTOR_TABLE__     000296 RLA    _main                     000394 RLA    
-__BANK0BLOCKSIZE__        000400 REA    __BLOCKSIZE__             000400 REA    
-__RODATA_SIZE__           00040E REA    ___directerrno            00040E RLA    
-___seterrno               000417 RLA    addysp1                   000420 RLA    
-addysp                    000421 RLA    aslax3                    00042E RLA    
-_atoi                     00043C RLA    axlong                    0004CD RLA    
-callmain                  0004DA RLA    donelib                   0004F1 RLA    
-ctypemaskdirect           000501 RLA    decax1                    00051B RLA    
-decsp4                    000522 RLA    decsp6                    00052F RLA    
-imul16x16r32              00053C RLA    popax                     000567 RLA    
-incsp2                    00056E RLA    incsp4                    00057C RLA    
-incsp6                    000581 RLA    incsp8                    000586 RLA    
-irq_done                  00058B  LAI   doneirq                   00058B RLA    
-_itoa                     0005AA RLA    _joy_install              000620 RLA    
-tosaddeax                 000673 RLA    tosandeax                 000695 RLA    
-tosasreax                 0006B2 RLA    ldax0sp                   0006D0 RLA    
-ldaxysp                   0006D2 RLA    ldeaxysp                  0006DB RLA    
-negeax                    0006EC RLA    _lynx_load                00070A RLA    
-popeax                    000729 RLA    pusheax                   000744 RLA    
-_lseek                    00075B RLA    lynxskip0                 000797 RLA    
-lynxread0                 0007A2 RLA    lynxblock                 0007C0 RLA    
-negax                     0007F9 RLA    __STACKSIZE__             000800 REA    
-_openn                    000838 RLA    popa                      00089F RLA    
-pusha                     0008AD RLA    pusha0                    0008C1 RLA    
-pushax                    0008C3 RLA    _read                     0008D9 RLA    
-stax0sp                   0008FA RLA    steaxysp                  000907 RLA    
-_strlen                   00091A RLA    _tgi_install              000930 RLA    
-tgi_inv_arg               000986 RLA    tgi_clippedline           000A73 RLA    
-tgi_curtoxy               000B92 RLA    _tgi_done                 000BA7 RLA    
-_tgi_gettextwidth         000BB5 RLA    _tgi_getxres              000C0C RLA    
-_tgi_getyres              000C13 RLA    tgi_imulround             000C21 RLA    
-_tgi_init                 000C3F RLA    _tgi_ioctl                000C97 RLA    
-tgi_outcode               000CA1 RLA    _tgi_outtext              000CE2 RLA    
-_tgi_outtextxy            000D73 RLA    _tgi_setcolor             000D94 RLA    
-_tgi_settextstyle         000DA7 RLA    _tgi_vectorchar           000E2B RLA    
-_toascii                  000EBE RLA    udiv32by16r16             000EC1 RLA    
-umul16x16r32              000EF2 RLA    umul16x16r32m             000EF6 RLA    
-umul8x16r16               000F1E RLA    umul8x16r24               000F1E RLA    
-zerobss                   000F49 RLA    __CODE_SIZE__             001083 REA    
-__hextab                  001329 RLA    __ctype                   001365 RLA    
-__ctypeidx                001370 RLA    __DESTRUCTOR_TABLE__      001723 RLA    
-__INTERRUPTOR_TABLE__     001725 RLA    callirq                   001729 RLA    
-joy_read                  001779 RLA    _joy_read                 001779 REA    
-tgi_init                  001786 RLA    tgi_done                  001789 RLA    
-tgi_geterror              00178C RLA    tgi_control               00178F RLA    
-tgi_clear                 001792 RLA    _tgi_clear                001792 REA    
-tgi_setviewpage           001795 RLA    tgi_setdrawpage           001798 RLA    
-tgi_setcolor              00179B RLA    tgi_setpalette            00179E RLA    
-tgi_getdefpalette         0017A4 RLA    tgi_line                  0017AD RLA    
-tgi_outtext               0017B6 RLA    tgi_irq                   0017B9  LAI   
-tgi_libref                0017B9 RLA    _lynx_stdjoy_joy          0017BC RLA    
-_joy_static_stddrv        0017BC RLA    _tgi_static_stddrv        0017CA RLA    
-_lynx_160_102_16_tgi      0017CA RLA    __BSS_RUN__               00185A RLA    
-___oserror                001875 RLA    ___errno                  001876 RLA    
-_tgi_error                00187C RLA    _tgi_gmode                00187D RLA    
-_tgi_curx                 00187E RLA    _tgi_cury                 001880 RLA    
-_tgi_color                001882 RLA    _tgi_font                 001883 RLA    
-_tgi_textdir              001884 RLA    _tgi_vectorfont           001885 RLA    
-_tgi_textscalew           001887 RLA    _tgi_charwidth            00188B RLA    
-_tgi_textscaleh           00188D RLA    _tgi_xmax                 001893 RLA    
-_tgi_ymax                 001895 RLA    _tgi_xres                 001897 RLA    
-_tgi_yres                 001899 RLA    _tgi_colorcount           00189B RLA    
-_tgi_fontwidth            00189D RLA    _tgi_fontheight           00189E RLA    
-_tgi_flags                0018A1 RLA    tgi_clip_x1               0018AA RLA    
-tgi_clip_y1               0018AC RLA    tgi_clip_x2               0018AE RLA    
-tgi_clip_y2               0018B0 RLA    __MAIN_SIZE__             00B5D3 REA    
-__UPCODE_LOAD__           00BFD7 RLA    _UpLoaderIRQ2             00C00D  LAI   
+__EXEHDR__                000001 REA    __CONSTRUCTOR_COUNT__     000001 REA    
+__CALLIRQ__               000001 REA    __UPLOADER__              000001 REA    
+__UPDATA_SIZE__           000001 REA    __STARTUP__               000001 REA    
+_UPLOAD_FILENR            000001 REA    __BOOTLDR__               000001 REA    
+__DESTRUCTOR_COUNT__      000001 REA    __INTERRUPTOR_COUNT__     000002 REA    
+sreg                      000002 RLZ    ptr1                      000008 RLZ    
+ptr2                      00000A RLZ    ptr3                      00000C RLZ    
+ptr4                      00000E RLZ    tgi_color_white           00000F REZ    
+__LOWCODE_SIZE__          000010 REA    tmp1                      000010 RLZ    
+tmp2                      000011 RLZ    tmp3                      000012 RLZ    
+tmp4                      000013 RLZ    regbank                   000014 RLZ    
+__iodat                   00001A RLZ    __iodir                   00001B RLZ    
+__ONCE_SIZE__             00001B REA    __viddma                  00001C RLZ    
+__sprsys                  00001D RLZ    _FileEntry                00001E RLZ    
+_FileStartBlock           00001E RLZ    _FileBlockOffset          00001F RLZ    
+_FileDestAddr             000022 RLZ    _FileFileLen              000024 RLZ    
+_FileCurrBlock            000026 RLZ    _FileBlockByte            000027 RLZ    
+_FileDestPtr              000029 RLZ    __UPCODE_SIZE__           000060 REA    
+__STARTUP_SIZE__          00006D REA    __STARTOFDIRECTORY__      0000CB REA    
+__BSS_SIZE__              00011D REA    __DATA_SIZE__             000131 REA    
+__MAIN_START__            000200 RLA    __STARTUP_LOAD__          000200 RLA    
+_exit                     000268 RLA    joy_libref                000268 RLA    
+initlib                   00027D RLA    initirq                   000289 RLA    
+irq_init                  000289  LAI   __CONSTRUCTOR_TABLE__     000296 RLA    
+_main                     000394 RLA    __BANK0BLOCKSIZE__        000400 REA    
+___directerrno            00040B RLA    __RODATA_SIZE__           00040E REA    
+___seterrno               000414 RLA    addysp1                   00041D RLA    
+addysp                    00041E RLA    aslax3                    00042B RLA    
+_atoi                     000439 RLA    axlong                    0004CA RLA    
+callmain                  0004D7 RLA    donelib                   0004EE RLA    
+ctypemaskdirect           0004FE RLA    decax1                    000518 RLA    
+decsp4                    00051F RLA    decsp6                    00052C RLA    
+imul16x16r32              000539 RLA    popax                     000564 RLA    
+incsp2                    00056B RLA    incsp4                    000579 RLA    
+incsp6                    00057E RLA    incsp8                    000583 RLA    
+irq_done                  000588  LAI   doneirq                   000588 RLA    
+_itoa                     0005A7 RLA    _joy_install              00061D RLA    
+tosaddeax                 000670 RLA    tosandeax                 000692 RLA    
+tosasreax                 0006AF RLA    ldax0sp                   0006CD RLA    
+ldaxysp                   0006CF RLA    ldeaxysp                  0006D8 RLA    
+negeax                    0006E9 RLA    _lynx_load                000707 RLA    
+popeax                    000726 RLA    pusheax                   000741 RLA    
+_lseek                    000758 RLA    lynxskip0                 000794 RLA    
+lynxread0                 00079F RLA    lynxblock                 0007BD RLA    
+negax                     0007F6 RLA    __STACKSIZE__             000800 REA    
+_openn                    000835 RLA    popa                      00089C RLA    
+pusha                     0008AA RLA    pusha0                    0008BE RLA    
+pushax                    0008C0 RLA    _read                     0008D6 RLA    
+stax0sp                   0008F7 RLA    steaxysp                  000904 RLA    
+_strlen                   000917 RLA    _tgi_install              00092D RLA    
+tgi_inv_arg               000983 RLA    tgi_clippedline           000A70 RLA    
+tgi_curtoxy               000B8F RLA    _tgi_done                 000BA4 RLA    
+_tgi_gettextwidth         000BB2 RLA    _tgi_getxres              000C09 RLA    
+_tgi_getyres              000C10 RLA    tgi_imulround             000C1E RLA    
+_tgi_init                 000C3C RLA    _tgi_ioctl                000C94 RLA    
+tgi_outcode               000C9E RLA    _tgi_outtext              000CDF RLA    
+_tgi_outtextxy            000D70 RLA    _tgi_setcolor             000D91 RLA    
+_tgi_settextstyle         000DA4 RLA    _tgi_vectorchar           000E28 RLA    
+_toascii                  000EBB RLA    udiv32by16r16             000EBE RLA    
+umul16x16r32              000EEF RLA    umul16x16r32m             000EF3 RLA    
+umul8x16r16               000F1B RLA    umul8x16r24               000F1B RLA    
+zerobss                   000F46 RLA    __CODE_SIZE__             001080 REA    
+__hextab                  001326 RLA    __ctype                   001362 RLA    
+__ctypeidx                00136D RLA    __DESTRUCTOR_TABLE__      001720 RLA    
+__INTERRUPTOR_TABLE__     001722 RLA    callirq                   001726 RLA    
+joy_read                  001776 RLA    _joy_read                 001776 REA    
+tgi_init                  001783 RLA    tgi_done                  001786 RLA    
+tgi_geterror              001789 RLA    tgi_control               00178C RLA    
+_tgi_clear                00178F REA    tgi_clear                 00178F RLA    
+tgi_setviewpage           001792 RLA    tgi_setdrawpage           001795 RLA    
+tgi_setcolor              001798 RLA    tgi_setpalette            00179B RLA    
+tgi_getdefpalette         0017A1 RLA    tgi_line                  0017AA RLA    
+tgi_outtext               0017B3 RLA    tgi_libref                0017B6 RLA    
+tgi_irq                   0017B6  LAI   _lynx_stdjoy_joy          0017B9 RLA    
+_joy_static_stddrv        0017B9 RLA    _tgi_static_stddrv        0017C7 RLA    
+_lynx_160_102_16_tgi      0017C7 RLA    __BSS_RUN__               001857 RLA    
+___oserror                001872 RLA    ___errno                  001873 RLA    
+_tgi_error                001879 RLA    _tgi_gmode                00187A RLA    
+_tgi_curx                 00187B RLA    _tgi_cury                 00187D RLA    
+_tgi_color                00187F RLA    _tgi_font                 001880 RLA    
+_tgi_textdir              001881 RLA    _tgi_vectorfont           001882 RLA    
+_tgi_textscalew           001884 RLA    _tgi_charwidth            001888 RLA    
+_tgi_textscaleh           00188A RLA    _tgi_xmax                 001890 RLA    
+_tgi_ymax                 001892 RLA    _tgi_xres                 001894 RLA    
+_tgi_yres                 001896 RLA    _tgi_colorcount           001898 RLA    
+_tgi_fontwidth            00189A RLA    _tgi_fontheight           00189B RLA    
+_tgi_flags                00189E RLA    tgi_clip_x1               0018A7 RLA    
+tgi_clip_y1               0018A9 RLA    tgi_clip_x2               0018AB RLA    
+tgi_clip_y2               0018AD RLA    __MAIN_SIZE__             00B5D7 REA    
+__UPCODE_LOAD__           00BFD7 RLA    _UpLoaderIRQ              00C00D  LAI   
 
 
 
@@ -409,13 +409,13 @@ _FileBlockOffset (extzp.o):
 _FileCurrBlock (extzp.o):
     lynx-cart.o               lynx/extzp.inc:21
     lseek.o                   lynx/lseek.s:22
+    uploader.o                lynx/extzp.inc:21
     open.o                    lynx/open.s:29
     bootldr.o                 lynx/extzp.inc:21
-    uploader.o                extzp.inc:25
 _FileDestAddr (extzp.o):
+    uploader.o                lynx/extzp.inc:19
     load.o                    lynx/load.s:11
     bootldr.o                 lynx/extzp.inc:19
-    uploader.o                extzp.inc:23
 _FileDestPtr (extzp.o):
     lynx-cart.o               lynx/extzp.inc:23
     read.o                    lynx/read.s:15
@@ -424,32 +424,31 @@ _FileEntry (extzp.o):
     open.o                    lynx/open.s:27
     bootldr.o                 lynx/extzp.inc:15
 _FileFileLen (extzp.o):
+    uploader.o                lynx/extzp.inc:20
     load.o                    lynx/load.s:10
     bootldr.o                 lynx/extzp.inc:20
-    uploader.o                extzp.inc:24
 _FileStartBlock (extzp.o):
     open.o                    lynx/open.s:28
     bootldr.o                 lynx/extzp.inc:16
 _UPLOAD_FILENR (directory.o):
     main.o                    main.s:26
 __BANK0BLOCKSIZE__ ([linker generated]):
-    exehdr.o                  lynx/exehdr.s:6
-    bootldr.o                 lynx/bootldr.s:8
-__BANK1BLOCKSIZE__ ([linker generated]):
-    exehdr.o                  lynx/exehdr.s:7
-__BLOCKSIZE__ ([linker generated]):
     lynx-cart.o               lynx/lynx-cart.s:20
     lseek.o                   lynx/lseek.s:21
+    exehdr.o                  lynx/exehdr.s:6
+    bootldr.o                 lynx/bootldr.s:8
     directory.o               directory.asm:11
+__BANK1BLOCKSIZE__ ([linker generated]):
+    exehdr.o                  lynx/exehdr.s:7
 __BOOTLDR__ (bootldr.o):
-    [linker generated]        lynx-uploader.cfg:8
+    [linker generated]        /workspaces/cc65/cfg/lynx-uploader.cfg:7
 __BSS_RUN__ ([linker generated]):
     zerobss.o                 common/zerobss.s:8
 __BSS_SIZE__ ([linker generated]):
     zerobss.o                 common/zerobss.s:8
 __CALLIRQ__ (callirq.o):
+    uploader.o                lynx/uploader.s:48
     tgi_irq.o                 lynx/tgi_irq.s:11
-    uploader.o                uploader.asm:47
 __CODE_SIZE__ ([linker generated]):
     directory.o               directory.asm:9
 __CONSTRUCTOR_COUNT__ ([linker generated]):
@@ -463,7 +462,7 @@ __DESTRUCTOR_COUNT__ ([linker generated]):
 __DESTRUCTOR_TABLE__ ([linker generated]):
     condes.o                  runtime/condes.s:19
 __EXEHDR__ (exehdr.o):
-    [linker generated]        lynx-uploader.cfg:7
+    [linker generated]        /workspaces/cc65/cfg/lynx-uploader.cfg:6
 __INTERRUPTOR_COUNT__ ([linker generated]):
     callirq.o                 runtime/callirq.s:36
 __INTERRUPTOR_TABLE__ ([linker generated]):
@@ -480,11 +479,11 @@ __RODATA_SIZE__ ([linker generated]):
     directory.o               directory.asm:9
 __STACKSIZE__ ([linker generated]):
     crt0.o                    lynx/crt0.s:25
-    [linker generated]        lynx-uploader.cfg:16
+    [linker generated]        /workspaces/cc65/cfg/lynx-uploader.cfg:17
 __STARTOFDIRECTORY__ ([linker generated]):
     open.o                    lynx/open.s:31
     directory.o               directory.asm:6
-    [linker generated]        lynx-uploader.cfg:14
+    [linker generated]        /workspaces/cc65/cfg/lynx-uploader.cfg:15
 __STARTUP_LOAD__ ([linker generated]):
     directory.o               directory.asm:12
 __STARTUP_SIZE__ ([linker generated]):
@@ -497,15 +496,17 @@ __UPCODE_SIZE__ ([linker generated]):
     directory.o               directory.asm:19
 __UPDATA_SIZE__ ([linker generated]):
     directory.o               directory.asm:21
+__UPLOADER__ (uploader.o):
+    [linker generated]        /workspaces/cc65/cfg/lynx-uploader.cfg:8
 ___directerrno (_directerrno.o):
-    open.o                    /sdk/cc65/asminc/errno.inc:10
+    open.o                    /usr/share/cc65/asminc/errno.inc:10
 ___errno (errno.o):
-    _seterrno.o               /sdk/cc65/asminc/errno.inc:7
+    _seterrno.o               /usr/share/cc65/asminc/errno.inc:7
 ___oserror (_oserror.o):
-    _directerrno.o            /sdk/cc65/asminc/errno.inc:7
-    open.o                    /sdk/cc65/asminc/errno.inc:7
+    _directerrno.o            /usr/share/cc65/asminc/errno.inc:7
+    open.o                    /usr/share/cc65/asminc/errno.inc:7
 ___seterrno (_seterrno.o):
-    _directerrno.o            /sdk/cc65/asminc/errno.inc:9
+    _directerrno.o            /usr/share/cc65/asminc/errno.inc:9
 __ctype (ctype.o):
     ctypemask.o               common/ctypemask.s:23
 __ctypeidx (ctype.o):
@@ -554,45 +555,45 @@ _read (read.o):
 _strlen (strlen.o):
     tgi_gettextwidth.o        tgi/tgi_gettextwidth.s:10
 _tgi_charwidth (tgi-kernel.o):
-    tgi_gettextwidth.o        /sdk/cc65/asminc/tgi-kernel.inc:126
+    tgi_gettextwidth.o        /usr/share/cc65/asminc/tgi-kernel.inc:126
 _tgi_clear (tgi_clear.o):
     main.o                    main.s:18
 _tgi_color (tgi-kernel.o):
-    tgi_setcolor.o            /sdk/cc65/asminc/tgi-kernel.inc:120
+    tgi_setcolor.o            /usr/share/cc65/asminc/tgi-kernel.inc:120
 _tgi_colorcount (tgi-kernel.o):
-    tgi_setcolor.o            /sdk/cc65/asminc/tgi-kernel.inc:132
+    tgi_setcolor.o            /usr/share/cc65/asminc/tgi-kernel.inc:132
 _tgi_curx (tgi-kernel.o):
-    tgi_curtoxy.o             /sdk/cc65/asminc/tgi-kernel.inc:118
-    tgi_vectorchar.o          /sdk/cc65/asminc/tgi-kernel.inc:118
-    tgi_outtext.o             /sdk/cc65/asminc/tgi-kernel.inc:118
-    tgi_outtextxy.o           /sdk/cc65/asminc/tgi-kernel.inc:118
+    tgi_curtoxy.o             /usr/share/cc65/asminc/tgi-kernel.inc:118
+    tgi_vectorchar.o          /usr/share/cc65/asminc/tgi-kernel.inc:118
+    tgi_outtext.o             /usr/share/cc65/asminc/tgi-kernel.inc:118
+    tgi_outtextxy.o           /usr/share/cc65/asminc/tgi-kernel.inc:118
 _tgi_cury (tgi-kernel.o):
-    tgi_curtoxy.o             /sdk/cc65/asminc/tgi-kernel.inc:119
-    tgi_outtextxy.o           /sdk/cc65/asminc/tgi-kernel.inc:119
+    tgi_curtoxy.o             /usr/share/cc65/asminc/tgi-kernel.inc:119
+    tgi_outtextxy.o           /usr/share/cc65/asminc/tgi-kernel.inc:119
 _tgi_done (tgi_done.o):
-    tgi_init.o                /sdk/cc65/asminc/tgi-kernel.inc:193
-    tgi-kernel.o              /sdk/cc65/asminc/tgi-kernel.inc:193
+    tgi_init.o                /usr/share/cc65/asminc/tgi-kernel.inc:193
+    tgi-kernel.o              /usr/share/cc65/asminc/tgi-kernel.inc:193
 _tgi_error (tgi-kernel.o):
-    tgi_init.o                /sdk/cc65/asminc/tgi-kernel.inc:116
+    tgi_init.o                /usr/share/cc65/asminc/tgi-kernel.inc:116
 _tgi_flags (tgi-kernel.o):
-    tgi_settextstyle.o        /sdk/cc65/asminc/tgi-kernel.inc:137
+    tgi_settextstyle.o        /usr/share/cc65/asminc/tgi-kernel.inc:137
 _tgi_font (tgi-kernel.o):
-    tgi_gettextwidth.o        /sdk/cc65/asminc/tgi-kernel.inc:121
-    tgi_outtext.o             /sdk/cc65/asminc/tgi-kernel.inc:121
-    tgi_settextstyle.o        /sdk/cc65/asminc/tgi-kernel.inc:121
+    tgi_gettextwidth.o        /usr/share/cc65/asminc/tgi-kernel.inc:121
+    tgi_outtext.o             /usr/share/cc65/asminc/tgi-kernel.inc:121
+    tgi_settextstyle.o        /usr/share/cc65/asminc/tgi-kernel.inc:121
 _tgi_fontheight (tgi-kernel.o):
-    tgi_settextstyle.o        /sdk/cc65/asminc/tgi-kernel.inc:135
+    tgi_settextstyle.o        /usr/share/cc65/asminc/tgi-kernel.inc:135
 _tgi_fontwidth (tgi-kernel.o):
-    tgi_settextstyle.o        /sdk/cc65/asminc/tgi-kernel.inc:134
+    tgi_settextstyle.o        /usr/share/cc65/asminc/tgi-kernel.inc:134
 _tgi_gettextwidth (tgi_gettextwidth.o):
-    tgi_outtext.o             /sdk/cc65/asminc/tgi-kernel.inc:208
+    tgi_outtext.o             /usr/share/cc65/asminc/tgi-kernel.inc:208
 _tgi_getxres (tgi_getxres.o):
-    tgi_init.o                /sdk/cc65/asminc/tgi-kernel.inc:209
+    tgi_init.o                /usr/share/cc65/asminc/tgi-kernel.inc:209
 _tgi_getyres (tgi_getyres.o):
-    tgi_init.o                /sdk/cc65/asminc/tgi-kernel.inc:210
+    tgi_init.o                /usr/share/cc65/asminc/tgi-kernel.inc:210
 _tgi_gmode (tgi-kernel.o):
-    tgi_init.o                /sdk/cc65/asminc/tgi-kernel.inc:117
-    tgi_done.o                /sdk/cc65/asminc/tgi-kernel.inc:117
+    tgi_init.o                /usr/share/cc65/asminc/tgi-kernel.inc:117
+    tgi_done.o                /usr/share/cc65/asminc/tgi-kernel.inc:117
 _tgi_init (tgi_init.o):
     main.o                    main.s:17
 _tgi_install (tgi-kernel.o):
@@ -600,45 +601,45 @@ _tgi_install (tgi-kernel.o):
 _tgi_ioctl (tgi_ioctl.o):
     main.o                    main.s:21
 _tgi_outtext (tgi_outtext.o):
-    tgi_outtextxy.o           /sdk/cc65/asminc/tgi-kernel.inc:220
+    tgi_outtextxy.o           /usr/share/cc65/asminc/tgi-kernel.inc:220
 _tgi_outtextxy (tgi_outtextxy.o):
     main.o                    main.s:20
 _tgi_setcolor (tgi_setcolor.o):
-    tgi_init.o                /sdk/cc65/asminc/tgi-kernel.inc:224
+    tgi_init.o                /usr/share/cc65/asminc/tgi-kernel.inc:224
     main.o                    main.s:19
 _tgi_settextstyle (tgi_settextstyle.o):
-    tgi_init.o                /sdk/cc65/asminc/tgi-kernel.inc:230
+    tgi_init.o                /usr/share/cc65/asminc/tgi-kernel.inc:230
 _tgi_static_stddrv (tgi_stat_stddrv.o):
     main.o                    main.s:15
 _tgi_textdir (tgi-kernel.o):
-    tgi_vectorchar.o          /sdk/cc65/asminc/tgi-kernel.inc:122
-    tgi_outtext.o             /sdk/cc65/asminc/tgi-kernel.inc:122
-    tgi_settextstyle.o        /sdk/cc65/asminc/tgi-kernel.inc:122
+    tgi_vectorchar.o          /usr/share/cc65/asminc/tgi-kernel.inc:122
+    tgi_outtext.o             /usr/share/cc65/asminc/tgi-kernel.inc:122
+    tgi_settextstyle.o        /usr/share/cc65/asminc/tgi-kernel.inc:122
 _tgi_textscaleh (tgi-kernel.o):
-    tgi_vectorchar.o          /sdk/cc65/asminc/tgi-kernel.inc:125
+    tgi_vectorchar.o          /usr/share/cc65/asminc/tgi-kernel.inc:125
 _tgi_textscalew (tgi-kernel.o):
-    tgi_gettextwidth.o        /sdk/cc65/asminc/tgi-kernel.inc:124
-    tgi_vectorchar.o          /sdk/cc65/asminc/tgi-kernel.inc:124
-    tgi_outtext.o             /sdk/cc65/asminc/tgi-kernel.inc:124
-    tgi_settextstyle.o        /sdk/cc65/asminc/tgi-kernel.inc:124
+    tgi_gettextwidth.o        /usr/share/cc65/asminc/tgi-kernel.inc:124
+    tgi_vectorchar.o          /usr/share/cc65/asminc/tgi-kernel.inc:124
+    tgi_outtext.o             /usr/share/cc65/asminc/tgi-kernel.inc:124
+    tgi_settextstyle.o        /usr/share/cc65/asminc/tgi-kernel.inc:124
 _tgi_vectorchar (tgi_vectorchar.o):
-    tgi_outtext.o             /sdk/cc65/asminc/tgi-vectorfont.inc:67
+    tgi_outtext.o             /usr/share/cc65/asminc/tgi-vectorfont.inc:67
 _tgi_vectorfont (tgi-kernel.o):
-    tgi_gettextwidth.o        /sdk/cc65/asminc/tgi-kernel.inc:123
-    tgi_vectorchar.o          /sdk/cc65/asminc/tgi-kernel.inc:123
-    tgi_outtext.o             /sdk/cc65/asminc/tgi-kernel.inc:123
+    tgi_gettextwidth.o        /usr/share/cc65/asminc/tgi-kernel.inc:123
+    tgi_vectorchar.o          /usr/share/cc65/asminc/tgi-kernel.inc:123
+    tgi_outtext.o             /usr/share/cc65/asminc/tgi-kernel.inc:123
 _tgi_xmax (tgi-kernel.o):
-    tgi_clippedline.o         /sdk/cc65/asminc/tgi-kernel.inc:130
-    tgi_init.o                /sdk/cc65/asminc/tgi-kernel.inc:130
+    tgi_clippedline.o         /usr/share/cc65/asminc/tgi-kernel.inc:130
+    tgi_init.o                /usr/share/cc65/asminc/tgi-kernel.inc:130
 _tgi_xres (tgi-kernel.o):
-    tgi_outcode.o             /sdk/cc65/asminc/tgi-kernel.inc:128
-    tgi_getxres.o             /sdk/cc65/asminc/tgi-kernel.inc:128
+    tgi_outcode.o             /usr/share/cc65/asminc/tgi-kernel.inc:128
+    tgi_getxres.o             /usr/share/cc65/asminc/tgi-kernel.inc:128
 _tgi_ymax (tgi-kernel.o):
-    tgi_clippedline.o         /sdk/cc65/asminc/tgi-kernel.inc:131
-    tgi_init.o                /sdk/cc65/asminc/tgi-kernel.inc:131
+    tgi_clippedline.o         /usr/share/cc65/asminc/tgi-kernel.inc:131
+    tgi_init.o                /usr/share/cc65/asminc/tgi-kernel.inc:131
 _tgi_yres (tgi-kernel.o):
-    tgi_outcode.o             /sdk/cc65/asminc/tgi-kernel.inc:129
-    tgi_getyres.o             /sdk/cc65/asminc/tgi-kernel.inc:129
+    tgi_outcode.o             /usr/share/cc65/asminc/tgi-kernel.inc:129
+    tgi_getyres.o             /usr/share/cc65/asminc/tgi-kernel.inc:129
 _toascii (toascii.o):
     tgi_gettextwidth.o        tgi/tgi_gettextwidth.s:10
     tgi_outtext.o             tgi/tgi_outtext.s:12
@@ -691,7 +692,7 @@ initlib (condes.o):
 joy_libref (libref.o):
     joy-kernel.o              joystick/joy-kernel.s:7
 joy_read (joy-kernel.o):
-    joy_read.o                /sdk/cc65/asminc/joy-kernel.inc:71
+    joy_read.o                /usr/share/cc65/asminc/joy-kernel.inc:71
 ldax0sp (ldaxsp.o):
     read.o                    lynx/read.s:17
     load.o                    lynx/load.s:12
@@ -725,54 +726,54 @@ popax (incsp2.o):
 popeax (lpop.o):
     lasr.o                    runtime/lasr.s:15
 ptr1 (zeropage.o):
-    imul16x16r32.o            /sdk/cc65/asminc/zeropage.inc:12
-    umul16x16r32.o            /sdk/cc65/asminc/zeropage.inc:12
-    udiv32by16r16.o           /sdk/cc65/asminc/zeropage.inc:12
-    tgi_imulround.o           /sdk/cc65/asminc/zeropage.inc:12
-    tgi_gettextwidth.o        /sdk/cc65/asminc/zeropage.inc:12
+    imul16x16r32.o            /usr/share/cc65/asminc/zeropage.inc:12
+    umul16x16r32.o            /usr/share/cc65/asminc/zeropage.inc:12
+    udiv32by16r16.o           /usr/share/cc65/asminc/zeropage.inc:12
+    tgi_imulround.o           /usr/share/cc65/asminc/zeropage.inc:12
+    tgi_gettextwidth.o        /usr/share/cc65/asminc/zeropage.inc:12
     tgi_curtoxy.o             tgi/tgi_curtoxy.s:9
-    tgi_clippedline.o         /sdk/cc65/asminc/zeropage.inc:12
-    tgi_vectorchar.o          /sdk/cc65/asminc/zeropage.inc:12
-    tgi_outtext.o             /sdk/cc65/asminc/zeropage.inc:12
+    tgi_clippedline.o         /usr/share/cc65/asminc/zeropage.inc:12
+    tgi_vectorchar.o          /usr/share/cc65/asminc/zeropage.inc:12
+    tgi_outtext.o             /usr/share/cc65/asminc/zeropage.inc:12
     atoi.o                    common/atoi.s:10
-    lynx-160-102-16-tgi.o     /sdk/cc65/asminc/zeropage.inc:12
+    lynx-160-102-16-tgi.o     /usr/share/cc65/asminc/zeropage.inc:12
     zerobss.o                 common/zerobss.s:9
-    umul8x16r24.o             /sdk/cc65/asminc/zeropage.inc:12
-    tgi_settextstyle.o        /sdk/cc65/asminc/zeropage.inc:12
+    umul8x16r24.o             /usr/share/cc65/asminc/zeropage.inc:12
+    tgi_settextstyle.o        /usr/share/cc65/asminc/zeropage.inc:12
     tgi_ioctl.o               tgi/tgi_ioctl.s:14
     tgi_init.o                tgi/tgi_init.s:12
     tgi-kernel.o              tgi/tgi-kernel.s:8
     joy-kernel.o              joystick/joy-kernel.s:8
 ptr2 (zeropage.o):
-    strlen.o                  common/strlen.s:12
-    udiv32by16r16.o           /sdk/cc65/asminc/zeropage.inc:12
-    tgi_gettextwidth.o        /sdk/cc65/asminc/zeropage.inc:12
+    udiv32by16r16.o           /usr/share/cc65/asminc/zeropage.inc:12
+    tgi_gettextwidth.o        /usr/share/cc65/asminc/zeropage.inc:12
     tgi_curtoxy.o             tgi/tgi_curtoxy.s:9
-    tgi_clippedline.o         /sdk/cc65/asminc/zeropage.inc:12
+    tgi_clippedline.o         /usr/share/cc65/asminc/zeropage.inc:12
     atoi.o                    common/atoi.s:10
-    lynx-160-102-16-tgi.o     /sdk/cc65/asminc/zeropage.inc:12
+    lynx-160-102-16-tgi.o     /usr/share/cc65/asminc/zeropage.inc:12
     itoa.o                    common/itoa.s:11
 ptr3 (zeropage.o):
-    imul16x16r32.o            /sdk/cc65/asminc/zeropage.inc:12
-    umul16x16r32.o            /sdk/cc65/asminc/zeropage.inc:12
-    udiv32by16r16.o           /sdk/cc65/asminc/zeropage.inc:12
-    tgi_gettextwidth.o        /sdk/cc65/asminc/zeropage.inc:12
-    tgi_outtext.o             /sdk/cc65/asminc/zeropage.inc:12
-    lynx-160-102-16-tgi.o     /sdk/cc65/asminc/zeropage.inc:12
-    umul8x16r24.o             /sdk/cc65/asminc/zeropage.inc:12
+    imul16x16r32.o            /usr/share/cc65/asminc/zeropage.inc:12
+    umul16x16r32.o            /usr/share/cc65/asminc/zeropage.inc:12
+    udiv32by16r16.o           /usr/share/cc65/asminc/zeropage.inc:12
+    tgi_gettextwidth.o        /usr/share/cc65/asminc/zeropage.inc:12
+    tgi_outtext.o             /usr/share/cc65/asminc/zeropage.inc:12
+    lynx-160-102-16-tgi.o     /usr/share/cc65/asminc/zeropage.inc:12
+    umul8x16r24.o             /usr/share/cc65/asminc/zeropage.inc:12
     itoa.o                    common/itoa.s:11
 ptr4 (zeropage.o):
-    lynx-160-102-16-tgi.o     /sdk/cc65/asminc/zeropage.inc:12
+    strlen.o                  common/strlen.s:12
+    lynx-160-102-16-tgi.o     /usr/share/cc65/asminc/zeropage.inc:12
 pusha (pusha.o):
     tgi_init.o                tgi/tgi_init.s:11
-    main.o                    main.s:396
-    main.o                    main.s:396
-    main.o                    main.s:396
+    main.o                    main.s:390
+    main.o                    main.s:390
+    main.o                    main.s:390
 pusha0 (pushax.o):
     open.o                    lynx/open.s:23
     load.o                    lynx/load.s:12
-    main.o                    main.s:396
-    main.o                    main.s:396
+    main.o                    main.s:390
+    main.o                    main.s:390
 pushax (pushax.o):
     lseek.o                   lynx/lseek.s:18
     callmain.o                runtime/callmain.s:11
@@ -780,14 +781,14 @@ pushax (pushax.o):
     read.o                    lynx/read.s:17
     open.o                    lynx/open.s:23
     load.o                    lynx/load.s:12
-    main.o                    main.s:396
-    main.o                    main.s:396
+    main.o                    main.s:390
+    main.o                    main.s:390
 pusheax (lpush.o):
     lseek.o                   lynx/lseek.s:17
     open.o                    lynx/open.s:23
 regbank (zeropage.o):
-    tgi_vectorchar.o          /sdk/cc65/asminc/zeropage.inc:14
-    tgi_outtext.o             /sdk/cc65/asminc/zeropage.inc:14
+    tgi_vectorchar.o          /usr/share/cc65/asminc/zeropage.inc:14
+    tgi_outtext.o             /usr/share/cc65/asminc/zeropage.inc:14
 sp (zeropage.o):
     lpop.o                    runtime/lpop.s:10
     ldeaxysp.o                runtime/ldeaxysp.s:12
@@ -806,12 +807,12 @@ sp (zeropage.o):
     pushax.o                  runtime/pushax.s:8
     pusha.o                   runtime/pusha.s:8
     itoa.o                    common/itoa.s:11
-    crt0.o                    /sdk/cc65/asminc/zeropage.inc:11
+    crt0.o                    /usr/share/cc65/asminc/zeropage.inc:11
 sreg (zeropage.o):
-    umul16x16r32.o            /sdk/cc65/asminc/zeropage.inc:11
-    udiv32by16r16.o           /sdk/cc65/asminc/zeropage.inc:11
-    tgi_imulround.o           /sdk/cc65/asminc/zeropage.inc:11
-    tgi_clippedline.o         /sdk/cc65/asminc/zeropage.inc:11
+    umul16x16r32.o            /usr/share/cc65/asminc/zeropage.inc:11
+    udiv32by16r16.o           /usr/share/cc65/asminc/zeropage.inc:11
+    tgi_imulround.o           /usr/share/cc65/asminc/zeropage.inc:11
+    tgi_clippedline.o         /usr/share/cc65/asminc/zeropage.inc:11
     lpop.o                    runtime/lpop.s:10
     ldeaxysp.o                runtime/ldeaxysp.s:12
     lasr.o                    runtime/lasr.s:16
@@ -821,7 +822,7 @@ sreg (zeropage.o):
     ladd.o                    runtime/ladd.s:9
     axlong.o                  runtime/axlong.s:9
     atoi.o                    common/atoi.s:10
-    umul8x16r24.o             /sdk/cc65/asminc/zeropage.inc:11
+    umul8x16r24.o             /usr/share/cc65/asminc/zeropage.inc:11
     steaxsp.o                 runtime/steaxsp.s:8
     open.o                    lynx/open.s:18
     itoa.o                    common/itoa.s:11
@@ -830,73 +831,73 @@ stax0sp (staxsp.o):
 steaxysp (steaxsp.o):
     open.o                    lynx/open.s:24
 tgi_clear (tgi-kernel.o):
-    tgi_clear.o               /sdk/cc65/asminc/tgi-kernel.inc:156
+    tgi_clear.o               /usr/share/cc65/asminc/tgi-kernel.inc:156
 tgi_clip_x1 (tgi_outcode.o):
-    tgi_clippedline.o         /sdk/cc65/asminc/tgi-kernel.inc:142
-    tgi_vectorchar.o          /sdk/cc65/asminc/tgi-kernel.inc:142
+    tgi_clippedline.o         /usr/share/cc65/asminc/tgi-kernel.inc:142
+    tgi_vectorchar.o          /usr/share/cc65/asminc/tgi-kernel.inc:142
 tgi_clip_x2 (tgi_outcode.o):
-    tgi_clippedline.o         /sdk/cc65/asminc/tgi-kernel.inc:144
+    tgi_clippedline.o         /usr/share/cc65/asminc/tgi-kernel.inc:144
 tgi_clip_y1 (tgi_outcode.o):
-    tgi_clippedline.o         /sdk/cc65/asminc/tgi-kernel.inc:143
+    tgi_clippedline.o         /usr/share/cc65/asminc/tgi-kernel.inc:143
 tgi_clip_y2 (tgi_outcode.o):
-    tgi_clippedline.o         /sdk/cc65/asminc/tgi-kernel.inc:145
+    tgi_clippedline.o         /usr/share/cc65/asminc/tgi-kernel.inc:145
 tgi_clippedline (tgi_clippedline.o):
-    tgi_vectorchar.o          /sdk/cc65/asminc/tgi-kernel.inc:174
+    tgi_vectorchar.o          /usr/share/cc65/asminc/tgi-kernel.inc:174
 tgi_color_white (tgi_colors.o):
-    tgi_init.o                /sdk/cc65/asminc/tgi-kernel.inc:110
+    tgi_init.o                /usr/share/cc65/asminc/tgi-kernel.inc:110
 tgi_control (tgi-kernel.o):
-    tgi_ioctl.o               /sdk/cc65/asminc/tgi-kernel.inc:155
+    tgi_ioctl.o               /usr/share/cc65/asminc/tgi-kernel.inc:155
 tgi_curtoxy (tgi_curtoxy.o):
-    tgi_outtext.o             /sdk/cc65/asminc/tgi-kernel.inc:175
+    tgi_outtext.o             /usr/share/cc65/asminc/tgi-kernel.inc:175
 tgi_done (tgi-kernel.o):
-    tgi_done.o                /sdk/cc65/asminc/tgi-kernel.inc:153
+    tgi_done.o                /usr/share/cc65/asminc/tgi-kernel.inc:153
 tgi_getdefpalette (tgi-kernel.o):
-    tgi_init.o                /sdk/cc65/asminc/tgi-kernel.inc:162
+    tgi_init.o                /usr/share/cc65/asminc/tgi-kernel.inc:162
 tgi_geterror (tgi-kernel.o):
-    tgi_init.o                /sdk/cc65/asminc/tgi-kernel.inc:154
+    tgi_init.o                /usr/share/cc65/asminc/tgi-kernel.inc:154
 tgi_imulround (tgi_imulround.o):
-    tgi_gettextwidth.o        /sdk/cc65/asminc/tgi-kernel.inc:177
-    tgi_vectorchar.o          /sdk/cc65/asminc/tgi-kernel.inc:177
-    tgi_outtext.o             /sdk/cc65/asminc/tgi-kernel.inc:177
+    tgi_gettextwidth.o        /usr/share/cc65/asminc/tgi-kernel.inc:177
+    tgi_vectorchar.o          /usr/share/cc65/asminc/tgi-kernel.inc:177
+    tgi_outtext.o             /usr/share/cc65/asminc/tgi-kernel.inc:177
 tgi_init (tgi-kernel.o):
-    tgi_init.o                /sdk/cc65/asminc/tgi-kernel.inc:152
+    tgi_init.o                /usr/share/cc65/asminc/tgi-kernel.inc:152
 tgi_inv_arg (tgi-kernel.o):
-    tgi_setcolor.o            /sdk/cc65/asminc/tgi-kernel.inc:178
+    tgi_setcolor.o            /usr/share/cc65/asminc/tgi-kernel.inc:178
 tgi_libref (tgi_irq.o):
     tgi-kernel.o              tgi/tgi-kernel.s:7
 tgi_line (tgi-kernel.o):
-    tgi_clippedline.o         /sdk/cc65/asminc/tgi-kernel.inc:165
+    tgi_clippedline.o         /usr/share/cc65/asminc/tgi-kernel.inc:165
 tgi_outcode (tgi_outcode.o):
-    tgi_clippedline.o         /sdk/cc65/asminc/tgi-kernel.inc:181
+    tgi_clippedline.o         /usr/share/cc65/asminc/tgi-kernel.inc:181
 tgi_outtext (tgi-kernel.o):
-    tgi_outtext.o             /sdk/cc65/asminc/tgi-kernel.inc:168
+    tgi_outtext.o             /usr/share/cc65/asminc/tgi-kernel.inc:168
 tgi_setcolor (tgi-kernel.o):
-    tgi_setcolor.o            /sdk/cc65/asminc/tgi-kernel.inc:159
+    tgi_setcolor.o            /usr/share/cc65/asminc/tgi-kernel.inc:159
 tgi_setdrawpage (tgi-kernel.o):
-    tgi_init.o                /sdk/cc65/asminc/tgi-kernel.inc:158
+    tgi_init.o                /usr/share/cc65/asminc/tgi-kernel.inc:158
 tgi_setpalette (tgi-kernel.o):
-    tgi_init.o                /sdk/cc65/asminc/tgi-kernel.inc:160
+    tgi_init.o                /usr/share/cc65/asminc/tgi-kernel.inc:160
 tgi_setviewpage (tgi-kernel.o):
-    tgi_init.o                /sdk/cc65/asminc/tgi-kernel.inc:157
+    tgi_init.o                /usr/share/cc65/asminc/tgi-kernel.inc:157
 tmp1 (zeropage.o):
-    imul16x16r32.o            /sdk/cc65/asminc/zeropage.inc:13
-    tgi_outcode.o             /sdk/cc65/asminc/zeropage.inc:13
-    tgi_clippedline.o         /sdk/cc65/asminc/zeropage.inc:13
+    imul16x16r32.o            /usr/share/cc65/asminc/zeropage.inc:13
+    tgi_outcode.o             /usr/share/cc65/asminc/zeropage.inc:13
+    tgi_clippedline.o         /usr/share/cc65/asminc/zeropage.inc:13
     lasr.o                    runtime/lasr.s:16
     land.o                    runtime/land.s:10
     ladd.o                    runtime/ladd.s:9
     atoi.o                    common/atoi.s:10
     aslax3.o                  runtime/aslax3.s:8
-    lynx-160-102-16-tgi.o     /sdk/cc65/asminc/zeropage.inc:13
+    lynx-160-102-16-tgi.o     /usr/share/cc65/asminc/zeropage.inc:13
     itoa.o                    common/itoa.s:11
     main.o                    main.s:11
 tmp2 (zeropage.o):
-    lynx-160-102-16-tgi.o     /sdk/cc65/asminc/zeropage.inc:13
+    lynx-160-102-16-tgi.o     /usr/share/cc65/asminc/zeropage.inc:13
 tmp3 (zeropage.o):
-    lynx-160-102-16-tgi.o     /sdk/cc65/asminc/zeropage.inc:13
+    lynx-160-102-16-tgi.o     /usr/share/cc65/asminc/zeropage.inc:13
     open.o                    lynx/open.s:18
 tmp4 (zeropage.o):
-    lynx-160-102-16-tgi.o     /sdk/cc65/asminc/zeropage.inc:13
+    lynx-160-102-16-tgi.o     /usr/share/cc65/asminc/zeropage.inc:13
 tosaddeax (ladd.o):
     open.o                    lynx/open.s:24
 tosandeax (land.o):
