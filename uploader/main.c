@@ -28,13 +28,6 @@ void show_screen()
     itoa(MIKEY.timer4.count, text, 10);
     tgi_outtextxy(10, 40, text);
 
-    joy = joy_read(JOY_1);
-    ltoa(SUZY.divide.quotient, text, 10);
-    tgi_outtextxy(10, 50, text);
-
-    ltoa(SUZY.divide.remainder, text, 10);
-    tgi_outtextxy(10, 60, text);
-
     tgi_updatedisplay();
     while (tgi_busy());
 }
@@ -68,37 +61,28 @@ void main(void)
 
     initialize();
     tgi_clear();
+
     while (tgi_busy());
     wait_joystick();
 
-    MIKEY.timer4.controla = ENABLE_RELOAD | ENABLE_COUNT; // %00011000
-    MIKEY.timer4.backup = AUD_2;
-    MIKEY.serctl = PAREN | TXOPEN | PAREVEN | RESETERR;
+    // Turn on serial timer to 1 MHz (1 microsecond source period)
+    MIKEY.timer4.controla = ENABLE_RELOAD | ENABLE_COUNT | AUD_1; // %0001 1000
+
+    // Set baud rate to 62500
+    // Reload is after 1 + 1 = 2 periods, with clock speed of 1 MHz => rate = 1M / (2*8) = 62500
+    MIKEY.timer4.backup = 1;
+    MIKEY.serctl = PAREN | TXOPEN | PAREVEN | RESETERR; // %0001 1101
 
     // Clear receive buffer
-    while ((MIKEY.serctl & 0x40) != 0)
+    while ((MIKEY.serctl & RXRDY) != 0)
     {
         data = MIKEY.serdat; // Dummy read from receive buffer
     }
 
-    MIKEY.serctl = PAREN | TXOPEN | PAREVEN | RESETERR | RXINTEN;
-
-    // SUZY.sprsys = ACCUMULATE | SIGNMATH;
-    // SUZY.math_signed_multiply.accumulate = 0;
-    // SUZY.math_signed_multiply.factor1 = -1234;
-    // SUZY.math_signed_multiply.factor2 = 5678;
-
-    // SUZY.math_divide.divisor = 0x3125;
-    // SUZY.math_divide.dividend2 = 0x5679;
-    // SUZY.math_divide.dividend1 = 0x1234;
-
-    // while ((SUZY.sprsys & MATHWORKING) != 0) ;
+    MIKEY.serctl = RXINTEN | PAREN | RESETERR | TXOPEN | PAREVEN; // %0101 1101
 
     while (true)
     {
-        // if (!tgi_busy())
-        // {
-            show_screen();
-        //}
+        show_screen();
     };
 }
