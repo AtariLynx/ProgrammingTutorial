@@ -1,7 +1,7 @@
 #include <6502.h>
 #include <lynx.h>
 #include <tgi.h>
-#include <joystick.h> 
+#include <joystick.h>
 #include <stdlib.h>
 
 extern unsigned char lynxtgi[];
@@ -15,87 +15,90 @@ extern int UPLOAD_FILENR;
 
 void show_screen()
 {
-	char text[4];
-	unsigned char joy;
+    char text[4];
+    unsigned char joy;
 
-	tgi_clear();
-	
-	tgi_setcolor(COLOR_WHITE);
-	tgi_setbgcolor(COLOR_TRANSPARENT);
+    tgi_clear();
 
-	tgi_outtextxy(30, 20, "Hello, World!");
+    tgi_setcolor(COLOR_WHITE);
+    tgi_setbgcolor(COLOR_TRANSPARENT);
 
-	itoa(MIKEY.timer4.count, text, 10);
-	tgi_outtextxy(10, 40, text);
-	
-	joy = joy_read(JOY_1);
-	itoa(joy, text, 10);
-	tgi_outtextxy(10, 50, text);
+    tgi_outtextxy(30, 20, "Hello, World!");
 
-	itoa(MIKEY.serctl, text, 16);
-	tgi_outtextxy(10, 60, text);
+    itoa(MIKEY.timer4.count, text, 10);
+    tgi_outtextxy(10, 40, text);
 
-	tgi_updatedisplay();
-	while (tgi_busy());
+    joy = joy_read(JOY_1);
+    ltoa(SUZY.divide.quotient, text, 10);
+    tgi_outtextxy(10, 50, text);
+
+    ltoa(SUZY.divide.remainder, text, 10);
+    tgi_outtextxy(10, 60, text);
+
+    tgi_updatedisplay();
+    while (tgi_busy());
 }
 
 void initialize()
 {
-	lynx_load((int)&UPLOAD_FILENR);
+    lynx_load((int)&UPLOAD_FILENR);
 
-	tgi_install(&tgi_static_stddrv);
-	joy_install(&joy_static_stddrv); 
-	tgi_init();
-	CLI();
+    tgi_install(&tgi_static_stddrv);
+    joy_install(&joy_static_stddrv);
+    tgi_init();
+    CLI();
 
-	
-	while (tgi_busy());
-	
-	tgi_setbgcolor(COLOR_TRANSPARENT);
+    while (tgi_busy());
 
-	tgi_clear();
+    tgi_setbgcolor(COLOR_TRANSPARENT);
+    tgi_clear();
 }
 
 void wait_joystick()
 {
-	__asm__("press:		lda $FCB0");
-	__asm__("					beq press");
-	__asm__("release: lda $FCB0");
-	__asm__("					bne release");
+    asm("press:   lda $FCB0");
+    asm("         beq press");
+    asm("release: lda $FCB0");
+    asm("         bne release");
 }
 
-void main(void) 
-{	
-	unsigned char data;
-	char joy;	
-	char text[20];
+void main(void)
+{
+    unsigned char data;
 
-	initialize();
+    initialize();
+    tgi_clear();
+    while (tgi_busy());
+    wait_joystick();
 
-	joy = joy_read(JOY_1);
-	itoa(joy, text, 10);
-	tgi_clear();
-	tgi_outtextxy(10, 10, text);
-	while (tgi_busy());
-	wait_joystick();
+    MIKEY.timer4.controla = ENABLE_RELOAD | ENABLE_COUNT; // %00011000
+    MIKEY.timer4.backup = AUD_2;
+    MIKEY.serctl = PAREN | TXOPEN | PAREVEN | RESETERR;
 
-	MIKEY.timer4.control = 0x18; // ENABLE_RELOAD | ENABLE_COUNT; // %00011000
-	MIKEY.timer4.reload = 1; // AUD_2;	
-	MIKEY.serctl = 0x10 | 0x04 | 0x01 | 0x08; // PAREN | TXOPEN | PAREVEN | RESETERR;
+    // Clear receive buffer
+    while ((MIKEY.serctl & 0x40) != 0)
+    {
+        data = MIKEY.serdat; // Dummy read from receive buffer
+    }
 
-	// Clear receive buffer
-	while ((MIKEY.serctl & 0x40) > 0)
-	{
-		data = MIKEY.serdat;
-	}
+    MIKEY.serctl = PAREN | TXOPEN | PAREVEN | RESETERR | RXINTEN;
 
-	MIKEY.serctl = 0x40 | 0x10 | 0x04 | 0x01 | 0x08; // PAREN | TXOPEN | PAREVEN | RESETERR | RXINTEN;
+    // SUZY.sprsys = ACCUMULATE | SIGNMATH;
+    // SUZY.math_signed_multiply.accumulate = 0;
+    // SUZY.math_signed_multiply.factor1 = -1234;
+    // SUZY.math_signed_multiply.factor2 = 5678;
 
-	while (true)
-	{
-		// if (!tgi_busy())
-		// {
-			show_screen();
-		//}
-	};
+    // SUZY.math_divide.divisor = 0x3125;
+    // SUZY.math_divide.dividend2 = 0x5679;
+    // SUZY.math_divide.dividend1 = 0x1234;
+
+    // while ((SUZY.sprsys & MATHWORKING) != 0) ;
+
+    while (true)
+    {
+        // if (!tgi_busy())
+        // {
+            show_screen();
+        //}
+    };
 }

@@ -33,7 +33,7 @@ CODE_SEGMENT=CODE
 DATA_SEGMENT=DATA
 RODATA_SEGMENT=RODATA
 BSS_SEGMENT=BSS
- 
+
 SEGMENTS=--code-name $(CODE_SEGMENT) \
 		 --rodata-name $(RODATA_SEGMENT) \
 		 --bss-name $(BSS_SEGMENT) \
@@ -45,9 +45,9 @@ AFLAGS=-I $(CA65_INC) -t $(SYS) -D $(BUILD)
 # Flags for C-code compiler
 CFLAGS=-I ./includes -t $(SYS) --add-source -O -Or -Cl -Os -D $(BUILD)
 
-target = tutorial-uploader.lnx 
+target = tutorial-uploader.lnx
 objects = main.o directory.o
-		  
+
 $(target) : $(objects)
 	$(CL) -t $(SYS) -o $@ -v -C lynx-uploader.cfg -m uploader.map $(objects) lynx.lib
 	$(CP) $@ $(BUILD)-$@
@@ -56,7 +56,7 @@ $(target) : $(objects)
 %.o: %.c
 	$(CC) $(CFLAGS) $(SEGMENTS) -o $(*).s $<
 	$(AS) -o $@ $(AFLAGS) $(*).s
-	$(RM) $*.s
+#	$(RM) $*.s
 
 # Rule for making a *.o file out of a *.s or *.asm file
 %.o: %.s
