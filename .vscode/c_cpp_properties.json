@@ -3,9 +3,9 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/**",
-                "${CC65_INC}",
-                "${CA65_INC}"
+                "/workspaces/cc65/include",
+                "/workspaces/cc65/asminc",
+                "${workspaceFolder}/**"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",
