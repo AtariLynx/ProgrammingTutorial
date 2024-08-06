@@ -14,10 +14,10 @@ void show_screen()
 {
     char text[4];
 
-	tgi_clear();
+    tgi_clear();
 
-	tgi_setcolor(COLOR_WHITE);
-	tgi_outtextxy(30, 48, "Serial demo");
+    tgi_setcolor(COLOR_WHITE);
+    tgi_outtextxy(30, 48, "Serial demo");
 
     itoa(MIKEY.timer4.count, text, 10);
     tgi_outtextxy(10, 40, text);
@@ -30,23 +30,23 @@ void show_screen()
     itoa(status_result, text, 10);
     tgi_outtextxy(10, 30, text);
 
-	tgi_updatedisplay();
+    tgi_updatedisplay();
 }
 
 void initialize()
 {
-	tgi_install(&tgi_static_stddrv);
+    tgi_install(&tgi_static_stddrv);
     ser_install(&ser_static_stddrv);
-	tgi_init();
-	CLI();
+    tgi_init();
+    CLI();
 
-	while (tgi_busy());
+    while (tgi_busy());
 
-	tgi_setbgcolor(COLOR_BLACK);
-	tgi_setpalette(tgi_getdefpalette());
+    tgi_setbgcolor(COLOR_BLACK);
+    tgi_setpalette(tgi_getdefpalette());
 
-	tgi_setcolor(COLOR_BLACK);
-	tgi_clear();
+    tgi_setcolor(COLOR_BLACK);
+    tgi_clear();
 }
 
 void main(void)
