@@ -8,8 +8,7 @@ extern unsigned char lynxtgi[];
 extern unsigned char lynxjoy[];
 extern unsigned char comlynx[];
 
-extern int MAIN_FILENR;
-extern int UPLOAD_FILENR;
+extern turbo_upload();
 
 #define true 1
 
@@ -23,10 +22,7 @@ void show_screen()
     tgi_setcolor(COLOR_WHITE);
     tgi_setbgcolor(COLOR_TRANSPARENT);
 
-    tgi_outtextxy(0, 20, "Upload at 62500 baud");
-
-    itoa(MIKEY.timer4.count, text, 10);
-    tgi_outtextxy(10, 40, text);
+    tgi_outtextxy(0, 20, "Upload at 1Mbaud!");
 
     tgi_updatedisplay();
     while (tgi_busy());
@@ -34,8 +30,6 @@ void show_screen()
 
 void initialize()
 {
-    lynx_load((int)&UPLOAD_FILENR);
-
     tgi_install(&tgi_static_stddrv);
     joy_install(&joy_static_stddrv);
     tgi_init();
@@ -47,14 +41,6 @@ void initialize()
     tgi_clear();
 }
 
-void wait_joystick()
-{
-    asm("press:   lda $FCB0");
-    asm("         beq press");
-    asm("release: lda $FCB0");
-    asm("         bne release");
-}
-
 void main(void)
 {
     unsigned char data;
@@ -63,26 +49,16 @@ void main(void)
     tgi_clear();
 
     while (tgi_busy());
-    wait_joystick();
-
-    // Turn on serial timer to 1 MHz (1 microsecond source period)
-    MIKEY.timer4.controla = ENABLE_RELOAD | ENABLE_COUNT | AUD_1; // %0001 1000
-
-    // Set baud rate to 62500
-    // Reload is after 1 + 1 = 2 periods, with clock speed of 1 MHz => rate = 1M / (2*8) = 62500
-    MIKEY.timer4.backup = 1;
-    MIKEY.serctl = PAREN | TXOPEN | PAREVEN | RESETERR; // %0001 1101
-
+    
     // Clear receive buffer
     while ((MIKEY.serctl & RXRDY) != 0)
     {
         data = MIKEY.serdat; // Dummy read from receive buffer
     }
 
-    MIKEY.serctl = RXINTEN | PAREN | RESETERR | TXOPEN | PAREVEN; // %0101 1101
-
-    while (true)
-    {
-        show_screen();
-    };
+    show_screen();
+    
+    // Switch on UARTturbo mode
+    MIKEY.mtest0 = 0x10;
+    turbo_upload();
 }

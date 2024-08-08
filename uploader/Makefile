@@ -46,10 +46,10 @@ AFLAGS=-I $(CA65_INC) -t $(SYS) -D $(BUILD)
 CFLAGS=-I ./includes -t $(SYS) --add-source -O -Or -Cl -Os -D $(BUILD)
 
 target = tutorial-uploader.lnx
-objects = main.o directory.o
+objects = main.o turbo.o
 
 $(target) : $(objects)
-	$(CL) -t $(SYS) -o $@ -v -C lynx-uploader.cfg -m uploader.map $(objects) lynx.lib
+	$(CL) -t $(SYS) -o $@ -v -m uploader.map $(objects) lynx.lib
 	$(CP) $@ $(BUILD)-$@
 
 # Rule for making a *.o file out of a *.c file
