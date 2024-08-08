@@ -6,7 +6,7 @@
 		"dockerfile": "Dockerfile",
 		// Update 'VARIANT' to pick an Alpine version: 3.10, 3.11, ..., 3.18
 		"args": { 
-			"VARIANT": "3.18",
+			"VARIANT": "3.20",
 			"CC65_VERSION": "latest"
 		}
 	},

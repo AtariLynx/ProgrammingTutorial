@@ -23,7 +23,7 @@ void show_screen()
     tgi_setcolor(COLOR_WHITE);
     tgi_setbgcolor(COLOR_TRANSPARENT);
 
-    tgi_outtextxy(30, 20, "Hello, World!");
+    tgi_outtextxy(0, 20, "Upload at 62500 baud");
 
     itoa(MIKEY.timer4.count, text, 10);
     tgi_outtextxy(10, 40, text);

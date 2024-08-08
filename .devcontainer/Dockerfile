@@ -1,10 +1,9 @@
 # See here for image contents: https://github.com/microsoft/vscode-dev-containers/tree/v0.154.0/containers/alpine/.devcontainer/base.Dockerfile
 
-# [Choice] Alpine version: 3.12, 3.11, 3.10, ..., 3.18
-ARG VARIANT="3.18"
+# [Choice] Alpine version: 3.13, ..., 3.20
+ARG VARIANT="3.20"
 
 FROM mcr.microsoft.com/vscode/devcontainers/base:0-alpine-${VARIANT}
-# FROM mcr.microsoft.com/devcontainers/dotnet:1-8.0-bookworm
 ARG CC65_VERSION="latest"
 
 #RUN apk update && \

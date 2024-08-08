@@ -26,8 +26,9 @@ void show_screen()
     itoa(show, text, 10);
     tgi_outtextxy(10, 10, text);
     itoa(status, text, 10);
+    tgi_outtextxy(0, 20, "S:");
     tgi_outtextxy(10, 20, text);
-    itoa(status_result, text, 10);
+    itoa(MIKEY.iodat, text, 10);
     tgi_outtextxy(10, 30, text);
 
     tgi_updatedisplay();
@@ -55,11 +56,11 @@ void main(void)
     unsigned char index = 0;
 
     struct ser_params params = {
-        SER_BAUD_62500,
+        SER_BAUD_300,
         SER_BITS_8, // Only 8 bits are supported
         SER_STOP_1, // Must be 1 stop bit
         SER_PAR_EVEN, // SER_PAR_NONE is not allowed
-        SER_HS_NONE // No handshake support
+        SER_HS_SW // No handshake support
     };
 
     // SER_PAR_MARK => TXOPEN|PAREVEN
@@ -69,18 +70,27 @@ void main(void)
 
     initialize();
 
-    ser_open(&params);
+    while (ser_open(&params) == SER_ERR_NO_DEVICE)
+    {
+        if (!tgi_busy())
+        {
+            tgi_clear();
+            tgi_setcolor(COLOR_WHITE);
+            tgi_outtextxy(10, 10, "No serial port");
+            tgi_updatedisplay();
+        }
+    }
 
     while (true)
     {
         result = ser_get(&message[index]);
+        status_result = ser_status(&status);
 
         if (result != SER_ERR_NO_DATA)
         {
-            show = data;
-            status_result = ser_status(&status);
+            show = message[index];
             ++index;
-            if (index == 16)
+            if (index == 16 || show == 0x00)
             {
                 index = 0;
             }
