@@ -66,11 +66,11 @@ void main(void)
     wait_joystick();
 
     // Turn on serial timer to 1 MHz (1 microsecond source period)
-    MIKEY.timer4.controla = ENABLE_RELOAD | ENABLE_COUNT | AUD_1; // %0001 1000
+    MIKEY.timer4.control = ENABLE_RELOAD | ENABLE_COUNT | AUD_1; // %0001 1000
 
     // Set baud rate to 62500
     // Reload is after 1 + 1 = 2 periods, with clock speed of 1 MHz => rate = 1M / (2*8) = 62500
-    MIKEY.timer4.backup = 1;
+    MIKEY.timer4.reload = 1;
     MIKEY.serctl = PAREN | TXOPEN | PAREVEN | RESETERR; // %0001 1101
 
     // Clear receive buffer
