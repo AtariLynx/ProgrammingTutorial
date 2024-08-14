@@ -1,7 +1,7 @@
 {
     "files.exclude": {
         "**/*.o": true,
-//        "**/*.s": { "when": "$(basename).c" },
+        "**/*.s": { "when": "$(basename).c" },
         "**/*.pal": false,
         "**/*.spr": false,
         "**/*.vcxproj*": true

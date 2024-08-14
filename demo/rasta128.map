@@ -1,0 +1,28 @@
+Modules list:
+-------------
+rasta128.o:
+    CODE              Offs=000000  Size=000080  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=00000C  Align=00001  Fill=0000
+
+
+Segment list:
+-------------
+Name                   Start     End    Size  Align
+----------------------------------------------------
+ZEROPAGE              000000  00000B  00000C  00001
+CODE                  000200  00027F  000080  00001
+
+
+Exports list by name:
+---------------------
+
+
+
+Exports list by value:
+----------------------
+
+
+
+Imports list:
+-------------
+

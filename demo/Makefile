@@ -13,7 +13,6 @@ SYS=lynx
 
 # Names of tools
 CO=co65
-CC=cc65
 AS=ca65
 AR=ar65
 CL=cl65
@@ -36,14 +35,13 @@ SEGMENTS=--code-name $(CODE_SEGMENT) \
 # Flag for assembler
 AFLAGS=-I $(CA65_INC) -t $(SYS) -D $(BUILD)
 
-# Flags for C-code compiler
-CFLAGS=-I ./includes -t $(SYS) --add-source -O -Or -Cl -Os -D $(BUILD)
+target = rasta128
+objects = rasta128.o 
 
-target = tutorial-assembler.lnx
-objects = main.o directory.o 
-
-$(target) : $(objects)
-	$(CL) -t $(SYS) -o $@ -C lynx-asm.cfg -v -m assembler.map $(objects) lynx.lib
+tutorial-$(target).lnx : $(objects)
+	$(CL) -t $(SYS) -o $(target).bin -C lynx-raw.cfg -v -m $(target).map $(objects)
+	lynxenc $(target).bin $(target).lyx
+	make_lnx $(target).lyx -b0 256K -o $@
 	$(CP) $@ $(BUILD)-$@
 
 # Rule for making a *.o file out of a *.s or *.asm file
@@ -71,6 +69,3 @@ clean :
 	$(RM) *.s
 	$(RM) *.o
 	$(RM) *.pal
-	$(RM) *.joy
-	$(RM) *.tgi
-	$(RM) *.ser

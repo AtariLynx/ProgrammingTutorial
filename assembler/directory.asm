@@ -8,8 +8,7 @@
         .import         __MAIN_START__
         .import         __STARTUP_LOAD__, __BSS_LOAD__
         .import         __BANK0BLOCKSIZE__
-;        .export         __DEFDIR__: absolute = 1
-
+        .import         __STARTADDRESS__
 
 ; ------------------------------------------------------------------------
 ; Lynx directory
@@ -20,7 +19,7 @@ off0 = __STARTOFDIRECTORY__ + (__DIRECTORY_END__ - __DIRECTORY_START__)
 blocka = off0 / __BANK0BLOCKSIZE__
 ; Entry 0 - first executable
 block0 = off0 / __BANK0BLOCKSIZE__
-len0 = __BSS_LOAD__
+len0 = __BSS_LOAD__ - __STARTADDRESS__
         .byte   <block0
         .word   off0 & (__BANK0BLOCKSIZE__ - 1)
         .byte   $88

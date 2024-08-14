@@ -1,3 +1,6 @@
+; Code ported from rasta128 demo by Bastian Schick
+; See original source code: https://github.com/42Bastian/lynx_hacking/tree/master/128b/rasta128 
+
 .include "lynx.inc"
 .segment "ZEROPAGE" : zeropage
 
@@ -18,31 +21,30 @@ start:
 
     ldx	col
 	stx	GCOLMAP		; green foreground
-	bne	xx
+	bne	@xx
 	lda	col+1		; blue middle
-	beq	xy
+	beq	@xy
 	asl
 	asl
 	asl
 	asl
     .byte  $ae
-;	dc.b $ae		; ldx nnnn
-xy:
+@xy:
 	lda	col+2
-xx:
+@xx:
 	sta	RBCOLMAP
 	ldx	#2
 
 loop:
 	lda	VTIMCNT		; line counter
 	cmp	pos,x
-	bcs	next
+	bcs	@next
 	lda	barsize,x
 	sta	col,x
 	dec	barsize,x
-	bpl	next
+	bpl	@next
 	stz	col,x
-next:
+@next:
 	dex
 	bpl	loop
 	rti
@@ -73,11 +75,11 @@ cont:
 	ldx	#8
 	stx	MAPCTL		; map vector table
     ldy #$02
-	sty	INTVECTL		; y = 2 => $202
+	sty	INTVECTL	; y = 2 => $202
 	sty	INTVECTH
 	lda	#$80
-	tsb	HTIMCTLA		; enable HBL
-	tsb	VTIMCTLA		; enable VBL
+	tsb	HTIMCTLA	; enable HBL
+	tsb	VTIMCTLA	; enable VBL
 	cli
 	lsr
 	sta	pos
