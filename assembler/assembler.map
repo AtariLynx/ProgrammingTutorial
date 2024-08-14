@@ -1,0 +1,89 @@
+Modules list:
+-------------
+main.o:
+    CODE              Offs=000000  Size=000005  Align=00001  Fill=0000
+directory.o:
+    DIRECTORY         Offs=000000  Size=000008  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(bootldr.o):
+    BOOTLDR           Offs=000000  Size=0000CB  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(exehdr.o):
+    EXEHDR            Offs=000000  Size=000040  Align=00001  Fill=0000
+/workspaces/cc65/lib/lynx.lib(extzp.o):
+    EXTZP             Offs=000000  Size=000011  Align=00001  Fill=0000
+
+
+Segment list:
+-------------
+Name                   Start     End    Size  Align
+----------------------------------------------------
+DIRECTORY             000000  000007  000008  00001
+EXEHDR                000000  00003F  000040  00001
+EXTZP                 000000  000010  000011  00001
+BOOTLDR               000200  0002CA  0000CB  00001
+CODE                  000200  000204  000005  00001
+
+
+Exports list by name:
+---------------------
+_FileBlockByte            00000D RLZ    _FileBlockOffset          000005 RLZ    
+_FileCurrBlock            00000C RLZ    _FileDestAddr             000008 RLZ    
+_FileDestPtr              00000F RLZ    _FileEntry                000004 RLZ    
+_FileFileLen              00000A RLZ    _FileStartBlock           000004 RLZ    
+__BANK0BLOCKSIZE__        000400 REA    __BANK1BLOCKSIZE__        000000 REA    
+__BOOTLDR__               000001 REA    __BSS_LOAD__              000205 RLA    
+__EXEHDR__                000001 REA    __MAIN_START__            000200 RLA    
+__STARTOFDIRECTORY__      0000CB REA    __iodat                   000000 RLZ    
+
+
+
+Exports list by value:
+----------------------
+__iodat                   000000 RLZ    __BANK1BLOCKSIZE__        000000 REA    
+__BOOTLDR__               000001 REA    __EXEHDR__                000001 REA    
+_FileEntry                000004 RLZ    _FileStartBlock           000004 RLZ    
+_FileBlockOffset          000005 RLZ    _FileDestAddr             000008 RLZ    
+_FileFileLen              00000A RLZ    _FileCurrBlock            00000C RLZ    
+_FileBlockByte            00000D RLZ    _FileDestPtr              00000F RLZ    
+__STARTOFDIRECTORY__      0000CB REA    __MAIN_START__            000200 RLA    
+__BSS_LOAD__              000205 RLA    __BANK0BLOCKSIZE__        000400 REA    
+
+
+
+Imports list:
+-------------
+_FileBlockByte (extzp.o):
+    bootldr.o                 lynx/extzp.inc:22
+_FileBlockOffset (extzp.o):
+    bootldr.o                 lynx/extzp.inc:17
+_FileCurrBlock (extzp.o):
+    bootldr.o                 lynx/extzp.inc:21
+_FileDestAddr (extzp.o):
+    bootldr.o                 lynx/extzp.inc:19
+_FileDestPtr (extzp.o):
+    bootldr.o                 lynx/extzp.inc:23
+_FileEntry (extzp.o):
+    bootldr.o                 lynx/extzp.inc:15
+_FileFileLen (extzp.o):
+    bootldr.o                 lynx/extzp.inc:20
+_FileStartBlock (extzp.o):
+    bootldr.o                 lynx/extzp.inc:16
+__BANK0BLOCKSIZE__ ([linker generated]):
+    exehdr.o                  lynx/exehdr.s:6
+    bootldr.o                 lynx/bootldr.s:8
+    directory.o               directory.asm:10
+__BANK1BLOCKSIZE__ ([linker generated]):
+    exehdr.o                  lynx/exehdr.s:7
+__BOOTLDR__ (bootldr.o):
+    [linker generated]        lynx-asm.cfg:6
+__BSS_LOAD__ ([linker generated]):
+    directory.o               directory.asm:9
+__EXEHDR__ (exehdr.o):
+    [linker generated]        lynx-asm.cfg:5
+__MAIN_START__ ([linker generated]):
+    directory.o               directory.asm:8
+__STARTOFDIRECTORY__ ([linker generated]):
+    directory.o               directory.asm:7
+    [linker generated]        lynx-asm.cfg:11
+__iodat (extzp.o):
+    bootldr.o                 lynx/extzp.inc:11
+
