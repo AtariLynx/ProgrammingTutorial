@@ -6,8 +6,6 @@ LD65_CFG=/workspaces/cc65/cfg
 LD65_LIB=/workspaces/cc65/lib
 LD65_OBJ=/workspaces/cc65/obj
 
-BUILD=debug
-
 # Compiling for Atari Lynx system
 SYS=lynx
 
@@ -44,7 +42,6 @@ objects = main.o directory.o
 
 $(target) : $(objects)
 	$(CL) -t $(SYS) -o $@ -C lynx-asm.cfg -v -m assembler.map $(objects) lynx.lib
-	$(CP) $@ $(BUILD)-$@
 
 # Rule for making a *.o file out of a *.s or *.asm file
 %.o: %.s

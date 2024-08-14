@@ -6,8 +6,6 @@ LD65_CFG=/workspaces/cc65/cfg
 LD65_LIB=/workspaces/cc65/lib
 LD65_OBJ=/workspaces/cc65/obj
 
-BUILD=debug
-
 # Compiling for Atari Lynx system
 SYS=lynx
 
@@ -35,20 +33,19 @@ SEGMENTS=--code-name $(CODE_SEGMENT) \
 # Flag for assembler
 AFLAGS=-I $(CA65_INC) -t $(SYS) -D $(BUILD)
 
-target = rasta128
-objects = rasta128.o 
+target = plasma
+objects = plasma.o 
 
 tutorial-$(target).lnx : $(objects)
 	$(CL) -t $(SYS) -o $(target).bin -C lynx-raw.cfg -v -m $(target).map $(objects)
 	lynxenc $(target).bin $(target).lyx
 	make_lnx $(target).lyx -b0 256K -o $@
-	$(CP) $@ $(BUILD)-$@
 
 # Rule for making a *.o file out of a *.s or *.asm file
 %.o: %.s
 	$(AS) -o $@ $(AFLAGS) $<
 %.o: %.asm
-	$(AS) -o $@ $(AFLAGS) $<
+	$(AS) -o $@ $(AFLAGS) -l $*.lst $<
 
 # Rule for making a *.o file out of a *.bmp file
 %.o : %.bmp
