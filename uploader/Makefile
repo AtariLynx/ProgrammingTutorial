@@ -9,9 +9,6 @@ endif
 ifeq ($(CA65_INC),)
 	CA65_INC=/usr/share/cc65/asminc
 endif
-ifeq ($(BUILD),)
-	BUILD=debug
-endif
 
 # Compiling for Atari Lynx system
 SYS=lynx
@@ -39,10 +36,10 @@ SEGMENTS=--code-name $(CODE_SEGMENT) \
 		 --data-name $(DATA_SEGMENT)
 
 # Flag for assembler
-AFLAGS=-I $(CA65_INC) -t $(SYS) -D $(BUILD)
+AFLAGS=-I $(CA65_INC) -t $(SYS)
 
 # Flags for C-code compiler
-CFLAGS=-I ./includes -t $(SYS) --add-source -O -Or -Cl -Os -D $(BUILD)
+CFLAGS=-I ./includes -t $(SYS) --add-source -O -Or -Cl -Os
 
 target = tutorial-uploader.lnx
 objects = main.o directory.o

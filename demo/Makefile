@@ -34,7 +34,7 @@ SEGMENTS=--code-name $(CODE_SEGMENT) \
 AFLAGS=-I $(CA65_INC) -t $(SYS) -D $(BUILD)
 
 target = plasma
-objects = plasma.o 
+objects = $(target).o 
 
 tutorial-$(target).lnx : $(objects)
 	$(CL) -t $(SYS) -o $(target).bin -C lynx-raw.cfg -v -m $(target).map $(objects)

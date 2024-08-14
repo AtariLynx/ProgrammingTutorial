@@ -9,7 +9,6 @@ endif
 ifeq ($(CA65_INC),)
 	CA65_INC=/usr/share/cc65/asminc
 endif
-
 ifeq ($(BUILD),)
 	BUILD=debug
 endif
@@ -45,12 +44,11 @@ AFLAGS=-I $(CA65_INC) -t $(SYS) -D $(BUILD)
 # Flags for C-code compiler
 CFLAGS=-I ./includes -t $(SYS) --add-source -O -Or -Cl -Os -D $(BUILD)
 
-target = helloworld.lnx 
+target = tutorial-helloworld.lnx 
 objects = helloworld.o 
 		  
 $(target) : $(objects)
 	$(CL) -t $(SYS) -o $@ $(objects) lynx.lib
-	$(CP) $@ $(BUILD)-$@
 
 # Rule for making a *.o file out of a *.c file
 %.o: %.c
