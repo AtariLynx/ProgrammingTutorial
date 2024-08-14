@@ -1,7 +1,8 @@
 Modules list:
 -------------
-main.o:
-    CODE              Offs=000000  Size=000005  Align=00001  Fill=0000
+main2.o:
+    CODE              Offs=000000  Size=000080  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=00000C  Align=00001  Fill=0000
 directory.o:
     DIRECTORY         Offs=000000  Size=000008  Align=00001  Fill=0000
 /workspaces/cc65/lib/lynx.lib(bootldr.o):
@@ -18,34 +19,35 @@ Name                   Start     End    Size  Align
 ----------------------------------------------------
 DIRECTORY             000000  000007  000008  00001
 EXEHDR                000000  00003F  000040  00001
-EXTZP                 000000  000010  000011  00001
+ZEROPAGE              000000  00000B  00000C  00001
+EXTZP                 00000C  00001C  000011  00001
 BOOTLDR               000200  0002CA  0000CB  00001
-CODE                  000200  000204  000005  00001
+CODE                  000200  00027F  000080  00001
 
 
 Exports list by name:
 ---------------------
-_FileBlockByte            00000D RLZ    _FileBlockOffset          000005 RLZ    
-_FileCurrBlock            00000C RLZ    _FileDestAddr             000008 RLZ    
-_FileDestPtr              00000F RLZ    _FileEntry                000004 RLZ    
-_FileFileLen              00000A RLZ    _FileStartBlock           000004 RLZ    
+_FileBlockByte            000019 RLZ    _FileBlockOffset          000011 RLZ    
+_FileCurrBlock            000018 RLZ    _FileDestAddr             000014 RLZ    
+_FileDestPtr              00001B RLZ    _FileEntry                000010 RLZ    
+_FileFileLen              000016 RLZ    _FileStartBlock           000010 RLZ    
 __BANK0BLOCKSIZE__        000400 REA    __BANK1BLOCKSIZE__        000000 REA    
-__BOOTLDR__               000001 REA    __BSS_LOAD__              000205 RLA    
+__BOOTLDR__               000001 REA    __BSS_LOAD__              000280 RLA    
 __EXEHDR__                000001 REA    __MAIN_START__            000200 RLA    
-__STARTOFDIRECTORY__      0000CB REA    __iodat                   000000 RLZ    
+__STARTOFDIRECTORY__      0000CB REA    __iodat                   00000C RLZ    
 
 
 
 Exports list by value:
 ----------------------
-__iodat                   000000 RLZ    __BANK1BLOCKSIZE__        000000 REA    
-__BOOTLDR__               000001 REA    __EXEHDR__                000001 REA    
-_FileEntry                000004 RLZ    _FileStartBlock           000004 RLZ    
-_FileBlockOffset          000005 RLZ    _FileDestAddr             000008 RLZ    
-_FileFileLen              00000A RLZ    _FileCurrBlock            00000C RLZ    
-_FileBlockByte            00000D RLZ    _FileDestPtr              00000F RLZ    
+__BANK1BLOCKSIZE__        000000 REA    __EXEHDR__                000001 REA    
+__BOOTLDR__               000001 REA    __iodat                   00000C RLZ    
+_FileEntry                000010 RLZ    _FileStartBlock           000010 RLZ    
+_FileBlockOffset          000011 RLZ    _FileDestAddr             000014 RLZ    
+_FileFileLen              000016 RLZ    _FileCurrBlock            000018 RLZ    
+_FileBlockByte            000019 RLZ    _FileDestPtr              00001B RLZ    
 __STARTOFDIRECTORY__      0000CB REA    __MAIN_START__            000200 RLA    
-__BSS_LOAD__              000205 RLA    __BANK0BLOCKSIZE__        000400 REA    
+__BSS_LOAD__              000280 RLA    __BANK0BLOCKSIZE__        000400 REA    
 
 
 

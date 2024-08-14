@@ -40,7 +40,7 @@ AFLAGS=-I $(CA65_INC) -t $(SYS) -D $(BUILD)
 CFLAGS=-I ./includes -t $(SYS) --add-source -O -Or -Cl -Os -D $(BUILD)
 
 target = tutorial-assembler.lnx
-objects = main.o directory.o
+objects = main2.o directory.o
 
 $(target) : $(objects)
 	$(CL) -t $(SYS) -o $@ -C lynx-asm.cfg -v -m assembler.map $(objects) lynx.lib
