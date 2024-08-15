@@ -32,17 +32,18 @@ SEGMENTS=--code-name $(CODE_SEGMENT) \
 		 --data-name $(DATA_SEGMENT)
 
 # Flag for assembler
-AFLAGS=-I $(CA65_INC) -t $(SYS) -D $(BUILD)
+AFLAGS=-I $(CA65_INC) -t $(SYS)
 
-# Flags for C-code compiler
-CFLAGS=-I ./includes -t $(SYS) --add-source -O -Or -Cl -Os -D $(BUILD)
+target=assembler
+objects=main.o screen.o
 
-target = tutorial-assembler.lnx
-objects = main.o directory.o 
+all: $(target).lnx
 
-$(target) : $(objects)
-	$(CL) -t $(SYS) -o $@ -C lynx-asm.cfg -v -m assembler.map $(objects) lynx.lib
-
+$(target).lnx : $(objects)
+	$(CL) -t $(SYS) -o $(target).bin -C lynx-asm.cfg -v -m assembler.map $(objects) lynx.lib
+	lynxenc $(target).bin $(target).lyx
+	make_lnx $(target).lyx -b0 256K -o $@
+	
 # Rule for making a *.o file out of a *.s or *.asm file
 %.o: %.s
 	$(AS) -o $@ $(AFLAGS) $<

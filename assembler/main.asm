@@ -1,6 +1,7 @@
 .segment "CODE"
 .org $0200
+.import _update
 
 start:
-    inc $FDA0
+    jsr _update
     bra start
