@@ -30,22 +30,25 @@ SEGMENTS=--code-name $(CODE_SEGMENT) \
 		 --bss-name $(BSS_SEGMENT) \
 		 --data-name $(DATA_SEGMENT)
 
+BIN=bin
+OBJ=obj
+
 # Flag for assembler
-AFLAGS=-I $(CA65_INC) -t $(SYS) -D $(BUILD)
+AFLAGS=-I $(CA65_INC) -t $(SYS)
 
-target = plasma
-objects = $(target).o 
+targets = plasma.lnx rasta128.lnx
+all: $(targets)
 
-tutorial-$(target).lnx : $(objects)
-	$(CL) -t $(SYS) -o $(target).bin -C lynx-raw.cfg -v -m $(target).map $(objects)
-	lynxenc $(target).bin $(target).lyx
-	make_lnx $(target).lyx -b0 256K -o $@
+%.lnx: %.o
+	$(CL) -t $(SYS) -o $(OBJ)/$*.bin -C lynx-asm.cfg -v -m $(OBJ)/$*.map $<
+	lynxenc $(OBJ)/$*.bin $(OBJ)/$*.lyx
+	make_lnx $(OBJ)/$*.lyx -b0 256K -o $(BIN)/$@
 
 # Rule for making a *.o file out of a *.s or *.asm file
 %.o: %.s
 	$(AS) -o $@ $(AFLAGS) $<
 %.o: %.asm
-	$(AS) -o $@ $(AFLAGS) -l $*.lst $<
+	$(AS) -o $@ $(AFLAGS) -l $(OBJ)/$*.lst $<
 
 # Rule for making a *.o file out of a *.bmp file
 %.o : %.bmp
@@ -61,7 +64,8 @@ tutorial-$(target).lnx : $(objects)
 all: $(target)
 
 clean :
-	$(RM) $(objects)
+	$(RM) $(BIN)/*.lnx
+	$(RM) $(OBJ)/*.*
 	$(RM) *.spr
 	$(RM) *.s
 	$(RM) *.o
