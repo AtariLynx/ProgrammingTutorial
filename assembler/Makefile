@@ -1,14 +1,10 @@
-# https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html
-# https://yuukidach.github.io/p/makefile-for-projects-with-subdirectories/
-# https://ismail.badawi.io/blog/automatic-directory-creation-in-make/
-
 # Include paths needed for compilations
-ifeq ($(CC65_INC),)
-	CC65_INC=/usr/share/cc65/include
-endif
-ifeq ($(CA65_INC),)
-	CA65_INC=/usr/share/cc65/asminc
-endif
+CC65_INC=/workspaces/cc65/include
+CA65_INC=/workspaces/cc65/asminc
+CC65_HOME=/workspaces/cc65/
+LD65_CFG=/workspaces/cc65/cfg
+LD65_LIB=/workspaces/cc65/lib
+LD65_OBJ=/workspaces/cc65/obj
 
 # Compiling for Atari Lynx system
 SYS=lynx
@@ -38,22 +34,16 @@ SEGMENTS=--code-name $(CODE_SEGMENT) \
 # Flag for assembler
 AFLAGS=-I $(CA65_INC) -t $(SYS)
 
-# Flags for C-code compiler
-CFLAGS=-I ./includes -t $(SYS) --add-source -O -Or -Cl -Os
+target=assembler
+objects=main.o screen.o
 
-target = tutorial-uploader.lnx
-objects = main.o directory.o
+all: $(target).lnx
 
-$(target) : $(objects)
-	$(CL) -t $(SYS) -o $@ -v -C lynx-uploader.cfg -m uploader.map $(objects) lynx.lib
-	$(CP) $@ $(BUILD)-$@
-
-# Rule for making a *.o file out of a *.c file
-%.o: %.c
-	$(CC) $(CFLAGS) $(SEGMENTS) -o $(*).s $<
-	$(AS) -o $@ $(AFLAGS) $(*).s
-#	$(RM) $*.s
-
+$(target).lnx : $(objects)
+	$(CL) -t $(SYS) -o $(target).bin -C lynx-asm.cfg -v -m assembler.map $(objects) lynx.lib
+	lynxenc $(target).bin $(target).lyx
+	make_lnx $(target).lyx -b0 256K -o $@
+	
 # Rule for making a *.o file out of a *.s or *.asm file
 %.o: %.s
 	$(AS) -o $@ $(AFLAGS) $<

@@ -1,0 +1,30 @@
+Modules list:
+-------------
+main.o:
+    CODE              Offs=000000  Size=000005  Align=00001  Fill=0000
+screen.o:
+    CODE              Offs=000005  Size=000004  Align=00001  Fill=0000
+
+
+Segment list:
+-------------
+Name                   Start     End    Size  Align
+----------------------------------------------------
+CODE                  000200  000208  000009  00001
+
+
+Exports list by name:
+---------------------
+_update                   000205 RLA    
+
+
+Exports list by value:
+----------------------
+_update                   000205 RLA    
+
+
+Imports list:
+-------------
+_update (screen.o):
+    main.o                    main.asm:3
+

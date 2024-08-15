@@ -9,6 +9,9 @@ endif
 ifeq ($(CA65_INC),)
 	CA65_INC=/usr/share/cc65/asminc
 endif
+ifeq ($(BUILD),)
+	BUILD=debug
+endif
 
 # Compiling for Atari Lynx system
 SYS=lynx
@@ -29,30 +32,23 @@ CODE_SEGMENT=CODE
 DATA_SEGMENT=DATA
 RODATA_SEGMENT=RODATA
 BSS_SEGMENT=BSS
-
+ 
 SEGMENTS=--code-name $(CODE_SEGMENT) \
 		 --rodata-name $(RODATA_SEGMENT) \
 		 --bss-name $(BSS_SEGMENT) \
 		 --data-name $(DATA_SEGMENT)
 
 # Flag for assembler
-AFLAGS=-I $(CA65_INC) -t $(SYS)
+AFLAGS=-I $(CA65_INC) -t $(SYS) -D $(BUILD)
 
 # Flags for C-code compiler
-CFLAGS=-I ./includes -t $(SYS) --add-source -O -Or -Cl -Os
+CFLAGS=-I ./includes -t $(SYS) --add-source -O -Or -Cl -Os -D $(BUILD)
 
-target = tutorial-uploader.lnx
-objects = main.o directory.o
-
+target = tutorial-helloasm.lnx 
+objects = helloworld.o 
+		  
 $(target) : $(objects)
-	$(CL) -t $(SYS) -o $@ -v -C lynx-uploader.cfg -m uploader.map $(objects) lynx.lib
-	$(CP) $@ $(BUILD)-$@
-
-# Rule for making a *.o file out of a *.c file
-%.o: %.c
-	$(CC) $(CFLAGS) $(SEGMENTS) -o $(*).s $<
-	$(AS) -o $@ $(AFLAGS) $(*).s
-#	$(RM) $*.s
+	$(CL) -t $(SYS) -o $@ $(objects) lynx.lib
 
 # Rule for making a *.o file out of a *.s or *.asm file
 %.o: %.s
@@ -77,8 +73,4 @@ clean :
 	$(RM) $(objects)
 	$(RM) *.spr
 	$(RM) *.s
-	$(RM) *.o
 	$(RM) *.pal
-	$(RM) *.joy
-	$(RM) *.tgi
-	$(RM) *.ser
