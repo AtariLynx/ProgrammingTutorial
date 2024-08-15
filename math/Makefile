@@ -3,15 +3,12 @@
 # https://ismail.badawi.io/blog/automatic-directory-creation-in-make/
 
 # Include paths needed for compilations
-ifeq ($(CC65_INC),)
-	CC65_INC=/usr/share/cc65/include
-endif
-ifeq ($(CA65_INC),)
-	CA65_INC=/usr/share/cc65/asminc
-endif
-ifeq ($(BUILD),)
-	BUILD=debug
-endif
+CC65_INC=/workspaces/cc65/include
+CA65_INC=/workspaces/cc65/asminc
+CC65_HOME=/workspaces/cc65/
+LD65_CFG=/workspaces/cc65/cfg
+LD65_LIB=/workspaces/cc65/lib
+LD65_OBJ=/workspaces/cc65/obj
 
 # Compiling for Atari Lynx system
 SYS=lynx
@@ -39,10 +36,10 @@ SEGMENTS=--code-name $(CODE_SEGMENT) \
 		 --data-name $(DATA_SEGMENT)
 
 # Flag for assembler
-AFLAGS=-I $(CA65_INC) -t $(SYS) -D $(BUILD)
+AFLAGS=-I $(CA65_INC) -t $(SYS)
 
 # Flags for C-code compiler
-CFLAGS=-I ./includes -t $(SYS) --add-source -O -Or -Cl -Os -D $(BUILD)
+CFLAGS=-I ./includes -t $(SYS) --add-source -O -Or -Cl -Os
 
 target = tutorial-math.lnx 
 objects = math.o 
@@ -54,7 +51,7 @@ $(target) : $(objects)
 %.o: %.c
 	$(CC) $(CFLAGS) $(SEGMENTS) -o $(*).s $<
 	$(AS) -o $@ $(AFLAGS) $(*).s
-	$(RM) $*.s
+#$(RM) $*.s
 
 # Rule for making a *.o file out of a *.s or *.asm file
 %.o: %.s

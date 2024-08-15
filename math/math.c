@@ -3,9 +3,7 @@
 #include <lynx.h>
 #include <tgi.h>
 #include <peekpoke.h>
-//#include <math.h>
-
-extern char lynxtgi[];
+#include "math.h"
 
 void wait_joystick()
 {
@@ -178,7 +176,7 @@ void prematuremath_read()
 
 void initialize()
 {
-	tgi_install(&lynxtgi);
+	tgi_install(&tgi_static_stddrv);
 	tgi_init();
 	CLI();
 	
