@@ -46,7 +46,6 @@ objects = main.o directory.o
 
 $(target) : $(objects)
 	$(CL) -t $(SYS) -o $@ -v -C lynx-uploader.cfg -m uploader.map $(objects) lynx.lib
-	$(CP) $@ $(BUILD)-$@
 
 # Rule for making a *.o file out of a *.c file
 %.o: %.c

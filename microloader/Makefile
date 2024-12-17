@@ -1,15 +1,3 @@
-# https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html
-# https://yuukidach.github.io/p/makefile-for-projects-with-subdirectories/
-# https://ismail.badawi.io/blog/automatic-directory-creation-in-make/
-
-# Include paths needed for compilations
-ifeq ($(CC65_INC),)
-	CC65_INC=/usr/share/cc65/include
-endif
-ifeq ($(CA65_INC),)
-	CA65_INC=/usr/share/cc65/asminc
-endif
-
 # Compiling for Atari Lynx system
 SYS=lynx
 
@@ -38,21 +26,22 @@ SEGMENTS=--code-name $(CODE_SEGMENT) \
 # Flag for assembler
 AFLAGS=-I $(CA65_INC) -t $(SYS)
 
-# Flags for C-code compiler
-CFLAGS=-I ./includes -t $(SYS) --add-source -O -Or -Cl -Os
+target=microloader
 
-target = tutorial-serial.lnx
-objects = main.o
+all: $(target).lnx
 
-$(target) : $(objects)
-	$(CL) -t $(SYS) -o $@ -v -m serial.map $(objects) lynx.lib
+$(target).lnx : $(target).lyx
+	make_lnx $(target).lyx -b0 256K -o $@
 
-# Rule for making a *.o file out of a *.c file
-%.o: %.c
-	$(CC) $(CFLAGS) $(SEGMENTS) -o $(*).s $<
-	$(AS) -o $@ $(AFLAGS) $(*).s
-#	$(RM) $*.s
+$(target).lyx : stage1.enc stage2.bin
+	cat stage1.enc stage2.bin > $@
 
+%.enc: %.bin
+	lynxenc $< $@
+
+%.bin: %.o
+	$(CL) -t $(SYS) -o $@ -C lynx-asm.cfg -v -m assembler.map $<
+	
 # Rule for making a *.o file out of a *.s or *.asm file
 %.o: %.s
 	$(AS) -o $@ $(AFLAGS) $<
@@ -73,8 +62,6 @@ $(target) : $(objects)
 all: $(target)
 
 clean :
-	$(RM) $(objects)
-	$(RM) *.spr
 	$(RM) *.s
 	$(RM) *.o
 	$(RM) *.pal

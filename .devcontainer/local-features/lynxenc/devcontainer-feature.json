@@ -1,0 +1,19 @@
+{
+    "name": "lynxenc utility",
+    "id": "lyxenc",
+    "version": "1.0.0",
+    "description": "Atari Lynx encryption and decryption tools",
+    "options": {
+        "version": {
+            "default": "latest",
+            "description": "Select the version to install.",
+            "proposals": [
+                "latest"
+            ],
+            "type": "string"
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}

@@ -6,179 +6,179 @@ main.o:
     BSS               Offs=000000  Size=000006  Align=00001  Fill=0000
 directory.o:
     DIRECTORY         Offs=000000  Size=000010  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(_directerrno.o):
+/usr/share/cc65/lib/lynx.lib(_directerrno.o):
     CODE              Offs=0000EA  Size=000009  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(_hextab.o):
+/usr/share/cc65/lib/lynx.lib(_hextab.o):
     RODATA            Offs=000015  Size=000010  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(_oserror.o):
+/usr/share/cc65/lib/lynx.lib(_oserror.o):
     BSS               Offs=000006  Size=000001  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(_seterrno.o):
+/usr/share/cc65/lib/lynx.lib(_seterrno.o):
     CODE              Offs=0000F3  Size=000009  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(addysp.o):
+/usr/share/cc65/lib/lynx.lib(addysp.o):
     CODE              Offs=0000FC  Size=00000E  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(aslax3.o):
+/usr/share/cc65/lib/lynx.lib(aslax3.o):
     CODE              Offs=00010A  Size=00000E  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(atoi.o):
+/usr/share/cc65/lib/lynx.lib(atoi.o):
     CODE              Offs=000118  Size=000091  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(axlong.o):
+/usr/share/cc65/lib/lynx.lib(axlong.o):
     CODE              Offs=0001A9  Size=00000D  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(bootldr.o):
+/usr/share/cc65/lib/lynx.lib(bootldr.o):
     BOOTLDR           Offs=000000  Size=0000CB  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(callirq.o):
+/usr/share/cc65/lib/lynx.lib(callirq.o):
     DATA              Offs=000000  Size=00001E  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(callmain.o):
+/usr/share/cc65/lib/lynx.lib(callmain.o):
     CODE              Offs=0001B6  Size=000017  Align=00001  Fill=0000
     DATA              Offs=00001E  Size=000004  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(condes.o):
+/usr/share/cc65/lib/lynx.lib(condes.o):
     CODE              Offs=0001CD  Size=00000C  Align=00001  Fill=0000
     DATA              Offs=000022  Size=000025  Align=00001  Fill=0000
     ONCE              Offs=000000  Size=00000C  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(crt0.o):
+/usr/share/cc65/lib/lynx.lib(crt0.o):
     RODATA            Offs=000025  Size=00002C  Align=00001  Fill=0000
     STARTUP           Offs=000000  Size=00006D  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(ctype.o):
+/usr/share/cc65/lib/lynx.lib(ctype.o):
     RODATA            Offs=000051  Size=00008B  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(ctypemask.o):
+/usr/share/cc65/lib/lynx.lib(ctypemask.o):
     CODE              Offs=0001D9  Size=00001E  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(decax1.o):
+/usr/share/cc65/lib/lynx.lib(decax1.o):
     CODE              Offs=0001F7  Size=000007  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(decsp4.o):
+/usr/share/cc65/lib/lynx.lib(decsp4.o):
     CODE              Offs=0001FE  Size=00000D  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(decsp6.o):
+/usr/share/cc65/lib/lynx.lib(decsp6.o):
     CODE              Offs=00020B  Size=00000D  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(errno.o):
+/usr/share/cc65/lib/lynx.lib(errno.o):
     BSS               Offs=000007  Size=000002  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(exehdr.o):
+/usr/share/cc65/lib/lynx.lib(exehdr.o):
     EXEHDR            Offs=000000  Size=000040  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(extzp.o):
+/usr/share/cc65/lib/lynx.lib(extzp.o):
     EXTZP             Offs=000000  Size=000011  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(imul16x16r32.o):
+/usr/share/cc65/lib/lynx.lib(imul16x16r32.o):
     CODE              Offs=000218  Size=00002B  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(incsp2.o):
+/usr/share/cc65/lib/lynx.lib(incsp2.o):
     CODE              Offs=000243  Size=000015  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(incsp4.o):
+/usr/share/cc65/lib/lynx.lib(incsp4.o):
     CODE              Offs=000258  Size=000005  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(incsp6.o):
+/usr/share/cc65/lib/lynx.lib(incsp6.o):
     CODE              Offs=00025D  Size=000005  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(incsp8.o):
+/usr/share/cc65/lib/lynx.lib(incsp8.o):
     CODE              Offs=000262  Size=000005  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(irq.o):
+/usr/share/cc65/lib/lynx.lib(irq.o):
     CODE              Offs=000267  Size=000001  Align=00001  Fill=0000
     ONCE              Offs=00000C  Size=00000D  Align=00001  Fill=0000
     LOWCODE           Offs=000000  Size=000010  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(itoa.o):
+/usr/share/cc65/lib/lynx.lib(itoa.o):
     CODE              Offs=000268  Size=000094  Align=00001  Fill=0000
     RODATA            Offs=0000DC  Size=000007  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(joy-kernel.o):
+/usr/share/cc65/lib/lynx.lib(joy-kernel.o):
     CODE              Offs=0002FC  Size=00004D  Align=00001  Fill=0000
     RODATA            Offs=0000E3  Size=000004  Align=00001  Fill=0000
     BSS               Offs=000009  Size=000002  Align=00001  Fill=0000
     DATA              Offs=000047  Size=00000C  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(joy_stat_stddrv.o):
-/workspaces/cc65/lib/lynx.lib(ladd.o):
+/usr/share/cc65/lib/lynx.lib(joy_stat_stddrv.o):
+/usr/share/cc65/lib/lynx.lib(ladd.o):
     CODE              Offs=000349  Size=000024  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(land.o):
+/usr/share/cc65/lib/lynx.lib(land.o):
     CODE              Offs=00036D  Size=000021  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(lasr.o):
+/usr/share/cc65/lib/lynx.lib(lasr.o):
     CODE              Offs=00038E  Size=00001E  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(ldaxsp.o):
+/usr/share/cc65/lib/lynx.lib(ldaxsp.o):
     CODE              Offs=0003AC  Size=000009  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(ldeaxysp.o):
+/usr/share/cc65/lib/lynx.lib(ldeaxysp.o):
     CODE              Offs=0003B5  Size=000013  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(libref.o):
-/workspaces/cc65/lib/lynx.lib(lneg.o):
+/usr/share/cc65/lib/lynx.lib(libref.o):
+/usr/share/cc65/lib/lynx.lib(lneg.o):
     CODE              Offs=0003C8  Size=00001E  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(load.o):
+/usr/share/cc65/lib/lynx.lib(load.o):
     CODE              Offs=0003E6  Size=00001F  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(lpop.o):
+/usr/share/cc65/lib/lynx.lib(lpop.o):
     CODE              Offs=000405  Size=000014  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(lpush.o):
+/usr/share/cc65/lib/lynx.lib(lpush.o):
     CODE              Offs=000419  Size=00001E  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(lseek.o):
+/usr/share/cc65/lib/lynx.lib(lseek.o):
     CODE              Offs=000437  Size=00003C  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(lynx-cart.o):
+/usr/share/cc65/lib/lynx.lib(lynx-cart.o):
     CODE              Offs=000473  Size=00005E  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(negabs.o):
+/usr/share/cc65/lib/lynx.lib(negabs.o):
     CODE              Offs=0004D1  Size=000012  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(open.o):
+/usr/share/cc65/lib/lynx.lib(open.o):
     CODE              Offs=0004E3  Size=000098  Align=00001  Fill=0000
     DATA              Offs=000053  Size=000004  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(popa.o):
+/usr/share/cc65/lib/lynx.lib(popa.o):
     CODE              Offs=00057B  Size=00000A  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(pusha.o):
+/usr/share/cc65/lib/lynx.lib(pusha.o):
     CODE              Offs=000585  Size=000016  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(pushax.o):
+/usr/share/cc65/lib/lynx.lib(pushax.o):
     CODE              Offs=00059B  Size=00001A  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(read.o):
+/usr/share/cc65/lib/lynx.lib(read.o):
     CODE              Offs=0005B5  Size=000021  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(staxsp.o):
+/usr/share/cc65/lib/lynx.lib(staxsp.o):
     CODE              Offs=0005D6  Size=00000B  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(steaxsp.o):
+/usr/share/cc65/lib/lynx.lib(steaxsp.o):
     CODE              Offs=0005E1  Size=000015  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(strlen.o):
+/usr/share/cc65/lib/lynx.lib(strlen.o):
     CODE              Offs=0005F6  Size=000016  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(tgi-kernel.o):
+/usr/share/cc65/lib/lynx.lib(tgi-kernel.o):
     CODE              Offs=00060C  Size=00007F  Align=00001  Fill=0000
     RODATA            Offs=0000E7  Size=000004  Align=00001  Fill=0000
     BSS               Offs=00000B  Size=000028  Align=00001  Fill=0000
     DATA              Offs=000057  Size=000039  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(tgi_clear.o):
-/workspaces/cc65/lib/lynx.lib(tgi_clippedline.o):
+/usr/share/cc65/lib/lynx.lib(tgi_clear.o):
+/usr/share/cc65/lib/lynx.lib(tgi_clippedline.o):
     CODE              Offs=00068B  Size=0001E3  Align=00001  Fill=0000
     BSS               Offs=000033  Size=000008  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(tgi_colors.o):
-/workspaces/cc65/lib/lynx.lib(tgi_curtoxy.o):
+/usr/share/cc65/lib/lynx.lib(tgi_colors.o):
+/usr/share/cc65/lib/lynx.lib(tgi_curtoxy.o):
     CODE              Offs=00086E  Size=000015  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(tgi_done.o):
+/usr/share/cc65/lib/lynx.lib(tgi_done.o):
     CODE              Offs=000883  Size=00000E  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(tgi_gettextwidth.o):
+/usr/share/cc65/lib/lynx.lib(tgi_gettextwidth.o):
     CODE              Offs=000891  Size=000057  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(tgi_getxres.o):
+/usr/share/cc65/lib/lynx.lib(tgi_getxres.o):
     CODE              Offs=0008E8  Size=000007  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(tgi_getyres.o):
+/usr/share/cc65/lib/lynx.lib(tgi_getyres.o):
     CODE              Offs=0008EF  Size=000007  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(tgi_imulround.o):
+/usr/share/cc65/lib/lynx.lib(tgi_imulround.o):
     CODE              Offs=0008F6  Size=000025  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(tgi_init.o):
+/usr/share/cc65/lib/lynx.lib(tgi_init.o):
     CODE              Offs=00091B  Size=000058  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(tgi_ioctl.o):
+/usr/share/cc65/lib/lynx.lib(tgi_ioctl.o):
     CODE              Offs=000973  Size=00000A  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(tgi_irq.o):
+/usr/share/cc65/lib/lynx.lib(tgi_irq.o):
     DATA              Offs=000090  Size=000003  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(tgi_outcode.o):
+/usr/share/cc65/lib/lynx.lib(tgi_outcode.o):
     CODE              Offs=00097D  Size=000041  Align=00001  Fill=0000
     BSS               Offs=00003B  Size=000008  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(tgi_outtext.o):
+/usr/share/cc65/lib/lynx.lib(tgi_outtext.o):
     CODE              Offs=0009BE  Size=000091  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(tgi_outtextxy.o):
+/usr/share/cc65/lib/lynx.lib(tgi_outtextxy.o):
     CODE              Offs=000A4F  Size=000021  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(tgi_setcolor.o):
+/usr/share/cc65/lib/lynx.lib(tgi_setcolor.o):
     CODE              Offs=000A70  Size=000013  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(tgi_settextstyle.o):
+/usr/share/cc65/lib/lynx.lib(tgi_settextstyle.o):
     CODE              Offs=000A83  Size=000042  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(tgi_stat_stddrv.o):
-/workspaces/cc65/lib/lynx.lib(tgi_vectorchar.o):
+/usr/share/cc65/lib/lynx.lib(tgi_stat_stddrv.o):
+/usr/share/cc65/lib/lynx.lib(tgi_vectorchar.o):
     CODE              Offs=000AC5  Size=0000D5  Align=00001  Fill=0000
     BSS               Offs=000043  Size=000008  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(toascii.o):
+/usr/share/cc65/lib/lynx.lib(toascii.o):
     CODE              Offs=000B9A  Size=000003  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(udiv32by16r16.o):
+/usr/share/cc65/lib/lynx.lib(udiv32by16r16.o):
     CODE              Offs=000B9D  Size=000031  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(umul16x16r32.o):
+/usr/share/cc65/lib/lynx.lib(umul16x16r32.o):
     CODE              Offs=000BCE  Size=00002C  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(umul8x16r24.o):
+/usr/share/cc65/lib/lynx.lib(umul8x16r24.o):
     CODE              Offs=000BFA  Size=00002B  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(uploader.o):
+/usr/share/cc65/lib/lynx.lib(uploader.o):
     UPCODE            Offs=000000  Size=000060  Align=00001  Fill=0000
     UPDATA            Offs=000000  Size=000001  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(zerobss.o):
+/usr/share/cc65/lib/lynx.lib(zerobss.o):
     CODE              Offs=000C25  Size=000023  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(zeropage.o):
+/usr/share/cc65/lib/lynx.lib(zeropage.o):
     ZEROPAGE          Offs=000000  Size=00001A  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(lynx-stdjoy-joy.o):
+/usr/share/cc65/lib/lynx.lib(lynx-stdjoy-joy.o):
     CODE              Offs=000C48  Size=000011  Align=00001  Fill=0000
     DATA              Offs=000093  Size=00000E  Align=00001  Fill=0000
-/workspaces/cc65/lib/lynx.lib(lynx-160-102-16-tgi.o):
+/usr/share/cc65/lib/lynx.lib(lynx-160-102-16-tgi.o):
     CODE              Offs=000C59  Size=00039E  Align=00001  Fill=0000
     RODATA            Offs=0000EB  Size=000324  Align=00001  Fill=0000
     BSS               Offs=00004B  Size=0000BD  Align=00001  Fill=0000
@@ -438,7 +438,7 @@ __BANK0BLOCKSIZE__ ([linker generated]):
 __BANK1BLOCKSIZE__ ([linker generated]):
     exehdr.o                  lynx/exehdr.s:7
 __BOOTLDR__ (bootldr.o):
-    [linker generated]        /workspaces/cc65/cfg/lynx-uploader.cfg:7
+    [linker generated]        /usr/share/cc65/cfg/lynx-uploader.cfg:7
 __BSS_RUN__ ([linker generated]):
     zerobss.o                 common/zerobss.s:8
 __BSS_SIZE__ ([linker generated]):
@@ -459,7 +459,7 @@ __DESTRUCTOR_COUNT__ ([linker generated]):
 __DESTRUCTOR_TABLE__ ([linker generated]):
     condes.o                  runtime/condes.s:19
 __EXEHDR__ (exehdr.o):
-    [linker generated]        /workspaces/cc65/cfg/lynx-uploader.cfg:6
+    [linker generated]        /usr/share/cc65/cfg/lynx-uploader.cfg:6
 __INTERRUPTOR_COUNT__ ([linker generated]):
     callirq.o                 runtime/callirq.s:36
 __INTERRUPTOR_TABLE__ ([linker generated]):
@@ -476,11 +476,11 @@ __RODATA_SIZE__ ([linker generated]):
     directory.o               directory.asm:9
 __STACKSIZE__ ([linker generated]):
     crt0.o                    lynx/crt0.s:25
-    [linker generated]        /workspaces/cc65/cfg/lynx-uploader.cfg:17
+    [linker generated]        /usr/share/cc65/cfg/lynx-uploader.cfg:17
 __STARTOFDIRECTORY__ ([linker generated]):
     open.o                    lynx/open.s:31
     directory.o               directory.asm:6
-    [linker generated]        /workspaces/cc65/cfg/lynx-uploader.cfg:15
+    [linker generated]        /usr/share/cc65/cfg/lynx-uploader.cfg:15
 __STARTUP_LOAD__ ([linker generated]):
     directory.o               directory.asm:12
 __STARTUP_SIZE__ ([linker generated]):
@@ -494,16 +494,16 @@ __UPCODE_SIZE__ ([linker generated]):
 __UPDATA_SIZE__ ([linker generated]):
     directory.o               directory.asm:21
 __UPLOADER__ (uploader.o):
-    [linker generated]        /workspaces/cc65/cfg/lynx-uploader.cfg:8
+    [linker generated]        /usr/share/cc65/cfg/lynx-uploader.cfg:8
 ___directerrno (_directerrno.o):
-    open.o                    /usr/share/cc65/asminc/errno.inc:10
+    open.o                    /usr/src/cc65/asminc/errno.inc:10
 ___errno (errno.o):
-    _seterrno.o               /usr/share/cc65/asminc/errno.inc:7
+    _seterrno.o               /usr/src/cc65/asminc/errno.inc:7
 ___oserror (_oserror.o):
-    _directerrno.o            /usr/share/cc65/asminc/errno.inc:7
-    open.o                    /usr/share/cc65/asminc/errno.inc:7
+    _directerrno.o            /usr/src/cc65/asminc/errno.inc:7
+    open.o                    /usr/src/cc65/asminc/errno.inc:7
 ___seterrno (_seterrno.o):
-    _directerrno.o            /usr/share/cc65/asminc/errno.inc:9
+    _directerrno.o            /usr/src/cc65/asminc/errno.inc:9
 __ctype (ctype.o):
     ctypemask.o               common/ctypemask.s:23
 __ctypeidx (ctype.o):
@@ -550,45 +550,45 @@ _read (read.o):
 _strlen (strlen.o):
     tgi_gettextwidth.o        tgi/tgi_gettextwidth.s:10
 _tgi_charwidth (tgi-kernel.o):
-    tgi_gettextwidth.o        /usr/share/cc65/asminc/tgi-kernel.inc:126
+    tgi_gettextwidth.o        /usr/src/cc65/asminc/tgi-kernel.inc:126
 _tgi_clear (tgi_clear.o):
     main.o                    main.s:18
 _tgi_color (tgi-kernel.o):
-    tgi_setcolor.o            /usr/share/cc65/asminc/tgi-kernel.inc:120
+    tgi_setcolor.o            /usr/src/cc65/asminc/tgi-kernel.inc:120
 _tgi_colorcount (tgi-kernel.o):
-    tgi_setcolor.o            /usr/share/cc65/asminc/tgi-kernel.inc:132
+    tgi_setcolor.o            /usr/src/cc65/asminc/tgi-kernel.inc:132
 _tgi_curx (tgi-kernel.o):
-    tgi_curtoxy.o             /usr/share/cc65/asminc/tgi-kernel.inc:118
-    tgi_vectorchar.o          /usr/share/cc65/asminc/tgi-kernel.inc:118
-    tgi_outtext.o             /usr/share/cc65/asminc/tgi-kernel.inc:118
-    tgi_outtextxy.o           /usr/share/cc65/asminc/tgi-kernel.inc:118
+    tgi_curtoxy.o             /usr/src/cc65/asminc/tgi-kernel.inc:118
+    tgi_vectorchar.o          /usr/src/cc65/asminc/tgi-kernel.inc:118
+    tgi_outtext.o             /usr/src/cc65/asminc/tgi-kernel.inc:118
+    tgi_outtextxy.o           /usr/src/cc65/asminc/tgi-kernel.inc:118
 _tgi_cury (tgi-kernel.o):
-    tgi_curtoxy.o             /usr/share/cc65/asminc/tgi-kernel.inc:119
-    tgi_outtextxy.o           /usr/share/cc65/asminc/tgi-kernel.inc:119
+    tgi_curtoxy.o             /usr/src/cc65/asminc/tgi-kernel.inc:119
+    tgi_outtextxy.o           /usr/src/cc65/asminc/tgi-kernel.inc:119
 _tgi_done (tgi_done.o):
-    tgi_init.o                /usr/share/cc65/asminc/tgi-kernel.inc:193
-    tgi-kernel.o              /usr/share/cc65/asminc/tgi-kernel.inc:193
+    tgi_init.o                /usr/src/cc65/asminc/tgi-kernel.inc:193
+    tgi-kernel.o              /usr/src/cc65/asminc/tgi-kernel.inc:193
 _tgi_error (tgi-kernel.o):
-    tgi_init.o                /usr/share/cc65/asminc/tgi-kernel.inc:116
+    tgi_init.o                /usr/src/cc65/asminc/tgi-kernel.inc:116
 _tgi_flags (tgi-kernel.o):
-    tgi_settextstyle.o        /usr/share/cc65/asminc/tgi-kernel.inc:137
+    tgi_settextstyle.o        /usr/src/cc65/asminc/tgi-kernel.inc:137
 _tgi_font (tgi-kernel.o):
-    tgi_gettextwidth.o        /usr/share/cc65/asminc/tgi-kernel.inc:121
-    tgi_outtext.o             /usr/share/cc65/asminc/tgi-kernel.inc:121
-    tgi_settextstyle.o        /usr/share/cc65/asminc/tgi-kernel.inc:121
+    tgi_gettextwidth.o        /usr/src/cc65/asminc/tgi-kernel.inc:121
+    tgi_outtext.o             /usr/src/cc65/asminc/tgi-kernel.inc:121
+    tgi_settextstyle.o        /usr/src/cc65/asminc/tgi-kernel.inc:121
 _tgi_fontheight (tgi-kernel.o):
-    tgi_settextstyle.o        /usr/share/cc65/asminc/tgi-kernel.inc:135
+    tgi_settextstyle.o        /usr/src/cc65/asminc/tgi-kernel.inc:135
 _tgi_fontwidth (tgi-kernel.o):
-    tgi_settextstyle.o        /usr/share/cc65/asminc/tgi-kernel.inc:134
+    tgi_settextstyle.o        /usr/src/cc65/asminc/tgi-kernel.inc:134
 _tgi_gettextwidth (tgi_gettextwidth.o):
-    tgi_outtext.o             /usr/share/cc65/asminc/tgi-kernel.inc:208
+    tgi_outtext.o             /usr/src/cc65/asminc/tgi-kernel.inc:208
 _tgi_getxres (tgi_getxres.o):
-    tgi_init.o                /usr/share/cc65/asminc/tgi-kernel.inc:209
+    tgi_init.o                /usr/src/cc65/asminc/tgi-kernel.inc:209
 _tgi_getyres (tgi_getyres.o):
-    tgi_init.o                /usr/share/cc65/asminc/tgi-kernel.inc:210
+    tgi_init.o                /usr/src/cc65/asminc/tgi-kernel.inc:210
 _tgi_gmode (tgi-kernel.o):
-    tgi_init.o                /usr/share/cc65/asminc/tgi-kernel.inc:117
-    tgi_done.o                /usr/share/cc65/asminc/tgi-kernel.inc:117
+    tgi_init.o                /usr/src/cc65/asminc/tgi-kernel.inc:117
+    tgi_done.o                /usr/src/cc65/asminc/tgi-kernel.inc:117
 _tgi_init (tgi_init.o):
     main.o                    main.s:17
 _tgi_install (tgi-kernel.o):
@@ -596,45 +596,45 @@ _tgi_install (tgi-kernel.o):
 _tgi_ioctl (tgi_ioctl.o):
     main.o                    main.s:21
 _tgi_outtext (tgi_outtext.o):
-    tgi_outtextxy.o           /usr/share/cc65/asminc/tgi-kernel.inc:220
+    tgi_outtextxy.o           /usr/src/cc65/asminc/tgi-kernel.inc:220
 _tgi_outtextxy (tgi_outtextxy.o):
     main.o                    main.s:20
 _tgi_setcolor (tgi_setcolor.o):
-    tgi_init.o                /usr/share/cc65/asminc/tgi-kernel.inc:224
+    tgi_init.o                /usr/src/cc65/asminc/tgi-kernel.inc:224
     main.o                    main.s:19
 _tgi_settextstyle (tgi_settextstyle.o):
-    tgi_init.o                /usr/share/cc65/asminc/tgi-kernel.inc:230
+    tgi_init.o                /usr/src/cc65/asminc/tgi-kernel.inc:230
 _tgi_static_stddrv (tgi_stat_stddrv.o):
     main.o                    main.s:15
 _tgi_textdir (tgi-kernel.o):
-    tgi_vectorchar.o          /usr/share/cc65/asminc/tgi-kernel.inc:122
-    tgi_outtext.o             /usr/share/cc65/asminc/tgi-kernel.inc:122
-    tgi_settextstyle.o        /usr/share/cc65/asminc/tgi-kernel.inc:122
+    tgi_vectorchar.o          /usr/src/cc65/asminc/tgi-kernel.inc:122
+    tgi_outtext.o             /usr/src/cc65/asminc/tgi-kernel.inc:122
+    tgi_settextstyle.o        /usr/src/cc65/asminc/tgi-kernel.inc:122
 _tgi_textscaleh (tgi-kernel.o):
-    tgi_vectorchar.o          /usr/share/cc65/asminc/tgi-kernel.inc:125
+    tgi_vectorchar.o          /usr/src/cc65/asminc/tgi-kernel.inc:125
 _tgi_textscalew (tgi-kernel.o):
-    tgi_gettextwidth.o        /usr/share/cc65/asminc/tgi-kernel.inc:124
-    tgi_vectorchar.o          /usr/share/cc65/asminc/tgi-kernel.inc:124
-    tgi_outtext.o             /usr/share/cc65/asminc/tgi-kernel.inc:124
-    tgi_settextstyle.o        /usr/share/cc65/asminc/tgi-kernel.inc:124
+    tgi_gettextwidth.o        /usr/src/cc65/asminc/tgi-kernel.inc:124
+    tgi_vectorchar.o          /usr/src/cc65/asminc/tgi-kernel.inc:124
+    tgi_outtext.o             /usr/src/cc65/asminc/tgi-kernel.inc:124
+    tgi_settextstyle.o        /usr/src/cc65/asminc/tgi-kernel.inc:124
 _tgi_vectorchar (tgi_vectorchar.o):
-    tgi_outtext.o             /usr/share/cc65/asminc/tgi-vectorfont.inc:67
+    tgi_outtext.o             /usr/src/cc65/asminc/tgi-vectorfont.inc:67
 _tgi_vectorfont (tgi-kernel.o):
-    tgi_gettextwidth.o        /usr/share/cc65/asminc/tgi-kernel.inc:123
-    tgi_vectorchar.o          /usr/share/cc65/asminc/tgi-kernel.inc:123
-    tgi_outtext.o             /usr/share/cc65/asminc/tgi-kernel.inc:123
+    tgi_gettextwidth.o        /usr/src/cc65/asminc/tgi-kernel.inc:123
+    tgi_vectorchar.o          /usr/src/cc65/asminc/tgi-kernel.inc:123
+    tgi_outtext.o             /usr/src/cc65/asminc/tgi-kernel.inc:123
 _tgi_xmax (tgi-kernel.o):
-    tgi_clippedline.o         /usr/share/cc65/asminc/tgi-kernel.inc:130
-    tgi_init.o                /usr/share/cc65/asminc/tgi-kernel.inc:130
+    tgi_clippedline.o         /usr/src/cc65/asminc/tgi-kernel.inc:130
+    tgi_init.o                /usr/src/cc65/asminc/tgi-kernel.inc:130
 _tgi_xres (tgi-kernel.o):
-    tgi_outcode.o             /usr/share/cc65/asminc/tgi-kernel.inc:128
-    tgi_getxres.o             /usr/share/cc65/asminc/tgi-kernel.inc:128
+    tgi_outcode.o             /usr/src/cc65/asminc/tgi-kernel.inc:128
+    tgi_getxres.o             /usr/src/cc65/asminc/tgi-kernel.inc:128
 _tgi_ymax (tgi-kernel.o):
-    tgi_clippedline.o         /usr/share/cc65/asminc/tgi-kernel.inc:131
-    tgi_init.o                /usr/share/cc65/asminc/tgi-kernel.inc:131
+    tgi_clippedline.o         /usr/src/cc65/asminc/tgi-kernel.inc:131
+    tgi_init.o                /usr/src/cc65/asminc/tgi-kernel.inc:131
 _tgi_yres (tgi-kernel.o):
-    tgi_outcode.o             /usr/share/cc65/asminc/tgi-kernel.inc:129
-    tgi_getyres.o             /usr/share/cc65/asminc/tgi-kernel.inc:129
+    tgi_outcode.o             /usr/src/cc65/asminc/tgi-kernel.inc:129
+    tgi_getyres.o             /usr/src/cc65/asminc/tgi-kernel.inc:129
 _toascii (toascii.o):
     tgi_gettextwidth.o        tgi/tgi_gettextwidth.s:10
     tgi_outtext.o             tgi/tgi_outtext.s:12
@@ -719,44 +719,44 @@ popax (incsp2.o):
 popeax (lpop.o):
     lasr.o                    runtime/lasr.s:15
 ptr1 (zeropage.o):
-    imul16x16r32.o            /usr/share/cc65/asminc/zeropage.inc:12
-    umul16x16r32.o            /usr/share/cc65/asminc/zeropage.inc:12
-    udiv32by16r16.o           /usr/share/cc65/asminc/zeropage.inc:12
-    tgi_imulround.o           /usr/share/cc65/asminc/zeropage.inc:12
-    tgi_gettextwidth.o        /usr/share/cc65/asminc/zeropage.inc:12
+    imul16x16r32.o            /usr/src/cc65/asminc/zeropage.inc:12
+    umul16x16r32.o            /usr/src/cc65/asminc/zeropage.inc:12
+    udiv32by16r16.o           /usr/src/cc65/asminc/zeropage.inc:12
+    tgi_imulround.o           /usr/src/cc65/asminc/zeropage.inc:12
+    tgi_gettextwidth.o        /usr/src/cc65/asminc/zeropage.inc:12
     tgi_curtoxy.o             tgi/tgi_curtoxy.s:9
-    tgi_clippedline.o         /usr/share/cc65/asminc/zeropage.inc:12
-    tgi_vectorchar.o          /usr/share/cc65/asminc/zeropage.inc:12
-    tgi_outtext.o             /usr/share/cc65/asminc/zeropage.inc:12
+    tgi_clippedline.o         /usr/src/cc65/asminc/zeropage.inc:12
+    tgi_vectorchar.o          /usr/src/cc65/asminc/zeropage.inc:12
+    tgi_outtext.o             /usr/src/cc65/asminc/zeropage.inc:12
     atoi.o                    common/atoi.s:10
-    lynx-160-102-16-tgi.o     /usr/share/cc65/asminc/zeropage.inc:12
+    lynx-160-102-16-tgi.o     /usr/src/cc65/asminc/zeropage.inc:12
     zerobss.o                 common/zerobss.s:9
-    umul8x16r24.o             /usr/share/cc65/asminc/zeropage.inc:12
-    tgi_settextstyle.o        /usr/share/cc65/asminc/zeropage.inc:12
+    umul8x16r24.o             /usr/src/cc65/asminc/zeropage.inc:12
+    tgi_settextstyle.o        /usr/src/cc65/asminc/zeropage.inc:12
     tgi_ioctl.o               tgi/tgi_ioctl.s:14
     tgi_init.o                tgi/tgi_init.s:12
     tgi-kernel.o              tgi/tgi-kernel.s:8
     joy-kernel.o              joystick/joy-kernel.s:8
 ptr2 (zeropage.o):
-    udiv32by16r16.o           /usr/share/cc65/asminc/zeropage.inc:12
-    tgi_gettextwidth.o        /usr/share/cc65/asminc/zeropage.inc:12
+    udiv32by16r16.o           /usr/src/cc65/asminc/zeropage.inc:12
+    tgi_gettextwidth.o        /usr/src/cc65/asminc/zeropage.inc:12
     tgi_curtoxy.o             tgi/tgi_curtoxy.s:9
-    tgi_clippedline.o         /usr/share/cc65/asminc/zeropage.inc:12
+    tgi_clippedline.o         /usr/src/cc65/asminc/zeropage.inc:12
     atoi.o                    common/atoi.s:10
-    lynx-160-102-16-tgi.o     /usr/share/cc65/asminc/zeropage.inc:12
+    lynx-160-102-16-tgi.o     /usr/src/cc65/asminc/zeropage.inc:12
     itoa.o                    common/itoa.s:11
 ptr3 (zeropage.o):
-    imul16x16r32.o            /usr/share/cc65/asminc/zeropage.inc:12
-    umul16x16r32.o            /usr/share/cc65/asminc/zeropage.inc:12
-    udiv32by16r16.o           /usr/share/cc65/asminc/zeropage.inc:12
-    tgi_gettextwidth.o        /usr/share/cc65/asminc/zeropage.inc:12
-    tgi_outtext.o             /usr/share/cc65/asminc/zeropage.inc:12
-    lynx-160-102-16-tgi.o     /usr/share/cc65/asminc/zeropage.inc:12
-    umul8x16r24.o             /usr/share/cc65/asminc/zeropage.inc:12
+    imul16x16r32.o            /usr/src/cc65/asminc/zeropage.inc:12
+    umul16x16r32.o            /usr/src/cc65/asminc/zeropage.inc:12
+    udiv32by16r16.o           /usr/src/cc65/asminc/zeropage.inc:12
+    tgi_gettextwidth.o        /usr/src/cc65/asminc/zeropage.inc:12
+    tgi_outtext.o             /usr/src/cc65/asminc/zeropage.inc:12
+    lynx-160-102-16-tgi.o     /usr/src/cc65/asminc/zeropage.inc:12
+    umul8x16r24.o             /usr/src/cc65/asminc/zeropage.inc:12
     itoa.o                    common/itoa.s:11
 ptr4 (zeropage.o):
     strlen.o                  common/strlen.s:12
-    lynx-160-102-16-tgi.o     /usr/share/cc65/asminc/zeropage.inc:12
+    lynx-160-102-16-tgi.o     /usr/src/cc65/asminc/zeropage.inc:12
 push0 (pushax.o):
     main.o                    main.s:306
 pusha (pusha.o):
@@ -780,8 +780,8 @@ pusheax (lpush.o):
     lseek.o                   lynx/lseek.s:17
     open.o                    lynx/open.s:23
 regbank (zeropage.o):
-    tgi_vectorchar.o          /usr/share/cc65/asminc/zeropage.inc:14
-    tgi_outtext.o             /usr/share/cc65/asminc/zeropage.inc:14
+    tgi_vectorchar.o          /usr/src/cc65/asminc/zeropage.inc:14
+    tgi_outtext.o             /usr/src/cc65/asminc/zeropage.inc:14
 sp (zeropage.o):
     lpop.o                    runtime/lpop.s:10
     ldeaxysp.o                runtime/ldeaxysp.s:12
@@ -800,12 +800,12 @@ sp (zeropage.o):
     pushax.o                  runtime/pushax.s:8
     pusha.o                   runtime/pusha.s:8
     itoa.o                    common/itoa.s:11
-    crt0.o                    /usr/share/cc65/asminc/zeropage.inc:11
+    crt0.o                    /usr/src/cc65/asminc/zeropage.inc:11
 sreg (zeropage.o):
-    umul16x16r32.o            /usr/share/cc65/asminc/zeropage.inc:11
-    udiv32by16r16.o           /usr/share/cc65/asminc/zeropage.inc:11
-    tgi_imulround.o           /usr/share/cc65/asminc/zeropage.inc:11
-    tgi_clippedline.o         /usr/share/cc65/asminc/zeropage.inc:11
+    umul16x16r32.o            /usr/src/cc65/asminc/zeropage.inc:11
+    udiv32by16r16.o           /usr/src/cc65/asminc/zeropage.inc:11
+    tgi_imulround.o           /usr/src/cc65/asminc/zeropage.inc:11
+    tgi_clippedline.o         /usr/src/cc65/asminc/zeropage.inc:11
     lpop.o                    runtime/lpop.s:10
     ldeaxysp.o                runtime/ldeaxysp.s:12
     lasr.o                    runtime/lasr.s:16
@@ -815,7 +815,7 @@ sreg (zeropage.o):
     ladd.o                    runtime/ladd.s:9
     axlong.o                  runtime/axlong.s:9
     atoi.o                    common/atoi.s:10
-    umul8x16r24.o             /usr/share/cc65/asminc/zeropage.inc:11
+    umul8x16r24.o             /usr/src/cc65/asminc/zeropage.inc:11
     steaxsp.o                 runtime/steaxsp.s:8
     open.o                    lynx/open.s:18
     itoa.o                    common/itoa.s:11
@@ -824,73 +824,73 @@ stax0sp (staxsp.o):
 steaxysp (steaxsp.o):
     open.o                    lynx/open.s:24
 tgi_clear (tgi-kernel.o):
-    tgi_clear.o               /usr/share/cc65/asminc/tgi-kernel.inc:156
+    tgi_clear.o               /usr/src/cc65/asminc/tgi-kernel.inc:156
 tgi_clip_x1 (tgi_outcode.o):
-    tgi_clippedline.o         /usr/share/cc65/asminc/tgi-kernel.inc:142
-    tgi_vectorchar.o          /usr/share/cc65/asminc/tgi-kernel.inc:142
+    tgi_clippedline.o         /usr/src/cc65/asminc/tgi-kernel.inc:142
+    tgi_vectorchar.o          /usr/src/cc65/asminc/tgi-kernel.inc:142
 tgi_clip_x2 (tgi_outcode.o):
-    tgi_clippedline.o         /usr/share/cc65/asminc/tgi-kernel.inc:144
+    tgi_clippedline.o         /usr/src/cc65/asminc/tgi-kernel.inc:144
 tgi_clip_y1 (tgi_outcode.o):
-    tgi_clippedline.o         /usr/share/cc65/asminc/tgi-kernel.inc:143
+    tgi_clippedline.o         /usr/src/cc65/asminc/tgi-kernel.inc:143
 tgi_clip_y2 (tgi_outcode.o):
-    tgi_clippedline.o         /usr/share/cc65/asminc/tgi-kernel.inc:145
+    tgi_clippedline.o         /usr/src/cc65/asminc/tgi-kernel.inc:145
 tgi_clippedline (tgi_clippedline.o):
-    tgi_vectorchar.o          /usr/share/cc65/asminc/tgi-kernel.inc:174
+    tgi_vectorchar.o          /usr/src/cc65/asminc/tgi-kernel.inc:174
 tgi_color_white (tgi_colors.o):
-    tgi_init.o                /usr/share/cc65/asminc/tgi-kernel.inc:110
+    tgi_init.o                /usr/src/cc65/asminc/tgi-kernel.inc:110
 tgi_control (tgi-kernel.o):
-    tgi_ioctl.o               /usr/share/cc65/asminc/tgi-kernel.inc:155
+    tgi_ioctl.o               /usr/src/cc65/asminc/tgi-kernel.inc:155
 tgi_curtoxy (tgi_curtoxy.o):
-    tgi_outtext.o             /usr/share/cc65/asminc/tgi-kernel.inc:175
+    tgi_outtext.o             /usr/src/cc65/asminc/tgi-kernel.inc:175
 tgi_done (tgi-kernel.o):
-    tgi_done.o                /usr/share/cc65/asminc/tgi-kernel.inc:153
+    tgi_done.o                /usr/src/cc65/asminc/tgi-kernel.inc:153
 tgi_getdefpalette (tgi-kernel.o):
-    tgi_init.o                /usr/share/cc65/asminc/tgi-kernel.inc:162
+    tgi_init.o                /usr/src/cc65/asminc/tgi-kernel.inc:162
 tgi_geterror (tgi-kernel.o):
-    tgi_init.o                /usr/share/cc65/asminc/tgi-kernel.inc:154
+    tgi_init.o                /usr/src/cc65/asminc/tgi-kernel.inc:154
 tgi_imulround (tgi_imulround.o):
-    tgi_gettextwidth.o        /usr/share/cc65/asminc/tgi-kernel.inc:177
-    tgi_vectorchar.o          /usr/share/cc65/asminc/tgi-kernel.inc:177
-    tgi_outtext.o             /usr/share/cc65/asminc/tgi-kernel.inc:177
+    tgi_gettextwidth.o        /usr/src/cc65/asminc/tgi-kernel.inc:177
+    tgi_vectorchar.o          /usr/src/cc65/asminc/tgi-kernel.inc:177
+    tgi_outtext.o             /usr/src/cc65/asminc/tgi-kernel.inc:177
 tgi_init (tgi-kernel.o):
-    tgi_init.o                /usr/share/cc65/asminc/tgi-kernel.inc:152
+    tgi_init.o                /usr/src/cc65/asminc/tgi-kernel.inc:152
 tgi_inv_arg (tgi-kernel.o):
-    tgi_setcolor.o            /usr/share/cc65/asminc/tgi-kernel.inc:178
+    tgi_setcolor.o            /usr/src/cc65/asminc/tgi-kernel.inc:178
 tgi_libref (tgi_irq.o):
     tgi-kernel.o              tgi/tgi-kernel.s:7
 tgi_line (tgi-kernel.o):
-    tgi_clippedline.o         /usr/share/cc65/asminc/tgi-kernel.inc:165
+    tgi_clippedline.o         /usr/src/cc65/asminc/tgi-kernel.inc:165
 tgi_outcode (tgi_outcode.o):
-    tgi_clippedline.o         /usr/share/cc65/asminc/tgi-kernel.inc:181
+    tgi_clippedline.o         /usr/src/cc65/asminc/tgi-kernel.inc:181
 tgi_outtext (tgi-kernel.o):
-    tgi_outtext.o             /usr/share/cc65/asminc/tgi-kernel.inc:168
+    tgi_outtext.o             /usr/src/cc65/asminc/tgi-kernel.inc:168
 tgi_setcolor (tgi-kernel.o):
-    tgi_setcolor.o            /usr/share/cc65/asminc/tgi-kernel.inc:159
+    tgi_setcolor.o            /usr/src/cc65/asminc/tgi-kernel.inc:159
 tgi_setdrawpage (tgi-kernel.o):
-    tgi_init.o                /usr/share/cc65/asminc/tgi-kernel.inc:158
+    tgi_init.o                /usr/src/cc65/asminc/tgi-kernel.inc:158
 tgi_setpalette (tgi-kernel.o):
-    tgi_init.o                /usr/share/cc65/asminc/tgi-kernel.inc:160
+    tgi_init.o                /usr/src/cc65/asminc/tgi-kernel.inc:160
 tgi_setviewpage (tgi-kernel.o):
-    tgi_init.o                /usr/share/cc65/asminc/tgi-kernel.inc:157
+    tgi_init.o                /usr/src/cc65/asminc/tgi-kernel.inc:157
 tmp1 (zeropage.o):
-    imul16x16r32.o            /usr/share/cc65/asminc/zeropage.inc:13
-    tgi_outcode.o             /usr/share/cc65/asminc/zeropage.inc:13
-    tgi_clippedline.o         /usr/share/cc65/asminc/zeropage.inc:13
+    imul16x16r32.o            /usr/src/cc65/asminc/zeropage.inc:13
+    tgi_outcode.o             /usr/src/cc65/asminc/zeropage.inc:13
+    tgi_clippedline.o         /usr/src/cc65/asminc/zeropage.inc:13
     lasr.o                    runtime/lasr.s:16
     land.o                    runtime/land.s:10
     ladd.o                    runtime/ladd.s:9
     atoi.o                    common/atoi.s:10
     aslax3.o                  runtime/aslax3.s:8
-    lynx-160-102-16-tgi.o     /usr/share/cc65/asminc/zeropage.inc:13
+    lynx-160-102-16-tgi.o     /usr/src/cc65/asminc/zeropage.inc:13
     itoa.o                    common/itoa.s:11
     main.o                    main.s:11
 tmp2 (zeropage.o):
-    lynx-160-102-16-tgi.o     /usr/share/cc65/asminc/zeropage.inc:13
+    lynx-160-102-16-tgi.o     /usr/src/cc65/asminc/zeropage.inc:13
 tmp3 (zeropage.o):
-    lynx-160-102-16-tgi.o     /usr/share/cc65/asminc/zeropage.inc:13
+    lynx-160-102-16-tgi.o     /usr/src/cc65/asminc/zeropage.inc:13
     open.o                    lynx/open.s:18
 tmp4 (zeropage.o):
-    lynx-160-102-16-tgi.o     /usr/share/cc65/asminc/zeropage.inc:13
+    lynx-160-102-16-tgi.o     /usr/src/cc65/asminc/zeropage.inc:13
 tosaddeax (ladd.o):
     open.o                    lynx/open.s:24
 tosandeax (land.o):

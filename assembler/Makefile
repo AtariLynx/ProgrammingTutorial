@@ -1,11 +1,3 @@
-# Include paths needed for compilations
-CC65_INC=/workspaces/cc65/include
-CA65_INC=/workspaces/cc65/asminc
-CC65_HOME=/workspaces/cc65/
-LD65_CFG=/workspaces/cc65/cfg
-LD65_LIB=/workspaces/cc65/lib
-LD65_OBJ=/workspaces/cc65/obj
-
 # Compiling for Atari Lynx system
 SYS=lynx
 
@@ -43,7 +35,7 @@ $(target).lnx : $(objects)
 	$(CL) -t $(SYS) -o $(target).bin -C lynx-asm.cfg -v -m assembler.map $(objects) lynx.lib
 	lynxenc $(target).bin $(target).lyx
 	make_lnx $(target).lyx -b0 256K -o $@
-	
+
 # Rule for making a *.o file out of a *.s or *.asm file
 %.o: %.s
 	$(AS) -o $@ $(AFLAGS) $<

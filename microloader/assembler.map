@@ -1,0 +1,28 @@
+Modules list:
+-------------
+stage2.o:
+    CODE              Offs=000000  Size=000042  Align=00001  Fill=0000
+    RODATA            Offs=000000  Size=000059  Align=00001  Fill=0000
+
+
+Segment list:
+-------------
+Name                   Start     End    Size  Align
+----------------------------------------------------
+CODE                  000200  000241  000042  00001
+RODATA                000242  00029A  000059  00001
+
+
+Exports list by name:
+---------------------
+
+
+
+Exports list by value:
+----------------------
+
+
+
+Imports list:
+-------------
+

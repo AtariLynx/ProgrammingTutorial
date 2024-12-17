@@ -1,6 +1,6 @@
 {
     "files.exclude": {
-        "**/*.o": true,
+        "**/*.o": false,
         "**/*.s": { "when": "$(basename).c" },
         "**/*.pal": false,
         "**/*.spr": false,
@@ -17,5 +17,6 @@
         }
     ],
     "makefile.buildLog": "build.txt",
-    "makefile.makefilePath": "/workspaces/ProgrammingTutorial/uploader"
+    "makefile.makefilePath": "/workspaces/ProgrammingTutorial/hellobll",
+    "makefile.configureOnOpen": true
 }
