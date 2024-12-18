@@ -40,7 +40,7 @@ $(target).lyx : stage1.enc stage2.bin
 	lynxenc $< $@
 
 %.bin: %.o
-	$(CL) -t $(SYS) -o $@ -C lynx-asm.cfg -v -m assembler.map $<
+	$(CL) -t $(SYS) -o $@ -C lynx-asm.cfg -v -m $*.map $<
 	
 # Rule for making a *.o file out of a *.s or *.asm file
 %.o: %.s
