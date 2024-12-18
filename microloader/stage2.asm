@@ -1,3 +1,6 @@
+; Original implementation by Bastian Schick (42Bastian)
+; https://github.com/42Bastian/new_bll/blob/master/uBLL/bll_2nd_stage.asm
+
 .setcpu "65C02"
 .include "lynx.inc"
 
@@ -111,10 +114,7 @@ plot_color:						;15
 
 plot_data:
 ; "NEW_BLL"
-	.incbin "new_bll.spr"
-
-;.segment "ZEROPAGE"
-
+	.incbin "new_bll.spr" ; Sprite data
 
 end:
 

@@ -1,4 +1,7 @@
-;.setcpu "65C02"
+; Original implementation by Bastian Schick (42Bastian)
+; https://github.com/42Bastian/new_bll/blob/master/uBLL/bll_1st_stage.asm
+
+.setcpu "65C02"
 .segment "CODE"
 .include "lynx.inc"
 .org $0200

@@ -35,6 +35,7 @@ $(target).lnx : $(target).lyx
 
 $(target).lyx : stage1.enc stage2.bin
 	cat stage1.enc stage2.bin > $@
+	bzcat allff.lyx.bz2 >> $@
 
 %.enc: %.bin
 	lynxenc $< $@
