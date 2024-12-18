@@ -1,7 +1,7 @@
 Modules list:
 -------------
 stage2.o:
-    CODE              Offs=000000  Size=000074  Align=00001  Fill=0000
+    CODE              Offs=000000  Size=000075  Align=00001  Fill=0000
     RODATA            Offs=000000  Size=000059  Align=00001  Fill=0000
     ZEROPAGE          Offs=000000  Size=000008  Align=00001  Fill=0000
 
@@ -11,8 +11,8 @@ Segment list:
 Name                   Start     End    Size  Align
 ----------------------------------------------------
 ZEROPAGE              000000  000007  000008  00001
-CODE                  000200  000273  000074  00001
-RODATA                000274  0002CC  000059  00001
+CODE                  000200  000274  000075  00001
+RODATA                000275  0002CD  000059  00001
 
 
 Exports list by name:

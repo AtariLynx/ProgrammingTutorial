@@ -48,23 +48,9 @@ $(target).lyx : stage1.enc stage2.bin
 %.o: %.asm
 	$(AS) -o $@ $(AFLAGS) $<
 
-# Rule for making a *.o file out of a *.bmp file
-%.o : %.bmp
-	$(SPRPCK) -t6 -p2 $<
-	$(ECHO) .global _$(*F) > $*.s
-	$(ECHO) .segment \"$(RODATA_SEGMENT)\" >> $*.s
-	$(ECHO) _$(*F): .incbin \"$*.spr\" >> $*.s
-	$(AS) -o $@ $(AFLAGS) $*.s
-	$(RM) $*.s
-	$(RM) $*.pal
-	$(RM) $*.spr
-
-all: $(target)
-
-clean :
+clean:
+	$(RM) *.lnx
+	$(RM) *.bin
+	$(RM) *.enc
 	$(RM) *.s
 	$(RM) *.o
-	$(RM) *.pal
-	$(RM) *.joy
-	$(RM) *.tgi
-	$(RM) *.ser

@@ -54,16 +54,17 @@ wait:
 	READ_BYTE
 	cmp	#'P'
 	bne	wait
-bla = $ffff
+
 Loader:
-	ldy #4
+	ldy #3
 loop0:
     READ_BYTE
-    sta bla,y
-    sta load_len2-1,y	; mirror for call
+    sta load_len,y
+    sta load_len2,y	; mirror for call
     dey
-    bne loop0	; get destination and length
+    bpl loop0	; get destination and length
     tax			; lowbyte of length
+    iny         ; set y to zero again
 
 loop1:
     inx
