@@ -3,8 +3,8 @@
         {
             "name": "Linux",
             "includePath": [
-                "/workspaces/cc65/include",
-                "/workspaces/cc65/asminc",
+                "/usr/share/cc65/include",
+                "/usr/share/cc65/asminc",
                 "${workspaceFolder}/**"
             ],
             "defines": [],

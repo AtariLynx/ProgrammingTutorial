@@ -1,14 +1,16 @@
 {
 	"name": "cc65",
-	//"image": "mcr.microsoft.com/devcontainers/base:alpine",
 	"build":{
-		"dockerfile": "Dockerfile"
+		"dockerfile": "Dockerfile",
+		"args": {
+			"VARIANT": "3.20"
+		}
 	},
 	"features": {
 		"ghcr.io/atarilynx/devcontainers/cc65suite:latest": {},
 		"ghcr.io/atarilynx/devcontainers/make_lnx:latest": {},
 		"ghcr.io/atarilynx/devcontainers/sprpck:latest": {},
-		"./local-features/lynxenc": {}
+		"ghcr.io/atarilynx/devcontainers/lynxenc:latest": {}
 	},
 
 	// Set *default* container specific settings.json values on container create.
@@ -22,7 +24,7 @@
 				"ms-vscode.hexeditor"
 			]
 		}
-	} //,
+	},
 	// "runArgs": [
     //     // Attach USB device 0 from host to container
 	//     "--device", "/dev/ttyUSB0:/dev/ttyUSB0",
@@ -33,5 +35,5 @@
 	// ]
 
 	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-	//	"remoteUser": "vscode"
+	"remoteUser": "vscode"
 }
