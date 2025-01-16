@@ -144,7 +144,7 @@ End INITLIT macro
 
 ; Initialize serial interrupt handler
 F3DB   A9 2D                LDA #$2D
-F3DB   8D E8 EF             STA $EFE8
+F3DD   8D E8 EF             STA $EFE8
 F3E0   A9 F7                LDA #$F7
 F3E2   8D E9 EF             STA $EFE9
 
@@ -195,10 +195,10 @@ F439   C9 07                CMP #$07
 F43B   D0 F2                BNE protocol
 
 ; Received magic bytes $1107
-F43D   A9 25                LDA #$25
-F43F   8D 44 FA             STA $FA44   ; Inside SCB data?
-F442   A9 1C                LDA #$1C
-F444   8D 3A FA             STA $FA3A   ; Inside SCB data?
+F43D   A9 25                LDA #$25    ; Reset left side progres bar
+F43F   8D 44 FA             STA $FA44   ; Inside SCB data of progress HPOS Low byte 
+F442   A9 1C                LDA #$1C    ; Reset to default data
+F444   8D 3A FA             STA $FA3A   ; Inside SCB data of Text VPOS Low byte
 
 F447   20 CA F6             JSR LF6CA   ; Receive byte for segment number SN
 F44A   F0 0D                BEQ ReceiveSN0
@@ -212,7 +212,7 @@ F457   80 10                BRA ReceiveSN2
 
 ReceiveSN0::
 F459   20 82 F4             JSR LF482  ; ReceiveSN0Step1
-F45C   20 32 F5             JSR LF532
+F45C   20 32 F5             JSR LF532  ; LoadPaletteFromBuffer
 F45F   80 CE                BRA protocol ; Start over 
 
 WrongSN::
@@ -288,8 +288,8 @@ F4D5   CA                   DEX
 F4D6   CA                   DEX
 F4D7   86 EE                STX $EE
 
-; Redraw indicator
-F4D9   EE 44 FA             INC $FA44     ; Increase load indicator? Inside SCB
+; Redraw the indicator
+F4D9   EE 44 FA             INC $FA44     ; Increase load indicator left side to right
 
 Macro SPRITES FA3D, 0
 F4DC   A9 3D                LDA #$3D
@@ -351,7 +351,7 @@ F541   8D 06 FC             STA VOFFL
 F544   18                   CLC
 F545   A5 E8                LDA $E8     ; Low byte load address
 F547   69 20                ADC #$20
-F549   85 E8                STA $E8     ; Update to skip 32 bytes to load rest of data
+F549   85 E8                STA $E8     ; Update to skip 32 bytes to make sure SCB data can read from E8-E9
 F54B   90 02                BCC LF54F
 F54D   E6 E9                INC $E9     ; Increase high byte if necessary
 
@@ -372,23 +372,25 @@ F56F   D0 F0                BNE LF561
 F571   9C 90 FD             STZ SDONEACK
 End macro SPRITES
 
+Restore original HOFF and VOFF
 F574   A9 14                LDA #$14
 F576   8D 04 FC             STA HOFFL
 F579   A9 14                LDA #$14
 F57B   8D 06 FC             STA VOFFL
 F57E   A9 25                LDA #$25
-F580   8D 44 FA             STA $FA44
+F580   8D 44 FA             STA $FA44   ; Restore location of progress bar
 F583   60                   RTS
 
-; Receive Name, copyright and author?
+; Receive name
 F584   A2 FF      LF584     LDX #$FF
 F586   E8         LF586     INX
 F587   20 CA F6             JSR LF6CA   ; Read from buffer
-F58A   9D B8 F2             STA $F2B8,X ; Should read to F2E1 maximum , as code starts at F2E2
+F58A   9D B8 F2             STA $F2B8,X ; Should read to F2E1 maximum , as code starts at F2E2 (41 chars)
 F58D   D0 F7                BNE LF586   ; Read until zero value is encountered
-F58F   20 DD F6             JSR LF6DD
+; Receive copyright
+F58F   20 DD F6             JSR LF6DD   ; Get year (instead of load address) into $EB-$EC
 
-; 
+; Create four digit hex value in buffer $F9A5-$F9A8 for year
 F592   A5 EB                LDA $EB
 F594   48                   PHA
 F595   4A                   LSR A
@@ -418,142 +420,143 @@ F5B5   1A                   INC
 F5B6   1A                   INC
 F5B7   8D A8 F9             STA $F9A8 
 
-; Load 20 chars
+; Load 20 chars for author
 F5BA   A2 FF                LDX #$FF
 F5BC   E8         LF5BC     INX
 F5BD   20 CA F6             JSR LF6CA    ; Load byte from buffer
-F5C0   9D CD F2             STA $F2CD,X  ; 
+F5C0   9D CD F2             STA $F2CD,X
 F5C3   D0 F7                BNE LF5BC    ; Repeat until zero byte is received (must be max 20 chars)
 
+; Move 24 pixels down from top
 F5C5   A9 18                LDA #$18
-F5C7   20 C2 F6             JSR LF6C2
+F5C7   20 C2 F6             JSR LF6C2    ; Increases $FA3A with $18
+
+; Call HandyPrint with $F2B8 Name of game into $F200 sprite text buffer 
 F5CA   A9 B8                LDA #$B8
-F5CC   85 E0                STA $E0
+F5CC   85 E0                STA $E0      ; sysptr
 F5CE   A9 F2                LDA #$F2
-F5D0   85 E1                STA $E1
+F5D0   85 E1                STA $E1      ; sysptr
 F5D2   A9 00                LDA #$00
-F5D4   8D F9 00             STA $00F9
+F5D4   8D F9 00             STA $00F9    ; TextPtr
 F5D7   A9 F2                LDA #$F2
-F5D9   8D FA 00             STA $00FA
+F5D9   8D FA 00             STA $00FA    ; TextPtr+1
 F5DC   20 D7 F7             JSR LF7D7
+
+Macro SPRITES $FA31,1
 F5DF   A9 31                LDA #$31
-F5E1   8D 10 FC             STA $FC10
+F5E1   8D 10 FC             STA SCBNEXTL
 F5E4   A9 FA                LDA #$FA
-F5E6   8D 11 FC             STA $FC11
-F5E9   9C         LF5E9     ???                ;%10011100
-F5EA   90 FD                BCC LF5E9
+F5E6   8D 11 FC             STA SCBNEXTH
+F5E9   9C 90 FD             STZ 
 F5EC   A9 01                LDA #$01
 F5EE   8D 91 FC             STA $FC91
-F5F1   0C         LF5F1     ???                ;%00001100
-F5F2   F9 FF 9C             SBC $9CFF,Y
-F5F5   91 FD                STA ($FD),Y
-F5F7   1C                   ???                ;%00011100
-F5F8   F9 FF AD             SBC $ADFF,Y
-F5FB   92                   ???                ;%10010010
-F5FC   FC                   ???                ;%11111100
+F5F1   0C F9 FF             TSB MAPCTL
+F5F4   9C 91 FD             STZ 
+F5F7   1C F9 FF             TRB MAPCTL
+F5FA   AD 92 FC             LDA 
 F5FD   29 01                AND #$01
 F5FF   D0 F0                BNE LF5F1
-F601   9C         LF601     ???                ;%10011100
-F602   90 FD                BCC LF601
+F601   9C 90 FD             STZ SDONEACK
+End macro SPRITES
+
 F604   A9 18                LDA #$18
-F606   20 C2 F6             JSR LF6C2
-F609   A9 9B                LDA #$9B
+F606   20 C2 F6             JSR LF6C2       ; Move VPOS of text 18 down?
+
+F609   A9 9B                LDA #$9B        ; sysptr => $F99B
 F60B   85 E0                STA $E0
 F60D   A9 F9                LDA #$F9
 F60F   85 E1                STA $E1
-F611   A9 00                LDA #$00
+
+F611   A9 00                LDA #$00        ; TextPtr => $F200
 F613   8D F9 00             STA $00F9
 F616   A9 F2                LDA #$F2
 F618   8D FA 00             STA $00FA
-F61B   20 D7 F7             JSR LF7D7
+F61B   20 D7 F7             JSR LF7D7       ; Call HandyPrint
+
+Macro SPRITES $FA31,1
 F61E   A9 31                LDA #$31
 F620   8D 10 FC             STA $FC10
 F623   A9 FA                LDA #$FA
 F625   8D 11 FC             STA $FC11
-F628   9C         LF628     ???                ;%10011100
-F629   90 FD                BCC LF628
+F628   9C 90 FD             
 F62B   A9 01                LDA #$01
 F62D   8D 91 FC             STA $FC91
-F630   0C         LF630     ???                ;%00001100
-F631   F9 FF 9C             SBC $9CFF,Y
-F634   91 FD                STA ($FD),Y
-F636   1C                   ???                ;%00011100
-F637   F9 FF AD             SBC $ADFF,Y
-F63A   92                   ???                ;%10010010
-F63B   FC                   ???                ;%11111100
+F630   0C F9 FF             TSB MAPCTL
+F633   9C 91 FD             STZ 
+F636   1C F9 FF             TRB MAPCTL
+F639   AD 92 FC             
 F63C   29 01                AND #$01
 F63E   D0 F0                BNE LF630
-F640   9C         LF640     ???                ;%10011100
-F641   90 FD                BCC LF640
+F640   9C 90 FD             STZ SDONEACK
+End macro SPRITES
+
+; Print year
 F643   A9 09                LDA #$09
-F645   20 C2 F6             JSR LF6C2
-F648   A9 A5                LDA #$A5
+F645   20 C2 F6             JSR LF6C2       ; Move 9 pixels down
+
+F648   A9 A5                LDA #$A5        ; sysptr => $F9A5
 F64A   85 E0                STA $E0
 F64C   A9 F9                LDA #$F9
 F64E   85 E1                STA $E1
-F650   A9 00                LDA #$00
+F650   A9 00                LDA #$00        ; TextPtr => $F200
 F652   8D F9 00             STA $00F9
 F655   A9 F2                LDA #$F2
 F657   8D FA 00             STA $00FA
-F65A   20 D7 F7             JSR LF7D7
+F65A   20 D7 F7             JSR LF7D7       ; Call HandyPrint
+
+Macro SPRITES FA31,1
 F65D   A9 31                LDA #$31
 F65F   8D 10 FC             STA $FC10
 F662   A9 FA                LDA #$FA
 F664   8D 11 FC             STA $FC11
-F667   9C         LF667     ???                ;%10011100
-F668   90 FD                BCC LF667
+F667   9C 90 FD             BCC LF667
 F66A   A9 01                LDA #$01
 F66C   8D 91 FC             STA $FC91
-F66F   0C         LF66F     ???                ;%00001100
-F670   F9 FF 9C             SBC $9CFF,Y
-F673   91 FD                STA ($FD),Y
-F675   1C                   ???                ;%00011100
-F676   F9 FF AD             SBC $ADFF,Y
-F679   92                   ???                ;%10010010
-F67A   FC                   ???                ;%11111100
+F66F   0C F9 FF
+F662   9C 91 FD             STA ($FD),Y
+F675   1C F9 FF 
+F678   AD 92 FC
 F67B   29 01                AND #$01
 F67D   D0 F0                BNE LF66F
-F67F   9C         LF67F     ???                ;%10011100
-F680   90 FD                BCC LF67F
+F67F   9C 90 FD
+
+; Print author
 F682   A9 09                LDA #$09
-F684   20 C2 F6             JSR LF6C2
-F687   A9 CD                LDA #$CD
+F684   20 C2 F6             JSR LF6C2     ; Move 9 lines down
+F687   A9 CD                LDA #$CD      ; sysptr => $F2CD
 F689   85 E0                STA $E0
 F68B   A9 F2                LDA #$F2
 F68D   85 E1                STA $E1
-F68F   A9 00                LDA #$00
+F68F   A9 00                LDA #$00      ; TextPtr => $F200
 F691   8D F9 00             STA $00F9
 F694   A9 F2                LDA #$F2
 F696   8D FA 00             STA $00FA
-F699   20 D7 F7             JSR LF7D7
+F699   20 D7 F7             JSR LF7D7     ; HandyPrint
+
+Macro SPRITES $FA31,1
 F69C   A9 31                LDA #$31
 F69E   8D 10 FC             STA $FC10
 F6A1   A9 FA                LDA #$FA
 F6A3   8D 11 FC             STA $FC11
-F6A6   9C         LF6A6     ???                ;%10011100
-F6A7   90 FD                BCC LF6A6
+F6A6   9C 90 FD
 F6A9   A9 01                LDA #$01
 F6AB   8D 91 FC             STA $FC91
-F6AE   0C         LF6AE     ???                ;%00001100
-F6AF   F9 FF 9C             SBC $9CFF,Y
-F6B2   91 FD                STA ($FD),Y
-F6B4   1C                   ???                ;%00011100
-F6B5   F9 FF AD             SBC $ADFF,Y
-F6B8   92                   ???                ;%10010010
-F6B9   FC                   ???                ;%11111100
+F6AE   0C F9 FF 
+F6B1   9C 91 FD             
+F6B4   1C F9 FF 
+F6B7   AD 92 FC             
 F6BA   29 01                AND #$01
 F6BC   D0 F0                BNE LF6AE
-F6BE   9C         LF6BE     ???                ;%10011100
-F6BF   90 FD                BCC LF6BE
+F6BE   9C 90 FD             BCC LF6BE
 F6C1   60                   RTS
 
-
+; Move line position down by A pixels
 F6C2   18         LF6C2     CLC
 F6C3   6D 3A FA             ADC $FA3A
 F6C6   8D 3A FA             STA $FA3A
 F6C9   60                   RTS
 
-Subroutine load from buffer?
+Subroutine load from buffer to destination at ($E7-$E8)
 F6CA   A4 E7      LF6CA     LDY $E7
 F6CC   C4 E6                CPY $E6
 F6CE   F0 FA                BEQ LF6CA    ; Wait until data in buffer is available
@@ -562,16 +565,17 @@ F6D1   B9 00 F0             LDA $F000,Y
 F6D4   84 E7                STY $E7
 F6D6   60                   RTS
 
-LoadRunAddress:
+GetRunAddress:
 F6D7   A2 E8      LF6D7     LDX #$E8    ; Run address
 F6D9   20 E9 F6             JSR LF6E9
 F6DC   60                   RTS
 
-LoadLength
+GetLoadAddress
 F6DD   A2 EA      LF6DD     LDX #$EA    ; Load address
 F6DF   20 E9 F6             JSR LF6E9
 F6E2   60                   RTS
 
+GetDataSize
 F6E3   A2 EC      LF6E3     LDX #$EC    ; Receive count/data size
 F6E5   20 E9 F6             JSR LF6E9
 F6E8   60                   RTS
@@ -579,7 +583,6 @@ F6E8   60                   RTS
 ; Read two consecutive bytes from buffer and store at X and X+1 in ZP 
 F6E9   20 ED F6   LF6E9     JSR LF6ED
 F6EC   E8                   INX
-
 F6ED   20 CA F6   LF6ED     JSR LF6CA  ; Read from buffer
 F6F0   95 00                STA $00,X
 F6F2   60                   RTS
@@ -1166,100 +1169,82 @@ F9A5   01 01                ORA ($01,X)
 F9A7   01 01                ORA ($01,X)
 F9A9   01 0D                ORA ($0D,X)
 F9AB   24 00                BIT $00
-F9AD   08                   PHP
-F9AE   7D F7 DF             ADC $DFF7,X
-F9B1   7D F7 DF             ADC $DFF7,X
-F9B4   14                   ???                ;%00010100
-F9B5   0B                   ???                ;%00001011
-F9B6   85 E7                STA $E7
-F9B8   A1 79                LDA ($79,X)
-F9BA   C8                   INY
-F9BB   5E 72 17             LSR $1772,X
-F9BE   9E                   ???                ;%10011110
-F9BF   84 0B                STY $0B
-F9C1   85 E7                STA $E7
-F9C3   A1 79                LDA ($79,X)
-F9C5   C8                   INY
-F9C6   5E 72 17             LSR $1772,X
-F9C9   9E                   ???                ;%10011110
-F9CA   84 0B                STY $0B
-F9CC   85 E7                STA $E7
-F9CE   A1 79                LDA ($79,X)
-F9D0   C8                   INY
-F9D1   5E 72 17             LSR $1772,X
-F9D4   9E                   ???                ;%10011110
-F9D5   84 0B                STY $0B
-F9D7   85 E7                STA $E7
-F9D9   A1 79                LDA ($79,X)
-F9DB   C8                   INY
-F9DC   5E 72 17             LSR $1772,X
-F9DF   9E                   ???                ;%10011110
-F9E0   84 08                STY $08
-F9E2   7D F7 DF             ADC $DFF7,X
-F9E5   7D F7 DF             ADC $DFF7,X
-F9E8   14                   ???                ;%00010100
-F9E9   00                   BRK
-F9EA   02                   ???                ;%00000010
-F9EB   80                   ???                ;%10000000
+
+; Sprite Data for SCB at FA21
+F9AD   08
+F9AE   7D F7 DF 7D F7 DF 14 
+; 01111101 11110111 11011111             01111101 11110111 11011111 00010100
+; 0 1111 1  0 1111 1  0 1111 1 0 1111 1  0 1111 1  0 1111 1  0 1111 1 0 1111 1  0 0010 1 00
+; 8*16+3 = 131 pixels from 16 to 146
+F9B5   0B
+F9B6   85 E7 A1 79 C8 5E 72 17 9E 84 
+F9C0   0B
+F9C1   85 E7 A1 79 C8 5E 72 17 9E 84 
+FC9B   0B
+F9CC   85 E7 A1 79 C8 5E 72 17 9E 84 
+F9D6   0B
+F9D7   85 E7 A1 79 C8 5E 72 17 9E 84
+F9E1   08
+F9E2   7D F7 DF 7D F7 DF 14 
+F9E9   00
+
+; Sprite data for SCB at $FA3D
+F9EA   02                   ; Single pixel sprite
+F9EB   80                   
 F9EC   00                   BRK
 
-; Palette values?
+; Palette values
 F9ED   00 00 0F 00 0F 0F 00 0F
 F9F5   07 07 00 07 00 07 00 07
 F9FD   00 0F 00 F0 F0 0F FF FF
 FA05   7F 77 07 00 70 07 77 70 
 
-FA0D   01	  
-FA0E   B0 00                BCS LFA10
-FA10   21 FA      LFA10     AND ($FA,X)
-FA12   EA         LFA12     NOP
-FA13   F9 14 00             SBC $0014,Y
-FA16   14                   ???                ;%00010100
-FA17   00                   BRK
-FA18   00                   BRK
-FA19   A0 00                LDY #$00
-FA1B   66 00                ROR $00
-FA1D   00                   BRK
-FA1E   00                   BRK
-FA1F   00                   BRK
-FA20   00                   BRK
-FA21   01 10                ORA ($10,X)
-FA23   00                   BRK
-FA24   00                   BRK
-FA25   00                   BRK
-FA26   AD F9 24             LDA $24F9
-FA29   00                   BRK
-FA2A   73                   ???                ;%01110011 's'
-FA2B   00                   BRK
-FA2C   00                   BRK
-FA2D   01 00                ORA ($00,X)
-FA2F   01 07                ORA ($07,X)
-FA31   05 80                ORA $80
-FA33   00                   BRK
-FA34   00                   BRK
-FA35   00                   BRK
-FA36   00                   BRK
-FA37   F2                   ???                ;%11110010
-FA38   1C                   ???                ;%00011100
-FA39   00                   BRK
+; SCB data Clear screen
+FA0D   01                   BACKNONCOLL_SPRITE
+FA0E   B0                   LITERAL+RELOAD_HVST
+FA0F   00                   SPRCOLL
+FA10   21 FA      LFA10     SCBNEXT
+FA12   EA F9                SCBDATA single pixel
+FA14   14 00                HPOS  ; Compensate for HOFF and VOFF?
+FA16   14 00                VPOS
+FA18   00 A0                HSIZE ; full screen
+FA1A   00 66                VSIZE
+FA1C   00 00                STRETCH
+FA1E   00 00                TILT
+FA20   00                   Palette uses pen 0 for both colors
+;Next SCB Frame around progress bar 
+FA21   01                   BACKNONCOLL_SPRITE
+FA22   10                   RELOAD_HV
+FA23   00                   SPRCOLL
+FA24   00 00                SCBNEXT
+FA26   AD F9                SCBDATA
+FA28   24 00                
+FA2A   73 00                HPOS 
+FA2C   00 01 
+FA2E   00 01 
+FA30   07                   Palette uses pen 7 for color 1
 
-FA3A   1C                   ???                ;%00011100
-FA3B   00                   BRK
-FA3C   02                   ???                ;%00000010
-FA3D   05 90                ORA $90
-FA3F   00                   BRK
-FA40   00                   BRK
-FA41   00                   BRK
-FA42   EA                   NOP
-FA43   F9 
+; SCB data for displaying text
+FA31   05                   SPRCTL0_NON_COLLIDABLE+SPRCTL0_2_COL
+FA32   80                   SPRCTL1_LITERAL+SPRCTL1_DEPTH_NO_RELOAD
+FA33   00                   SPRCOLL
+FA34   00 00                SCBNEXT
+FA36   00 F2                sprite data at $F200
+FA38   1C 00                HPOS
+FA3A   1C 00                VPOS
+FABC   02                   Palette 2 colors pen 2 for color 1
 
-FA44   25 
-FA45   00             SBC $0025,Y
-FA46   74                   ???                ;%01110100 't'
-FA47   00                   BRK
-FA48   00                   BRK
-FA49   01 00                ORA ($00,X)
-FA4B   04                   ???                ;%00000100
-FA4C   06 00                ASL $00
-
+; SCB data for progress bar (Fits inside frame at (16,95) to (146,101))
+; Sprite draws new vertical pixel line by increasing HPOS. No double buffers
+FA3D   05                   SPRCTL0_NON_COLLIDABLE+SPRCTL0_2_COL
+FA3E   90                   SPRCTL1_LITERAL+RELOAD_HV
+FA3F   00                   SPRCOLL
+FA40   00 00                SCBNEXT
+FA42   EA F9                SCB data single pixel
+FA44   25 00                HPOS (17, compensating for #$14 offset)
+FA46   74 00                VPOS (96, compensating for #$14 offset)
+FA48   00 01                HSIZE normal horizontal size
+FA4A   00 04                VSIZE 4 pixels high
+FA4C   06                   Palette 2 colors pen 6 for color 1
+FA4D   00                   ? One byte too much?
 .END
