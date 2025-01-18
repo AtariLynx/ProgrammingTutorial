@@ -16,7 +16,7 @@ unsigned char vbl(void)
 		return IRQ_NOT_HANDLED;
 	}
 
-	MIKEY.palette[1] = ++irq_counter;
+	MIKEY.palette[17] = ++irq_counter;
 	return IRQ_HANDLED;
 }
 
@@ -36,7 +36,7 @@ void initialize()
 	tgi_init();
 
 	// Set up C-level interrupt
-	set_irq (&vbl, irq_stack, IRQ_STACK_SIZE);
+	set_irq(&vbl, irq_stack, IRQ_STACK_SIZE);
 	
 	// If no C calls are made from interrupt, no stack is needed.
 	//set_irq (&vbl, NULL, 0);
